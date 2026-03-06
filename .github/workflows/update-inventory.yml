@@ -29,6 +29,7 @@ jobs:
         id: changes
         run: |
           git add -A docs/
+          git add custom.json || true
           if git diff --staged --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
