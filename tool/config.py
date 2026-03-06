@@ -33,6 +33,11 @@ LOG_DIR = os.path.join(BASE_DIR, "logs")
 MAX_IMAGES_PER_CAR = 10
 IMAGE_BASE_URL = f"{GITHUB_PAGES_URL}/images"  # Public URL for images
 
+# ── Custom Data ──
+CUSTOM_JSON = os.path.join(ROOT_DIR, "custom.json")
+CUSTOM_IMAGES_DIR = os.path.join(OUTPUT_DIR, "custom-images")
+CUSTOM_IMAGES_URL = f"{GITHUB_PAGES_URL}/custom-images"
+
 # ── Translations (FR) ──
 FUEL_TYPE_FR = {
     "gasoline": "Essence",

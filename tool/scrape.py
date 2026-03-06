@@ -17,7 +17,7 @@ from datetime import datetime
 # Ensure imports work from any working directory
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from config import OUTPUT_DIR, IMAGES_DIR, DETAIL_DIR, CACHE_FILE, LOG_DIR
+from config import OUTPUT_DIR, IMAGES_DIR, DETAIL_DIR, CACHE_FILE, LOG_DIR, CUSTOM_JSON, CUSTOM_IMAGES_DIR
 from fetcher import fetch_listings
 from image_handler import download_images, cleanup_old_images
 from html_generator import generate_grid_html, generate_detail_pages, format_chf
@@ -133,12 +133,21 @@ def main():
         if count:
             print(f"  {listing['make']} {listing['model']}: {count} images")
 
-    # 4. Generate HTML
+    # 4. Load custom data
+    custom_data = {}
+    if os.path.exists(CUSTOM_JSON):
+        with open(CUSTOM_JSON, "r", encoding="utf-8") as f:
+            custom_data = json.load(f)
+        print(f"Loaded custom data for {len(custom_data)} cars")
+
+    os.makedirs(CUSTOM_IMAGES_DIR, exist_ok=True)
+
+    # 5. Generate HTML
     print("Generating HTML pages...")
     os.makedirs(DETAIL_DIR, exist_ok=True)
 
     grid_html = generate_grid_html(listings)
-    detail_pages = generate_detail_pages(listings)
+    detail_pages = generate_detail_pages(listings, custom_data)
 
     # 5. Write output
     grid_path = os.path.join(OUTPUT_DIR, "grid.html")

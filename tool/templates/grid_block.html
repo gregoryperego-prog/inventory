@@ -54,9 +54,14 @@ a { color: inherit; text-decoration: none; }
     font-size: 0.82rem; color: var(--color-text-muted);
 }
 
+/* Hide hero when embedded in iframe */
+.in-iframe .pc-inv-hero { display: none; }
+.in-iframe body { background: transparent; }
+
 @media (max-width: 1024px) { .pc-cars-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) { .pc-cars-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; } }
 </style>
+<script>if(window.self!==window.top)document.documentElement.classList.add('in-iframe');</script>
 
 <div class="pc-inv-container">
     <div class="pc-inv-hero">
