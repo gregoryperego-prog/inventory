@@ -10,22 +10,27 @@
     :root {
         --color-primary: #FF4605;
         --color-primary-light: #FF6B35;
+        --color-primary-06: rgba(255,70,5,0.06);
+        --color-primary-10: rgba(255,70,5,0.1);
         --color-text-primary: #1A1A1A;
         --color-text-muted: #666666;
+        --color-text-light: #999999;
         --color-surface: #FFFFFF;
         --color-background: #FAFBFC;
         --color-border: #E5E7EB;
+        --color-border-light: #F0F0F0;
         --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
         --radius-sm: 0.5rem;
         --radius-md: 0.75rem;
         --radius-lg: 1rem;
+        --shadow-sm: 0 2px 12px rgba(0,0,0,0.06);
     }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: var(--font-body); color: var(--color-text-primary); background: var(--color-background); }
     img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; text-decoration: none; }
 
-    .pcd-container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    .pcd-container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
 
     /* Back link */
     .pcd-back {
@@ -35,14 +40,18 @@
     }
     .pcd-back:hover { text-decoration: underline; }
 
-    /* Gallery */
+    /* Two-column layout */
+    .pcd-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; align-items: start; }
+
+    /* Left column — Gallery */
+    .pcd-gallery {}
     .pcd-gallery-main {
         width: 100%; aspect-ratio: 16/9; object-fit: cover;
         border-radius: var(--radius-lg); margin-bottom: 0.75rem;
     }
     .pcd-thumbs {
-        display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-        gap: 0.5rem; margin-bottom: 2rem;
+        display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 0.5rem;
     }
     .pcd-thumb {
         width: 100%; aspect-ratio: 4/3; object-fit: cover;
@@ -52,48 +61,80 @@
     .pcd-thumb:hover { border-color: var(--color-primary); opacity: 1; }
     .pcd-thumb.active { border-color: var(--color-primary); opacity: 1; }
 
-    /* Header */
+    /* Right column — Info */
+    .pcd-info { position: sticky; top: 2rem; }
     .pcd-brand {
         font-size: 0.75rem; letter-spacing: 2px; color: var(--color-primary);
         text-transform: uppercase; font-weight: 600; margin-bottom: 0.3rem;
     }
-    .pcd-model { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
-    .pcd-price { font-size: 1.8rem; font-weight: 700; color: var(--color-primary); margin-bottom: 2rem; }
+    .pcd-model { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
+    .pcd-price { font-size: 1.6rem; font-weight: 700; color: var(--color-primary); margin-bottom: 1.5rem; }
 
     /* Specs */
-    .pcd-specs { margin-bottom: 2rem; }
+    .pcd-specs { margin-bottom: 1.5rem; }
     .pcd-specs-title {
-        font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem;
-        padding-bottom: 0.75rem; border-bottom: 2px solid var(--color-primary);
+        font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem;
+        padding-bottom: 0.6rem; border-bottom: 2px solid var(--color-primary);
     }
     .pcd-spec-row {
         display: flex; justify-content: space-between; align-items: center;
-        padding: 0.75rem 0; border-bottom: 1px solid var(--color-border);
+        padding: 0.6rem 0; border-bottom: 1px solid var(--color-border-light);
     }
-    .pcd-spec-label { color: var(--color-text-muted); font-size: 0.88rem; }
-    .pcd-spec-value { font-weight: 600; font-size: 0.88rem; }
+    .pcd-spec-label { color: var(--color-text-muted); font-size: 0.85rem; }
+    .pcd-spec-value { font-weight: 600; font-size: 0.85rem; }
+
+    /* Leasing */
+    .pcd-leasing {
+        background: var(--color-primary-06); border: 1px solid rgba(255,70,5,0.12);
+        border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.5rem;
+    }
+    .pcd-leasing-header {
+        display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem;
+    }
+    .pcd-leasing-icon {
+        width: 32px; height: 32px; background: var(--color-primary-10);
+        border-radius: var(--radius-sm); display: flex; align-items: center;
+        justify-content: center; color: var(--color-primary); flex-shrink: 0;
+    }
+    .pcd-leasing-title { font-weight: 700; font-size: 0.92rem; }
+    .pcd-leasing-amount { font-size: 1.4rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.3rem; }
+    .pcd-leasing-note { font-size: 0.72rem; color: var(--color-text-light); line-height: 1.4; }
 
     /* WhatsApp CTA */
     .pcd-cta-wa {
         display: flex; align-items: center; justify-content: center; gap: 0.6rem;
-        width: 100%; padding: 1rem; background: #25D366; color: #fff;
-        border-radius: var(--radius-md); font-weight: 700; font-size: 1rem;
-        text-decoration: none; margin-top: 2rem; transition: background 0.2s;
+        width: 100%; padding: 0.9rem; background: #25D366; color: #fff;
+        border-radius: var(--radius-md); font-weight: 700; font-size: 0.95rem;
+        text-decoration: none; transition: background 0.2s;
     }
     .pcd-cta-wa:hover { background: #1ebe5d; }
 
+    /* Phone CTA */
+    .pcd-cta-phone {
+        display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+        width: 100%; padding: 0.8rem; margin-top: 0.6rem;
+        background: transparent; border: 1.5px solid var(--color-border);
+        border-radius: var(--radius-md); font-weight: 600; font-size: 0.85rem;
+        color: var(--color-text-primary); text-decoration: none; transition: all 0.2s;
+    }
+    .pcd-cta-phone:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
     /* AutoScout link */
     .pcd-as-link {
-        display: block; text-align: center; margin-top: 1rem;
-        color: var(--color-text-muted); font-size: 0.82rem;
+        display: block; text-align: center; margin-top: 0.8rem;
+        color: var(--color-text-light); font-size: 0.78rem;
     }
     .pcd-as-link:hover { color: var(--color-primary); }
 
+    /* Full-width sections below */
+    .pcd-full-width { margin-top: 2.5rem; }
+
     /* Teaser */
     .pcd-teaser {
-        margin-top: 2rem; padding: 1.5rem; background: var(--color-surface);
+        padding: 1.5rem; background: var(--color-surface);
         border: 1px solid var(--color-border); border-radius: var(--radius-md);
         font-size: 0.92rem; line-height: 1.7; color: var(--color-text-muted);
+        margin-top: 2rem;
     }
 
     /* Description */
@@ -112,44 +153,50 @@
     .pcd-video-wrap { position: relative; padding-bottom: 56.25%; margin-top: 1rem; border-radius: var(--radius-md); overflow: hidden; }
     .pcd-video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
-    @media (max-width: 640px) {
-        .pcd-model { font-size: 1.5rem; }
-        .pcd-price { font-size: 1.4rem; }
-        .pcd-thumbs { grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); }
+    @media (max-width: 768px) {
+        .pcd-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+        .pcd-info { position: static; }
+        .pcd-model { font-size: 1.4rem; }
+        .pcd-price { font-size: 1.3rem; }
+        .pcd-thumbs { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
     }
     </style>
 </head>
 <body>
     <div class="pcd-container">
-        <a href="https://gregoryperego-prog.github.io/inventory/grid.html" class="pcd-back">
+        <a href="https://peregocars.com/cars-for-sale" class="pcd-back">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
             Retour a l'inventaire
         </a>
 
-        <!-- Gallery -->
-        <img class="pcd-gallery-main" src="https://gregoryperego-prog.github.io/inventory/images/lamborghini-urus-20061800-01.jpg" alt="Lamborghini URUS">
-        <div class="pcd-thumbs">
-            <img class="pcd-thumb active" src="https://gregoryperego-prog.github.io/inventory/images/lamborghini-urus-20061800-01.jpg" alt="Lamborghini URUS" loading="lazy">
-            <img class="pcd-thumb" src="https://gregoryperego-prog.github.io/inventory/images/lamborghini-urus-20061800-02.jpg" alt="Lamborghini URUS" loading="lazy">
-            <img class="pcd-thumb" src="https://gregoryperego-prog.github.io/inventory/images/lamborghini-urus-20061800-03.jpg" alt="Lamborghini URUS" loading="lazy">
-            <img class="pcd-thumb" src="https://gregoryperego-prog.github.io/inventory/images/lamborghini-urus-20061800-04.jpg" alt="Lamborghini URUS" loading="lazy">
-            <img class="pcd-thumb" src="https://gregoryperego-prog.github.io/inventory/images/lamborghini-urus-20061800-05.jpg" alt="Lamborghini URUS" loading="lazy">
-            <img class="pcd-thumb" src="https://gregoryperego-prog.github.io/inventory/images/lamborghini-urus-20061800-06.jpg" alt="Lamborghini URUS" loading="lazy">
-            <img class="pcd-thumb" src="https://gregoryperego-prog.github.io/inventory/images/lamborghini-urus-20061800-07.jpg" alt="Lamborghini URUS" loading="lazy">
-            <img class="pcd-thumb" src="https://gregoryperego-prog.github.io/inventory/images/lamborghini-urus-20061800-08.jpg" alt="Lamborghini URUS" loading="lazy">
-            <img class="pcd-thumb" src="https://gregoryperego-prog.github.io/inventory/images/lamborghini-urus-20061800-09.jpg" alt="Lamborghini URUS" loading="lazy">
-            <img class="pcd-thumb" src="https://gregoryperego-prog.github.io/inventory/images/lamborghini-urus-20061800-10.jpg" alt="Lamborghini URUS" loading="lazy">
+        <div class="pcd-layout">
+            <!-- Left — Gallery -->
+            <div class="pcd-gallery">
+                <img class="pcd-gallery-main" src="../images/lamborghini-urus-20061800-01.jpg" alt="Lamborghini URUS">
+                <div class="pcd-thumbs">
+            <img class="pcd-thumb active" src="../images/lamborghini-urus-20061800-01.jpg" alt="Lamborghini URUS" loading="lazy">
+            <img class="pcd-thumb" src="../images/lamborghini-urus-20061800-02.jpg" alt="Lamborghini URUS" loading="lazy">
+            <img class="pcd-thumb" src="../images/lamborghini-urus-20061800-03.jpg" alt="Lamborghini URUS" loading="lazy">
+            <img class="pcd-thumb" src="../images/lamborghini-urus-20061800-04.jpg" alt="Lamborghini URUS" loading="lazy">
+            <img class="pcd-thumb" src="../images/lamborghini-urus-20061800-05.jpg" alt="Lamborghini URUS" loading="lazy">
+            <img class="pcd-thumb" src="../images/lamborghini-urus-20061800-06.jpg" alt="Lamborghini URUS" loading="lazy">
+            <img class="pcd-thumb" src="../images/lamborghini-urus-20061800-07.jpg" alt="Lamborghini URUS" loading="lazy">
+            <img class="pcd-thumb" src="../images/lamborghini-urus-20061800-08.jpg" alt="Lamborghini URUS" loading="lazy">
+            <img class="pcd-thumb" src="../images/lamborghini-urus-20061800-09.jpg" alt="Lamborghini URUS" loading="lazy">
+            <img class="pcd-thumb" src="../images/lamborghini-urus-20061800-10.jpg" alt="Lamborghini URUS" loading="lazy">
 
-        </div>
+                </div>
+            </div>
 
-        <!-- Header -->
-        <div class="pcd-brand">LAMBORGHINI</div>
-        <h1 class="pcd-model">Urus E-Gear</h1>
-        <div class="pcd-price">CHF 184'900.--</div>
+            <!-- Right — Info -->
+            <div class="pcd-info">
+                <div class="pcd-brand">LAMBORGHINI</div>
+                <h1 class="pcd-model">Urus E-Gear</h1>
+                <div class="pcd-price">CHF 184'900.--</div>
 
-        <!-- Specs -->
-        <div class="pcd-specs">
-            <h2 class="pcd-specs-title">Caracteristiques</h2>
+                <!-- Specs -->
+                <div class="pcd-specs">
+                    <h2 class="pcd-specs-title">Caracteristiques</h2>
             <div class="pcd-spec-row"><span class="pcd-spec-label">Annee</span><span class="pcd-spec-value">2020</span></div>
             <div class="pcd-spec-row"><span class="pcd-spec-label">Kilometrage</span><span class="pcd-spec-value">80'880 km</span></div>
             <div class="pcd-spec-row"><span class="pcd-spec-label">Puissance</span><span class="pcd-spec-value">650 ch</span></div>
@@ -157,28 +204,49 @@
             <div class="pcd-spec-row"><span class="pcd-spec-label">Transmission</span><span class="pcd-spec-value">Semi-automatique</span></div>
             <div class="pcd-spec-row"><span class="pcd-spec-label">Carrosserie</span><span class="pcd-spec-value">SUV</span></div>
 
+                </div>
+
+                <!-- Leasing -->
+                <div class="pcd-leasing" id="pcdLeasing">
+                    <div class="pcd-leasing-header">
+                        <div class="pcd-leasing-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                        </div>
+                        <div class="pcd-leasing-title">Leasing disponible</div>
+                    </div>
+                    <div class="pcd-leasing-amount" id="pcdLeasingAmount">—</div>
+                    <div class="pcd-leasing-note">Estimation indicative sur 48 mois. Taux et conditions a definir selon votre profil.</div>
+                </div>
+
+                <!-- WhatsApp CTA -->
+                <a href="https://wa.me/41798076339?text=Bonjour%2C%20je%20suis%20interesse%28e%29%20par%20votre%20Lamborghini%20URUS%20%282020%29%20a%20CHF%20184%27900.--.%20Est-il%20toujours%20disponible%20%3F" target="_blank" rel="noopener noreferrer" class="pcd-cta-wa">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Contacter pour ce vehicule
+                </a>
+
+                <a href="tel:+41218698911" class="pcd-cta-phone">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    +41 21 869 89 11
+                </a>
+
+                <a href="https://www.autoscout24.ch/fr/d/20061800" target="_blank" rel="noopener noreferrer" class="pcd-as-link">
+                    Voir sur AutoScout24 &rarr;
+                </a>
+            </div>
         </div>
 
-        
-
-        
-
-        
-
-        <!-- WhatsApp CTA -->
-        <a href="https://wa.me/41798076339?text=Bonjour%2C%20je%20suis%20interesse%28e%29%20par%20votre%20Lamborghini%20URUS%20%282020%29%20a%20CHF%20184%27900.--.%20Est-il%20toujours%20disponible%20%3F" target="_blank" rel="noopener noreferrer" class="pcd-cta-wa">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Contacter pour ce vehicule
-        </a>
-
-        <a href="https://www.autoscout24.ch/fr/d/20061800" target="_blank" rel="noopener noreferrer" class="pcd-as-link">
-            Voir sur AutoScout24 &rarr;
-        </a>
-
-        <div class="pcd-teaser">Voiture Suisse - Très soignée - Tous les services suivis chez Lamborghini - sièges chauffants et ventilés - ACC adaptatif - caméra - cuir complet - head up display - camera surround - vitre teintée - finition intérieures en aluminium brossé - jantes 21</div>
+        <!-- Full-width sections -->
+        <div class="pcd-full-width">
+            
+            
+            
+            <div class="pcd-teaser">Voiture Suisse - Très soignée - Tous les services suivis chez Lamborghini - sièges chauffants et ventilés - ACC adaptatif - caméra - cuir complet - head up display - camera surround - vitre teintée - finition intérieures en aluminium brossé - jantes 21</div>
+        </div>
     </div>
+
     <script>
     (function() {
+        // Gallery thumbnail switching
         var main = document.querySelector('.pcd-gallery-main');
         var thumbs = document.querySelectorAll('.pcd-thumb');
         thumbs.forEach(function(t) {
@@ -188,6 +256,16 @@
                 this.classList.add('active');
             });
         });
+
+        // Leasing calculation
+        var price = parseInt('184900') || 0;
+        if (price > 0) {
+            var monthly = Math.round(price / 48);
+            var formatted = monthly.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'");
+            document.getElementById('pcdLeasingAmount').textContent = 'des CHF ' + formatted + '.-- / mois';
+        } else {
+            document.getElementById('pcdLeasing').style.display = 'none';
+        }
     })();
     </script>
 </body>
