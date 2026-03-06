@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <!-- Perego Cars Inventory — Auto-generated {{timestamp}} -->
 <style>
 :root {
@@ -5,9 +6,11 @@
     --color-primary-light: #FF6B35;
     --color-text-primary: #1A1A1A;
     --color-text-muted: #666666;
+    --color-text-light: #999;
     --color-surface: #FFFFFF;
     --color-background: #FAFBFC;
     --color-border: #E5E7EB;
+    --color-primary-10: rgba(255,70,5,0.1);
     --shadow-sm: 0 2px 12px rgba(0,0,0,0.06);
     --shadow-md: 0 8px 30px rgba(0,0,0,0.1);
     --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
@@ -31,6 +34,67 @@ a { color: inherit; text-decoration: none; }
 .pc-inv-title em { color: var(--color-primary); font-style: italic; }
 .pc-inv-sub { font-size: 1rem; color: var(--color-text-muted); max-width: 600px; margin: 0 auto; line-height: 1.6; }
 
+/* ── Filters ── */
+.pc-inv-filters { padding: 1.5rem 0; }
+.pc-filter-search-wrap {
+    position: relative; max-width: 480px; margin: 0 auto 1.5rem;
+}
+.pc-filter-search {
+    width: 100%; padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid var(--color-border); border-radius: 50px;
+    font-size: 0.9rem; font-family: var(--font-body);
+    background: var(--color-surface); outline: none; transition: var(--transition-base);
+}
+.pc-filter-search:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--color-primary-10); }
+.pc-filter-search::placeholder { color: var(--color-text-light); }
+.pc-filter-search-icon {
+    position: absolute; left: 0.9rem; top: 50%; transform: translateY(-50%);
+    color: var(--color-text-muted); pointer-events: none;
+}
+
+/* ── Smart Filters (standout) ── */
+.pc-smart-filters {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+.pc-smart-chip {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.55rem 1.1rem; border-radius: 50px; cursor: pointer;
+    font-size: 0.82rem; font-weight: 600; letter-spacing: 0.3px;
+    border: none;
+    background: linear-gradient(135deg, #1A1A1A 0%, #333 100%);
+    color: #fff;
+    transition: all 250ms ease;
+    user-select: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.pc-smart-chip:hover {
+    background: linear-gradient(135deg, #333 0%, #555 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+.pc-smart-chip.active {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    box-shadow: 0 4px 16px rgba(255,70,5,0.35);
+    transform: translateY(-1px);
+}
+.pc-smart-chip .emoji { font-size: 1rem; }
+
+/* ── Brand Chips ── */
+.pc-filter-chips {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;
+}
+.pc-filter-chip {
+    padding: 0.45rem 1rem; border-radius: 50px; cursor: pointer;
+    font-size: 0.78rem; font-weight: 500; border: 1px solid var(--color-border);
+    background: var(--color-surface); transition: var(--transition-base);
+    user-select: none;
+}
+.pc-filter-chip:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.pc-filter-chip.active {
+    background: var(--color-primary); color: #fff; border-color: var(--color-primary);
+}
+
 .pc-cars-grid {
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
     padding-bottom: 3rem;
@@ -40,6 +104,7 @@ a { color: inherit; text-decoration: none; }
     border-radius: var(--radius-md); overflow: hidden; transition: var(--transition-base);
     text-decoration: none; color: inherit; display: block; cursor: pointer;
 }
+.pc-car-card.hidden { display: none; }
 .pc-car-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--color-primary); }
 .pc-car-img { width: 100%; height: 220px; object-fit: cover; }
 .pc-car-body { padding: 1.25rem; }
@@ -54,13 +119,25 @@ a { color: inherit; text-decoration: none; }
     font-size: 0.82rem; color: var(--color-text-muted);
 }
 
+.pc-inv-no-results {
+    display: none; text-align: center; padding: 3rem 1rem;
+    font-size: 1rem; color: var(--color-text-muted);
+}
+.pc-inv-no-results.visible { display: block; }
+
 /* Hide hero when embedded in iframe */
 .in-iframe .pc-inv-hero { display: none; }
 .in-iframe body { background: transparent; }
 
 @media (max-width: 1200px) { .pc-cars-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 1024px) { .pc-cars-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 768px) { .pc-cars-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; } }
+@media (max-width: 768px) {
+    .pc-cars-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+    .pc-smart-filters { gap: 0.4rem; }
+    .pc-smart-chip { padding: 0.45rem 0.8rem; font-size: 0.72rem; }
+    .pc-filter-chips { gap: 0.4rem; }
+    .pc-filter-chip { padding: 0.4rem 0.8rem; font-size: 0.72rem; }
+}
 </style>
 <script>if(window.self!==window.top)document.documentElement.classList.add('in-iframe');</script>
 
@@ -70,8 +147,135 @@ a { color: inherit; text-decoration: none; }
         <h1 class="pc-inv-title">Notre <em>inventaire</em></h1>
         <p class="pc-inv-sub">Explorez notre selection actuelle de vehicules d'exception, rigoureusement inspectes et prets a prendre la route.</p>
     </div>
-    <div class="pc-inv-count">{{count}} vehicules disponibles</div>
-    <div class="pc-cars-grid">
+
+    <!-- Filters -->
+    <div class="pc-inv-filters">
+        <div class="pc-filter-search-wrap">
+            <svg class="pc-filter-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" class="pc-filter-search" id="pcFilterSearch" placeholder="Rechercher une marque ou un modele...">
+        </div>
+
+        <!-- Smart Filters -->
+        <div class="pc-smart-filters" id="pcSmartFilters">
+            <span class="pc-smart-chip" data-tag="expensive"><span class="emoji">💎</span> Plus cheres</span>
+            <span class="pc-smart-chip" data-tag="deal"><span class="emoji">🔥</span> Meilleures affaires</span>
+            <span class="pc-smart-chip" data-tag="powerful"><span class="emoji">⚡</span> Plus puissantes</span>
+            <span class="pc-smart-chip" data-tag="rare"><span class="emoji">🏆</span> Editions limitees</span>
+            <span class="pc-smart-chip" data-tag="classic"><span class="emoji">🕰️</span> Classiques</span>
+            <span class="pc-smart-chip" data-tag="lowkm"><span class="emoji">✨</span> Faible km</span>
+            <span class="pc-smart-chip" data-tag="cabriolet"><span class="emoji">☀️</span> Cabriolets</span>
+        </div>
+
+        <!-- Brand Chips -->
+        <div class="pc-filter-chips" id="pcFilterChips">
+            <!-- Built dynamically by JS -->
+        </div>
+    </div>
+
+    <div class="pc-inv-count" id="pcInvCount">{{count}} vehicules disponibles</div>
+
+    <div class="pc-cars-grid" id="pcCarsGrid">
 {{car_cards}}
+        <div class="pc-inv-no-results" id="pcNoResults">Aucun vehicule ne correspond a votre recherche.</div>
     </div>
 </div>
+
+<script>
+(function() {
+    var cards = document.querySelectorAll('#pcCarsGrid .pc-car-card');
+    var searchInput = document.getElementById('pcFilterSearch');
+    var chipsWrap = document.getElementById('pcFilterChips');
+    var smartFilters = document.getElementById('pcSmartFilters');
+    var countEl = document.getElementById('pcInvCount');
+    var noResults = document.getElementById('pcNoResults');
+    var activeMake = '';
+    var activeTag = '';
+
+    // Build brand chips from data attributes
+    var makes = [];
+    cards.forEach(function(c) {
+        var m = c.getAttribute('data-make');
+        if (m && makes.indexOf(m) === -1) makes.push(m);
+    });
+    makes.sort();
+
+    // "Tous" chip
+    var allChip = document.createElement('span');
+    allChip.className = 'pc-filter-chip active';
+    allChip.textContent = 'Tous';
+    allChip.onclick = function() { activeMake = ''; applyFilters(); };
+    chipsWrap.appendChild(allChip);
+
+    makes.forEach(function(m) {
+        var chip = document.createElement('span');
+        chip.className = 'pc-filter-chip';
+        chip.textContent = m;
+        chip.setAttribute('data-make', m);
+        chip.onclick = function() { activeMake = m; applyFilters(); };
+        chipsWrap.appendChild(chip);
+    });
+
+    // Smart filter clicks (toggle)
+    smartFilters.querySelectorAll('.pc-smart-chip').forEach(function(chip) {
+        chip.onclick = function() {
+            var tag = chip.getAttribute('data-tag');
+            activeTag = (activeTag === tag) ? '' : tag;
+            applyFilters();
+        };
+    });
+
+    searchInput.addEventListener('input', function() { applyFilters(); });
+
+    function applyFilters() {
+        var query = searchInput.value.toLowerCase().trim();
+        var visible = 0;
+
+        // Update brand chip states
+        chipsWrap.querySelectorAll('.pc-filter-chip').forEach(function(chip) {
+            var chipMake = chip.getAttribute('data-make');
+            if (!chipMake) {
+                chip.classList.toggle('active', !activeMake);
+            } else {
+                chip.classList.toggle('active', chipMake === activeMake);
+            }
+        });
+
+        // Update smart chip states
+        smartFilters.querySelectorAll('.pc-smart-chip').forEach(function(chip) {
+            chip.classList.toggle('active', chip.getAttribute('data-tag') === activeTag);
+        });
+
+        cards.forEach(function(card) {
+            var make = (card.getAttribute('data-make') || '').toLowerCase();
+            var model = (card.getAttribute('data-model') || '').toLowerCase();
+            var tags = card.getAttribute('data-tags') || '';
+            var text = make + ' ' + model;
+
+            var matchMake = !activeMake || card.getAttribute('data-make') === activeMake;
+            var matchSearch = !query || text.indexOf(query) !== -1;
+            var matchTag = !activeTag || tags.split(',').indexOf(activeTag) !== -1;
+
+            if (matchMake && matchSearch && matchTag) {
+                card.classList.remove('hidden');
+                visible++;
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+
+        countEl.textContent = visible + ' vehicule' + (visible !== 1 ? 's' : '') + ' disponible' + (visible !== 1 ? 's' : '');
+        noResults.classList.toggle('visible', visible === 0);
+    }
+
+    // Hide smart chips that have 0 matching cars
+    smartFilters.querySelectorAll('.pc-smart-chip').forEach(function(chip) {
+        var tag = chip.getAttribute('data-tag');
+        var count = 0;
+        cards.forEach(function(card) {
+            var tags = card.getAttribute('data-tags') || '';
+            if (tags.split(',').indexOf(tag) !== -1) count++;
+        });
+        if (count === 0) chip.style.display = 'none';
+    });
+})();
+</script>

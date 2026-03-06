@@ -129,12 +129,36 @@
     /* Full-width sections below */
     .pcd-full-width { margin-top: 2.5rem; }
 
-    /* Teaser */
+    /* Teaser — Points forts */
     .pcd-teaser {
-        padding: 1.5rem; background: var(--color-surface);
-        border: 1px solid var(--color-border); border-radius: var(--radius-md);
-        font-size: 0.92rem; line-height: 1.7; color: var(--color-text-muted);
+        padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+        background: rgba(255,70,5,0.04);
+        border-left: 3px solid var(--color-primary);
+        border-radius: 0 var(--radius-md) var(--radius-md) 0;
         margin-top: 2rem;
+    }
+    .pcd-teaser-title {
+        font-size: 1rem; font-weight: 700; margin-bottom: 1rem;
+        padding-bottom: 0.6rem; border-bottom: 2px solid var(--color-primary);
+        display: inline-block;
+    }
+    .pcd-teaser-list {
+        list-style: none; padding: 0; margin: 0;
+    }
+    .pcd-teaser-list li {
+        position: relative; padding: 0.35rem 0 0.35rem 1.4rem;
+        font-size: 0.92rem; font-weight: 500; color: var(--color-text-primary);
+        line-height: 1.5;
+    }
+    .pcd-teaser-list li::before {
+        content: '';
+        position: absolute; left: 0; top: 0.7rem;
+        width: 6px; height: 6px; border-radius: 50%;
+        background: var(--color-primary);
+    }
+    .pcd-teaser-raw {
+        font-size: 0.92rem; font-weight: 500; line-height: 1.7;
+        color: var(--color-text-primary);
     }
 
     /* Description */
@@ -147,6 +171,36 @@
     .pcd-sh-table th { text-align: left; padding: 0.75rem 0; border-bottom: 2px solid var(--color-border); color: var(--color-text-muted); font-weight: 600; }
     .pcd-sh-table td { padding: 0.75rem 0; border-bottom: 1px solid var(--color-border); }
     .pcd-sh-date { white-space: nowrap; padding-right: 2rem; color: var(--color-text-muted); }
+
+    /* Sales Guru — Pourquoi cette voiture */
+    .pcd-guru { margin-top: 2rem; }
+    .pcd-guru-grid {
+        display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1rem; margin-top: 1rem;
+    }
+    .pcd-guru-card {
+        display: flex; align-items: flex-start; gap: 0.9rem;
+        padding: 1.1rem 1.2rem;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        transition: all 0.25s ease;
+    }
+    .pcd-guru-card:hover {
+        border-color: var(--color-primary);
+        box-shadow: 0 4px 20px rgba(255,70,5,0.1);
+        transform: translateY(-2px);
+    }
+    .pcd-guru-icon {
+        flex-shrink: 0;
+        width: 40px; height: 40px;
+        background: var(--color-primary-06);
+        border-radius: var(--radius-sm);
+        display: flex; align-items: center; justify-content: center;
+        color: var(--color-primary);
+    }
+    .pcd-guru-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.2rem; }
+    .pcd-guru-desc { font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.4; }
 
     /* YouTube videos */
     .pcd-videos { margin-top: 2rem; }
@@ -164,7 +218,7 @@
 </head>
 <body>
     <div class="pcd-container">
-        <a href="https://peregocars.com/cars-for-sale" class="pcd-back">
+        <a href="https://peregocars.github.io/inventory/grid.html" class="pcd-back">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
             Retour a l'inventaire
         </a>
@@ -172,18 +226,18 @@
         <div class="pcd-layout">
             <!-- Left — Gallery -->
             <div class="pcd-gallery">
-                <img class="pcd-gallery-main" src="../images/ferrari-f550-12836951-01.jpg" alt="Ferrari F550">
+                <img class="pcd-gallery-main" src="https://peregocars.github.io/inventory/images/ferrari-f550-12836951-01.jpg" alt="Ferrari F550">
                 <div class="pcd-thumbs">
-            <img class="pcd-thumb active" src="../images/ferrari-f550-12836951-01.jpg" alt="Ferrari F550" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-f550-12836951-02.jpg" alt="Ferrari F550" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-f550-12836951-03.jpg" alt="Ferrari F550" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-f550-12836951-04.jpg" alt="Ferrari F550" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-f550-12836951-05.jpg" alt="Ferrari F550" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-f550-12836951-06.jpg" alt="Ferrari F550" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-f550-12836951-07.jpg" alt="Ferrari F550" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-f550-12836951-08.jpg" alt="Ferrari F550" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-f550-12836951-09.jpg" alt="Ferrari F550" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-f550-12836951-10.jpg" alt="Ferrari F550" loading="lazy">
+            <img class="pcd-thumb active" src="https://peregocars.github.io/inventory/images/ferrari-f550-12836951-01.jpg" alt="Ferrari F550" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-f550-12836951-02.jpg" alt="Ferrari F550" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-f550-12836951-03.jpg" alt="Ferrari F550" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-f550-12836951-04.jpg" alt="Ferrari F550" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-f550-12836951-05.jpg" alt="Ferrari F550" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-f550-12836951-06.jpg" alt="Ferrari F550" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-f550-12836951-07.jpg" alt="Ferrari F550" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-f550-12836951-08.jpg" alt="Ferrari F550" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-f550-12836951-09.jpg" alt="Ferrari F550" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-f550-12836951-10.jpg" alt="Ferrari F550" loading="lazy">
 
                 </div>
             </div>
@@ -236,10 +290,15 @@
 
         <!-- Full-width sections -->
         <div class="pcd-full-width">
+            <div class="pcd-guru"><h2 class="pcd-specs-title">Pourquoi cette voiture</h2><div class="pcd-guru-grid"><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 22V8a4 4 0 0 1 4 0v14"/><path d="M6 2h12v7a6 6 0 0 1-12 0V2z"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Piece de collection</div><div class="pcd-guru-desc">Un investissement dans l'excellence automobile</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Tres faible kilometrage</div><div class="pcd-guru-desc">1'755 km — usage soigne</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M2 9h20"/><path d="m10 3 2 6 2-6"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Edition limitee</div><div class="pcd-guru-desc">Production restreinte — modele recherche</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Plaisir a ciel ouvert</div><div class="pcd-guru-desc">Cabriolet — profitez de chaque rayon de soleil</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Neuf / non immatricule</div><div class="pcd-guru-desc">Vehicule sans premiere mise en circulation</div></div></div></div></div>
+
+            <div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">F550 Barchetta Pininfarina 1 of 448 world wide | État de neuf | Dossier complet</div></div>
+
             
+
             
+
             
-            <div class="pcd-teaser">F550 Barchetta Pininfarina 1 of 448 world wide | État de neuf | Dossier complet</div>
         </div>
     </div>
 
@@ -264,6 +323,24 @@
             document.getElementById('pcdLeasingAmount').textContent = 'des CHF ' + formatted + '.-- / mois';
         } else {
             document.getElementById('pcdLeasing').style.display = 'none';
+        }
+
+        // Parse teaser into bullet list
+        var teaser = document.querySelector('.pcd-teaser-raw');
+        if (teaser) {
+            var text = teaser.textContent.trim();
+            var items = text.split(/\s*[|I]\s*/);
+            items = items.filter(function(s) { return s.trim().length > 2; });
+            if (items.length > 1) {
+                var ul = document.createElement('ul');
+                ul.className = 'pcd-teaser-list';
+                items.forEach(function(item) {
+                    var li = document.createElement('li');
+                    li.textContent = item.trim();
+                    ul.appendChild(li);
+                });
+                teaser.replaceWith(ul);
+            }
         }
     })();
     </script>

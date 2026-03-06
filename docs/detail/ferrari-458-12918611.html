@@ -129,12 +129,36 @@
     /* Full-width sections below */
     .pcd-full-width { margin-top: 2.5rem; }
 
-    /* Teaser */
+    /* Teaser — Points forts */
     .pcd-teaser {
-        padding: 1.5rem; background: var(--color-surface);
-        border: 1px solid var(--color-border); border-radius: var(--radius-md);
-        font-size: 0.92rem; line-height: 1.7; color: var(--color-text-muted);
+        padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+        background: rgba(255,70,5,0.04);
+        border-left: 3px solid var(--color-primary);
+        border-radius: 0 var(--radius-md) var(--radius-md) 0;
         margin-top: 2rem;
+    }
+    .pcd-teaser-title {
+        font-size: 1rem; font-weight: 700; margin-bottom: 1rem;
+        padding-bottom: 0.6rem; border-bottom: 2px solid var(--color-primary);
+        display: inline-block;
+    }
+    .pcd-teaser-list {
+        list-style: none; padding: 0; margin: 0;
+    }
+    .pcd-teaser-list li {
+        position: relative; padding: 0.35rem 0 0.35rem 1.4rem;
+        font-size: 0.92rem; font-weight: 500; color: var(--color-text-primary);
+        line-height: 1.5;
+    }
+    .pcd-teaser-list li::before {
+        content: '';
+        position: absolute; left: 0; top: 0.7rem;
+        width: 6px; height: 6px; border-radius: 50%;
+        background: var(--color-primary);
+    }
+    .pcd-teaser-raw {
+        font-size: 0.92rem; font-weight: 500; line-height: 1.7;
+        color: var(--color-text-primary);
     }
 
     /* Description */
@@ -147,6 +171,36 @@
     .pcd-sh-table th { text-align: left; padding: 0.75rem 0; border-bottom: 2px solid var(--color-border); color: var(--color-text-muted); font-weight: 600; }
     .pcd-sh-table td { padding: 0.75rem 0; border-bottom: 1px solid var(--color-border); }
     .pcd-sh-date { white-space: nowrap; padding-right: 2rem; color: var(--color-text-muted); }
+
+    /* Sales Guru — Pourquoi cette voiture */
+    .pcd-guru { margin-top: 2rem; }
+    .pcd-guru-grid {
+        display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1rem; margin-top: 1rem;
+    }
+    .pcd-guru-card {
+        display: flex; align-items: flex-start; gap: 0.9rem;
+        padding: 1.1rem 1.2rem;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        transition: all 0.25s ease;
+    }
+    .pcd-guru-card:hover {
+        border-color: var(--color-primary);
+        box-shadow: 0 4px 20px rgba(255,70,5,0.1);
+        transform: translateY(-2px);
+    }
+    .pcd-guru-icon {
+        flex-shrink: 0;
+        width: 40px; height: 40px;
+        background: var(--color-primary-06);
+        border-radius: var(--radius-sm);
+        display: flex; align-items: center; justify-content: center;
+        color: var(--color-primary);
+    }
+    .pcd-guru-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.2rem; }
+    .pcd-guru-desc { font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.4; }
 
     /* YouTube videos */
     .pcd-videos { margin-top: 2rem; }
@@ -164,7 +218,7 @@
 </head>
 <body>
     <div class="pcd-container">
-        <a href="https://peregocars.com/cars-for-sale" class="pcd-back">
+        <a href="https://peregocars.github.io/inventory/grid.html" class="pcd-back">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
             Retour a l'inventaire
         </a>
@@ -172,18 +226,18 @@
         <div class="pcd-layout">
             <!-- Left — Gallery -->
             <div class="pcd-gallery">
-                <img class="pcd-gallery-main" src="../images/ferrari-458-12918611-01.jpg" alt="Ferrari 458">
+                <img class="pcd-gallery-main" src="https://peregocars.github.io/inventory/images/ferrari-458-12918611-01.jpg" alt="Ferrari 458">
                 <div class="pcd-thumbs">
-            <img class="pcd-thumb active" src="../images/ferrari-458-12918611-01.jpg" alt="Ferrari 458" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-458-12918611-02.jpg" alt="Ferrari 458" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-458-12918611-03.jpg" alt="Ferrari 458" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-458-12918611-04.jpg" alt="Ferrari 458" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-458-12918611-05.jpg" alt="Ferrari 458" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-458-12918611-06.jpg" alt="Ferrari 458" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-458-12918611-07.jpg" alt="Ferrari 458" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-458-12918611-08.jpg" alt="Ferrari 458" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-458-12918611-09.jpg" alt="Ferrari 458" loading="lazy">
-            <img class="pcd-thumb" src="../images/ferrari-458-12918611-10.jpg" alt="Ferrari 458" loading="lazy">
+            <img class="pcd-thumb active" src="https://peregocars.github.io/inventory/images/ferrari-458-12918611-01.jpg" alt="Ferrari 458" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-458-12918611-02.jpg" alt="Ferrari 458" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-458-12918611-03.jpg" alt="Ferrari 458" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-458-12918611-04.jpg" alt="Ferrari 458" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-458-12918611-05.jpg" alt="Ferrari 458" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-458-12918611-06.jpg" alt="Ferrari 458" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-458-12918611-07.jpg" alt="Ferrari 458" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-458-12918611-08.jpg" alt="Ferrari 458" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-458-12918611-09.jpg" alt="Ferrari 458" loading="lazy">
+            <img class="pcd-thumb" src="https://peregocars.github.io/inventory/images/ferrari-458-12918611-10.jpg" alt="Ferrari 458" loading="lazy">
 
                 </div>
             </div>
@@ -237,38 +291,15 @@
 
         <!-- Full-width sections -->
         <div class="pcd-full-width">
-            <div class="pcd-description"><h2 class="pcd-specs-title">Description</h2><div class="pcd-desc-text">Ferrari 458 Italia – Origine Suisse
+            <div class="pcd-guru"><h2 class="pcd-specs-title">Pourquoi cette voiture</h2><div class="pcd-guru-grid"><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Prix tres competitif</div><div class="pcd-guru-desc">En dessous de la moyenne de notre inventaire</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Haute performance</div><div class="pcd-guru-desc">566 ch — sensations garanties</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Plaisir a ciel ouvert</div><div class="pcd-guru-desc">Cabriolet — profitez de chaque rayon de soleil</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Vehicule suisse</div><div class="pcd-guru-desc">Entretien et historique suisse</div></div></div></div></div>
 
-Ferrari 458 livrée neuve chez Ferrari Lausanne (Garage Zenith) le 17 mars 2014.
+            <div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">Voiture livrée neuve en Suisse I Tous les services fait chez Ferrari I très belle I Swiss delivered car I All services made by Ferrari I Very beautiful car</div></div>
 
-La voiture bénéficie d’un carnet de service complet, avec tous les entretiens effectués exclusivement chez Ferrari Lausanne depuis sa mise en circulation.
-
-Historique des services :
-
-2014 – 15’000 km
-
-2015 – 37’330 km
-
-2016 – 53’320 km
-
-2017 – 71’721 km
-
-2018 – 89’113 km
-
-2019 – 93’330 km
-
-2020 – 97’927 km
-
-2021 – 102’250 km
-
-La voiture est dans un état remarquable.
-
-Les boutons collant ont déjà été traité par l’ancien propriétaire, un point important sur ce modèle.
-
-Le véhicule sera livré avec un service du jour effectué chez Ferrari.</div></div>
             
+
             
-            <div class="pcd-teaser">Voiture livrée neuve en Suisse I Tous les services fait chez Ferrari I très belle I Swiss delivered car I All services made by Ferrari I Very beautiful car</div>
+
+            
         </div>
     </div>
 
@@ -293,6 +324,24 @@ Le véhicule sera livré avec un service du jour effectué chez Ferrari.</div></
             document.getElementById('pcdLeasingAmount').textContent = 'des CHF ' + formatted + '.-- / mois';
         } else {
             document.getElementById('pcdLeasing').style.display = 'none';
+        }
+
+        // Parse teaser into bullet list
+        var teaser = document.querySelector('.pcd-teaser-raw');
+        if (teaser) {
+            var text = teaser.textContent.trim();
+            var items = text.split(/\s*[|I]\s*/);
+            items = items.filter(function(s) { return s.trim().length > 2; });
+            if (items.length > 1) {
+                var ul = document.createElement('ul');
+                ul.className = 'pcd-teaser-list';
+                items.forEach(function(item) {
+                    var li = document.createElement('li');
+                    li.textContent = item.trim();
+                    ul.appendChild(li);
+                });
+                teaser.replaceWith(ul);
+            }
         }
     })();
     </script>
