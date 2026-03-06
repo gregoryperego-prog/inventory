@@ -1,0 +1,45 @@
+name: Update Perego Cars Inventory
+
+on:
+  schedule:
+    # Every Monday at 08:00 UTC (09:00 Swiss time)
+    - cron: '0 8 * * 1'
+  workflow_dispatch:  # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run inventory scraper
+        working-directory: tool
+        run: python scrape.py --force
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git add -A docs/
+          if git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "Perego Cars Bot"
+          git config user.email "bot@peregocars.com"
+          git add -A docs/
+          git commit -m "Update inventory $(date +%Y-%m-%d)"
+          git push
