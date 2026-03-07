@@ -42,5 +42,6 @@ jobs:
           git config user.name "Perego Cars Bot"
           git config user.email "bot@peregocars.com"
           git add -A docs/
+          git add custom.json || true
           git commit -m "Update inventory $(date +%Y-%m-%d)"
           git push
