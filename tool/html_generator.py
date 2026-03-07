@@ -163,6 +163,56 @@ def _extract_youtube_id(url):
     return match.group(1) if match else None
 
 
+# ── Cross-Selling ──
+
+def _pick_related_cars(current, all_listings, max_count=4):
+    """Pick related cars: same make first, then closest price. Never the current car."""
+    candidates = [l for l in all_listings if l["id"] != current["id"]]
+    if not candidates:
+        return []
+
+    make = current["make"].lower()
+    price = current.get("price", 0) or 0
+
+    # Score: same make = 1000 bonus, then closeness in price
+    def score(l):
+        same_make = 1000 if l["make"].lower() == make else 0
+        price_diff = abs((l.get("price", 0) or 0) - price) if price else 0
+        return same_make - price_diff / 1000  # Higher = better match
+
+    candidates.sort(key=score, reverse=True)
+    return candidates[:max_count]
+
+
+# ── Teaser Cleanup ──
+
+# Common English words/phrases that signal an English duplicate
+_EN_MARKERS = re.compile(
+    r'\b(swiss delivered|delivered|all services|very beautiful|new condition|'
+    r'owner|worldwide|world wide|matching number|inside|outside|front and rear|'
+    r'parking assistance|camera 360|navigation|bluetooth|privacy windows|'
+    r'brake caliper|bang & olufsen|without|made by)\b',
+    re.IGNORECASE,
+)
+
+
+def _filter_teaser_items(teaser_text):
+    """Split teaser on | or I delimiters, remove English duplicates, return clean FR text."""
+    items = re.split(r'\s*[|I]\s*', teaser_text)
+    items = [s.strip() for s in items if len(s.strip()) > 2]
+
+    fr_items = []
+    for item in items:
+        # Skip if item is predominantly English
+        if _EN_MARKERS.search(item):
+            continue
+        fr_items.append(item)
+
+    if not fr_items:
+        return teaser_text  # Fallback: return original if everything got filtered
+    return " | ".join(fr_items)
+
+
 # ── Sales Guru — "Pourquoi cette voiture" ──
 
 def _compute_selling_points(listing, all_listings):
@@ -233,12 +283,6 @@ def _compute_selling_points(listing, all_listings):
     # 9. Full options / PPF
     if "full" in teaser and "ppf" in teaser.lower():
         points.append(("shield", "Protection PPF", "Film de protection carrosserie integrale"))
-
-    # 10. Value per HP
-    if price and hp and hp > 0:
-        chf_per_hp = price / hp
-        if chf_per_hp < 200:
-            points.append(("chart", "Rapport prix/puissance", f"CHF {int(chf_per_hp)}.-- par cheval"))
 
     return points[:5]  # Max 5 selling points
 
@@ -319,10 +363,11 @@ def generate_detail_pages(listings, custom_data=None):
             f"Est-il toujours disponible ?"
         )
 
-        # Teaser block — with title and raw text for JS parsing
+        # Teaser block — with title and raw text for JS parsing (FR only)
         teaser_block = ""
         if listing.get("teaser"):
-            teaser_block = f'<div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">{listing["teaser"]}</div></div>'
+            clean_teaser = _filter_teaser_items(listing["teaser"])
+            teaser_block = f'<div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">{clean_teaser}</div></div>'
 
         # Sales Guru — "Pourquoi cette voiture"
         selling_points = _compute_selling_points(listing, listings)
@@ -347,6 +392,27 @@ def generate_detail_pages(listings, custom_data=None):
                 cards += f'<div class="pcd-guru-card"><div class="pcd-guru-icon">{icon_svg}</div><div class="pcd-guru-text"><div class="pcd-guru-title">{title}</div><div class="pcd-guru-desc">{desc}</div></div></div>'
             guru_html = f'<div class="pcd-guru"><h2 class="pcd-specs-title">Pourquoi cette voiture</h2><div class="pcd-guru-grid">{cards}</div></div>'
 
+        # Cross-sell — "Decouvrez aussi"
+        related = _pick_related_cars(listing, listings)
+        crosssell_html = ""
+        if related:
+            cards_cs = ""
+            for rel in related:
+                rel_slug = make_slug(rel["make"], rel["model"], rel["id"])
+                rel_imgs = rel.get("local_images", [])
+                rel_thumb = f"{IMAGE_BASE_URL}/{rel_imgs[0]}" if rel_imgs else ""
+                rel_name = rel.get("full_name", f"{rel['make']} {rel['model']}")
+                cards_cs += (
+                    f'<a href="{GITHUB_PAGES_URL}/detail/{rel_slug}.html" class="pcd-cs-card">'
+                    f'<img class="pcd-cs-img" src="{rel_thumb}" alt="{rel_name}" loading="lazy">'
+                    f'<div class="pcd-cs-info">'
+                    f'<div class="pcd-cs-brand">{rel["make"].upper()}</div>'
+                    f'<div class="pcd-cs-name">{rel["model"]}</div>'
+                    f'<div class="pcd-cs-price">{format_chf(rel.get("price"))}</div>'
+                    f'</div></a>'
+                )
+            crosssell_html = f'<div class="pcd-crosssell"><h2 class="pcd-specs-title">Decouvrez aussi</h2><div class="pcd-cs-grid">{cards_cs}</div></div>'
+
         page = _render(detail_tpl, {
             "make": listing["make"],
             "make_upper": listing["make"].upper(),
@@ -368,6 +434,7 @@ def generate_detail_pages(listings, custom_data=None):
             "grid_url": f"{SITE_URL}/cars-for-sale",
             "teaser_block": teaser_block,
             "sales_guru": guru_html,
+            "crosssell": crosssell_html,
         })
 
         pages[slug] = page
