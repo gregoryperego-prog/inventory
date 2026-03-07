@@ -207,12 +207,43 @@
     .pcd-video-wrap { position: relative; padding-bottom: 56.25%; margin-top: 1rem; border-radius: var(--radius-md); overflow: hidden; }
     .pcd-video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
+    /* Cross-sell — Decouvrez aussi */
+    .pcd-crosssell { margin-top: 3rem; }
+    .pcd-cs-grid {
+        display: grid; grid-template-columns: repeat(4, 1fr);
+        gap: 1rem; margin-top: 1rem;
+    }
+    .pcd-cs-card {
+        display: block; text-decoration: none; color: inherit;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        transition: all 0.25s ease;
+    }
+    .pcd-cs-card:hover {
+        border-color: var(--color-primary);
+        box-shadow: 0 4px 20px rgba(255,70,5,0.1);
+        transform: translateY(-3px);
+    }
+    .pcd-cs-img {
+        width: 100%; aspect-ratio: 16/10; object-fit: cover;
+    }
+    .pcd-cs-info { padding: 0.8rem 1rem; }
+    .pcd-cs-brand {
+        font-size: 0.65rem; letter-spacing: 1.5px; color: var(--color-primary);
+        font-weight: 600; margin-bottom: 0.15rem;
+    }
+    .pcd-cs-name { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.3rem; line-height: 1.2; }
+    .pcd-cs-price { font-size: 0.85rem; font-weight: 700; color: var(--color-primary); }
+
     @media (max-width: 768px) {
         .pcd-layout { grid-template-columns: 1fr; gap: 1.5rem; }
         .pcd-info { position: static; }
         .pcd-model { font-size: 1.4rem; }
         .pcd-price { font-size: 1.3rem; }
         .pcd-thumbs { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
+        .pcd-cs-grid { grid-template-columns: repeat(2, 1fr); }
     }
     </style>
 </head>
@@ -299,7 +330,9 @@
 
             
 
-            
+            <div class="pcd-videos"><h2 class="pcd-specs-title">Videos</h2><div class="pcd-video-wrap"><iframe src="https://www.youtube.com/embed/VsI1WoXOrq8" allowfullscreen loading="lazy"></iframe></div></div>
+
+            <div class="pcd-crosssell"><h2 class="pcd-specs-title">Decouvrez aussi</h2><div class="pcd-cs-grid"><a href="https://peregocars.github.io/inventory/detail/alfa-romeo-giulietta-12764100.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/alfa-romeo-giulietta-12764100-01.jpg" alt="Sprint Zagato Coda Tronca" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">ALFA ROMEO</div><div class="pcd-cs-name">GIULIETTA</div><div class="pcd-cs-price">CHF 350'000.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/aston-martin-v8-vantage-20253789.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/aston-martin-v8-vantage-20253789-01.jpg" alt="V8 Vantage 4.7 N420 Sportshift" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">ASTON MARTIN</div><div class="pcd-cs-name">V8 Vantage</div><div class="pcd-cs-price">CHF 69'900.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/audi-r8-11085770.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/audi-r8-11085770-01.jpg" alt="R8 Spyder 4.2" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">AUDI</div><div class="pcd-cs-name">R8</div><div class="pcd-cs-price">CHF 74'900.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/porsche-macan-20254924.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/porsche-macan-20254924-01.jpg" alt="Macan GTS PDK" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">PORSCHE</div><div class="pcd-cs-name">MACAN</div><div class="pcd-cs-price">CHF 61'900.--</div></div></a></div></div>
         </div>
     </div>
 

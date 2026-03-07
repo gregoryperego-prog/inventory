@@ -207,12 +207,43 @@
     .pcd-video-wrap { position: relative; padding-bottom: 56.25%; margin-top: 1rem; border-radius: var(--radius-md); overflow: hidden; }
     .pcd-video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
+    /* Cross-sell — Decouvrez aussi */
+    .pcd-crosssell { margin-top: 3rem; }
+    .pcd-cs-grid {
+        display: grid; grid-template-columns: repeat(4, 1fr);
+        gap: 1rem; margin-top: 1rem;
+    }
+    .pcd-cs-card {
+        display: block; text-decoration: none; color: inherit;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        transition: all 0.25s ease;
+    }
+    .pcd-cs-card:hover {
+        border-color: var(--color-primary);
+        box-shadow: 0 4px 20px rgba(255,70,5,0.1);
+        transform: translateY(-3px);
+    }
+    .pcd-cs-img {
+        width: 100%; aspect-ratio: 16/10; object-fit: cover;
+    }
+    .pcd-cs-info { padding: 0.8rem 1rem; }
+    .pcd-cs-brand {
+        font-size: 0.65rem; letter-spacing: 1.5px; color: var(--color-primary);
+        font-weight: 600; margin-bottom: 0.15rem;
+    }
+    .pcd-cs-name { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.3rem; line-height: 1.2; }
+    .pcd-cs-price { font-size: 0.85rem; font-weight: 700; color: var(--color-primary); }
+
     @media (max-width: 768px) {
         .pcd-layout { grid-template-columns: 1fr; gap: 1.5rem; }
         .pcd-info { position: static; }
         .pcd-model { font-size: 1.4rem; }
         .pcd-price { font-size: 1.3rem; }
         .pcd-thumbs { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
+        .pcd-cs-grid { grid-template-columns: repeat(2, 1fr); }
     }
     </style>
 </head>
@@ -293,13 +324,15 @@
         <div class="pcd-full-width">
             <div class="pcd-guru"><h2 class="pcd-specs-title">Pourquoi cette voiture</h2><div class="pcd-guru-grid"><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Prix tres competitif</div><div class="pcd-guru-desc">En dessous de la moyenne de notre inventaire</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Usage modere</div><div class="pcd-guru-desc">Moyenne de 4'686 km/an</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Haute performance</div><div class="pcd-guru-desc">580 ch — sensations garanties</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Plaisir a ciel ouvert</div><div class="pcd-guru-desc">Cabriolet — profitez de chaque rayon de soleil</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Vehicule suisse</div><div class="pcd-guru-desc">Entretien et historique suisse</div></div></div></div></div>
 
-            <div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">Véhicule Suisse | ACC | PDCC | Prise d'aire carbon | Intérieur carbon | Burmester sound system | Echappement Techart</div></div>
+            <div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">Véhicule Suisse | ACC | PDCC | Prise d'aire carbon | ntérieur carbon | Burmester sound system | Echappement Techart</div></div>
 
             
 
             
 
             
+
+            <div class="pcd-crosssell"><h2 class="pcd-specs-title">Decouvrez aussi</h2><div class="pcd-cs-grid"><a href="https://peregocars.github.io/inventory/detail/porsche-911-20029708.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/porsche-911-20029708-01.png" alt="2.4 S" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">PORSCHE</div><div class="pcd-cs-name">911</div><div class="pcd-cs-price">CHF 159'900.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/porsche-911-11461099.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/porsche-911-11461099-01.jpg" alt="911 GT3 Touring" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">PORSCHE</div><div class="pcd-cs-name">911</div><div class="pcd-cs-price">CHF 174'950.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/porsche-911-20180834.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/porsche-911-20180834-01.jpg" alt="911 Carrera 4 GTS PDK" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">PORSCHE</div><div class="pcd-cs-name">911</div><div class="pcd-cs-price">CHF 118'900.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/porsche-911-12612747.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/porsche-911-12612747-01.jpg" alt="911 Carrera 4S" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">PORSCHE</div><div class="pcd-cs-name">911</div><div class="pcd-cs-price">CHF 109'900.--</div></div></a></div></div>
         </div>
     </div>
 

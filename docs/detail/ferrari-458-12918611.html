@@ -207,12 +207,43 @@
     .pcd-video-wrap { position: relative; padding-bottom: 56.25%; margin-top: 1rem; border-radius: var(--radius-md); overflow: hidden; }
     .pcd-video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
+    /* Cross-sell — Decouvrez aussi */
+    .pcd-crosssell { margin-top: 3rem; }
+    .pcd-cs-grid {
+        display: grid; grid-template-columns: repeat(4, 1fr);
+        gap: 1rem; margin-top: 1rem;
+    }
+    .pcd-cs-card {
+        display: block; text-decoration: none; color: inherit;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        transition: all 0.25s ease;
+    }
+    .pcd-cs-card:hover {
+        border-color: var(--color-primary);
+        box-shadow: 0 4px 20px rgba(255,70,5,0.1);
+        transform: translateY(-3px);
+    }
+    .pcd-cs-img {
+        width: 100%; aspect-ratio: 16/10; object-fit: cover;
+    }
+    .pcd-cs-info { padding: 0.8rem 1rem; }
+    .pcd-cs-brand {
+        font-size: 0.65rem; letter-spacing: 1.5px; color: var(--color-primary);
+        font-weight: 600; margin-bottom: 0.15rem;
+    }
+    .pcd-cs-name { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.3rem; line-height: 1.2; }
+    .pcd-cs-price { font-size: 0.85rem; font-weight: 700; color: var(--color-primary); }
+
     @media (max-width: 768px) {
         .pcd-layout { grid-template-columns: 1fr; gap: 1.5rem; }
         .pcd-info { position: static; }
         .pcd-model { font-size: 1.4rem; }
         .pcd-price { font-size: 1.3rem; }
         .pcd-thumbs { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
+        .pcd-cs-grid { grid-template-columns: repeat(2, 1fr); }
     }
     </style>
 </head>
@@ -293,13 +324,43 @@
         <div class="pcd-full-width">
             <div class="pcd-guru"><h2 class="pcd-specs-title">Pourquoi cette voiture</h2><div class="pcd-guru-grid"><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Prix tres competitif</div><div class="pcd-guru-desc">En dessous de la moyenne de notre inventaire</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Haute performance</div><div class="pcd-guru-desc">566 ch — sensations garanties</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Plaisir a ciel ouvert</div><div class="pcd-guru-desc">Cabriolet — profitez de chaque rayon de soleil</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Vehicule suisse</div><div class="pcd-guru-desc">Entretien et historique suisse</div></div></div></div></div>
 
-            <div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">Voiture livrée neuve en Suisse I Tous les services fait chez Ferrari I très belle I Swiss delivered car I All services made by Ferrari I Very beautiful car</div></div>
+            <div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">Voiture livrée neuve en Suisse | Tous les services fait chez Ferrari | très belle</div></div>
+
+            <div class="pcd-description"><h2 class="pcd-specs-title">Description</h2><div class="pcd-desc-text">Ferrari 458 Italia – Origine Suisse
+
+Ferrari 458 livrée neuve chez Ferrari Lausanne (Garage Zenith) le 17 mars 2014.
+
+La voiture bénéficie d’un carnet de service complet, avec tous les entretiens effectués exclusivement chez Ferrari Lausanne depuis sa mise en circulation.
+
+Historique des services :
+
+2014 – 15’000 km
+
+2015 – 37’330 km
+
+2016 – 53’320 km
+
+2017 – 71’721 km
+
+2018 – 89’113 km
+
+2019 – 93’330 km
+
+2020 – 97’927 km
+
+2021 – 102’250 km
+
+La voiture est dans un état remarquable.
+
+Les boutons collant ont déjà été traité par l’ancien propriétaire, un point important sur ce modèle.
+
+Le véhicule sera livré avec un service du jour effectué chez Ferrari.</div></div>
 
             
 
             
 
-            
+            <div class="pcd-crosssell"><h2 class="pcd-specs-title">Decouvrez aussi</h2><div class="pcd-cs-grid"><a href="https://peregocars.github.io/inventory/detail/ferrari-599-12015323.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/ferrari-599-12015323-01.jpg" alt="599 GTB HGTE" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">FERRARI</div><div class="pcd-cs-name">599</div><div class="pcd-cs-price">CHF 144'900.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/ferrari-ff-12523893.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/ferrari-ff-12523893-01.jpg" alt="FF" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">FERRARI</div><div class="pcd-cs-name">FF</div><div class="pcd-cs-price">CHF 168'500.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/ferrari-portofino-12732545.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/ferrari-portofino-12732545-01.jpg" alt="Portofino 3.9 V8 T" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">FERRARI</div><div class="pcd-cs-name">PORTOFINO</div><div class="pcd-cs-price">CHF 179'900.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/ferrari-f430-20247208.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/ferrari-f430-20247208-01.jpg" alt="F430" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">FERRARI</div><div class="pcd-cs-name">F430</div><div class="pcd-cs-price">CHF 94'900.--</div></div></a></div></div>
         </div>
     </div>
 

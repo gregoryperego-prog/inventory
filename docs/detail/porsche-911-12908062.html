@@ -207,12 +207,43 @@
     .pcd-video-wrap { position: relative; padding-bottom: 56.25%; margin-top: 1rem; border-radius: var(--radius-md); overflow: hidden; }
     .pcd-video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
+    /* Cross-sell — Decouvrez aussi */
+    .pcd-crosssell { margin-top: 3rem; }
+    .pcd-cs-grid {
+        display: grid; grid-template-columns: repeat(4, 1fr);
+        gap: 1rem; margin-top: 1rem;
+    }
+    .pcd-cs-card {
+        display: block; text-decoration: none; color: inherit;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        transition: all 0.25s ease;
+    }
+    .pcd-cs-card:hover {
+        border-color: var(--color-primary);
+        box-shadow: 0 4px 20px rgba(255,70,5,0.1);
+        transform: translateY(-3px);
+    }
+    .pcd-cs-img {
+        width: 100%; aspect-ratio: 16/10; object-fit: cover;
+    }
+    .pcd-cs-info { padding: 0.8rem 1rem; }
+    .pcd-cs-brand {
+        font-size: 0.65rem; letter-spacing: 1.5px; color: var(--color-primary);
+        font-weight: 600; margin-bottom: 0.15rem;
+    }
+    .pcd-cs-name { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.3rem; line-height: 1.2; }
+    .pcd-cs-price { font-size: 0.85rem; font-weight: 700; color: var(--color-primary); }
+
     @media (max-width: 768px) {
         .pcd-layout { grid-template-columns: 1fr; gap: 1.5rem; }
         .pcd-info { position: static; }
         .pcd-model { font-size: 1.4rem; }
         .pcd-price { font-size: 1.3rem; }
         .pcd-thumbs { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
+        .pcd-cs-grid { grid-template-columns: repeat(2, 1fr); }
     }
     </style>
 </head>
@@ -293,13 +324,15 @@
         <div class="pcd-full-width">
             <div class="pcd-guru"><h2 class="pcd-specs-title">Pourquoi cette voiture</h2><div class="pcd-guru-grid"><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Usage modere</div><div class="pcd-guru-desc">Moyenne de 2'585 km/an</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Haute performance</div><div class="pcd-guru-desc">521 ch — sensations garanties</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Vehicule suisse</div><div class="pcd-guru-desc">Entretien et historique suisse</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Neuf / non immatricule</div><div class="pcd-guru-desc">Vehicule sans premiere mise en circulation</div></div></div></div></div>
 
-            <div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">Voiture Suisse I Sans OPF I Porsche Approved Warranty until 7/2027 I Etat de neuf I Services suivis chez Porsche I Weissach Paket I Lift System</div></div>
+            <div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">Voiture Suisse | Sans OPF | Porsche Approved Warranty until 7/2027 | Etat de neuf | Services suivis chez Porsche | Weissach Paket | Lift System</div></div>
 
             
 
             
 
-            
+            <div class="pcd-videos"><h2 class="pcd-specs-title">Videos</h2><div class="pcd-video-wrap"><iframe src="https://www.youtube.com/embed/x4THP9YVTPk" allowfullscreen loading="lazy"></iframe></div></div>
+
+            <div class="pcd-crosssell"><h2 class="pcd-specs-title">Decouvrez aussi</h2><div class="pcd-cs-grid"><a href="https://peregocars.github.io/inventory/detail/porsche-356-11441628.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/porsche-356-11441628-01.jpg" alt="C" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">PORSCHE</div><div class="pcd-cs-name">356</div><div class="pcd-cs-price">CHF 199'900.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/porsche-911-9854927.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/porsche-911-9854927-01.jpg" alt="911 GT3 RS" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">PORSCHE</div><div class="pcd-cs-name">911</div><div class="pcd-cs-price">CHF 199'900.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/porsche-911-11461099.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/porsche-911-11461099-01.jpg" alt="911 GT3 Touring" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">PORSCHE</div><div class="pcd-cs-name">911</div><div class="pcd-cs-price">CHF 174'950.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/porsche-911-20029708.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/porsche-911-20029708-01.png" alt="2.4 S" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">PORSCHE</div><div class="pcd-cs-name">911</div><div class="pcd-cs-price">CHF 159'900.--</div></div></a></div></div>
         </div>
     </div>
 
