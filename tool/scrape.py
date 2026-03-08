@@ -17,10 +17,10 @@ from datetime import datetime
 # Ensure imports work from any working directory
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from config import OUTPUT_DIR, IMAGES_DIR, DETAIL_DIR, CACHE_FILE, LOG_DIR, CUSTOM_JSON, CUSTOM_IMAGES_DIR
+from config import OUTPUT_DIR, IMAGES_DIR, DETAIL_DIR, CACHE_FILE, LOG_DIR, CUSTOM_JSON, CUSTOM_IMAGES_DIR, SOLD_JSON
 from fetcher import fetch_listings
 from image_handler import download_images, cleanup_old_images
-from html_generator import generate_grid_html, generate_detail_pages, format_chf
+from html_generator import generate_grid_html, generate_detail_pages, generate_sold_detail_pages, format_chf
 
 
 def setup_logging():
@@ -69,6 +69,31 @@ def detect_changes(old_listings, new_listings):
             })
 
     return added, removed, price_changes
+
+
+def load_sold():
+    """Load sold cars archive."""
+    if os.path.exists(SOLD_JSON):
+        with open(SOLD_JSON, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+
+def save_sold(sold):
+    """Save sold cars archive."""
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    with open(SOLD_JSON, "w", encoding="utf-8") as f:
+        json.dump(sold, f, ensure_ascii=False, indent=2, default=str)
+
+
+def archive_removed(removed, sold):
+    """Move removed listings to sold archive with date stamp."""
+    sold_ids = {s["id"] for s in sold}
+    for car in removed:
+        if car["id"] not in sold_ids:
+            car["sold_date"] = datetime.now().strftime("%Y-%m-%d")
+            sold.append(car)
+    return sold
 
 
 def print_summary(listings, added, removed, price_changes):
@@ -142,14 +167,24 @@ def main():
 
     os.makedirs(CUSTOM_IMAGES_DIR, exist_ok=True)
 
-    # 5. Generate HTML
+    # 5. Archive sold cars
+    sold = load_sold()
+    if removed:
+        sold = archive_removed(removed, sold)
+        save_sold(sold)
+        print(f"Archived {len(removed)} sold cars (total sold: {len(sold)})")
+
+    # 6. Generate HTML
     print("Generating HTML pages...")
     os.makedirs(DETAIL_DIR, exist_ok=True)
 
     grid_html = generate_grid_html(listings)
     detail_pages = generate_detail_pages(listings, custom_data)
 
-    # 5. Write output
+    # Generate sold detail pages (VENDU badge, no buy CTAs, cross-sell to active stock)
+    sold_pages = generate_sold_detail_pages(sold, listings, custom_data)
+
+    # 7. Write output
     grid_path = os.path.join(OUTPUT_DIR, "grid.html")
     with open(grid_path, "w", encoding="utf-8") as f:
         f.write(grid_html)
@@ -159,18 +194,24 @@ def main():
         with open(detail_path, "w", encoding="utf-8") as f:
             f.write(html)
 
-    # 6. Save cache
+    for slug, html in sold_pages.items():
+        detail_path = os.path.join(DETAIL_DIR, f"{slug}.html")
+        with open(detail_path, "w", encoding="utf-8") as f:
+            f.write(html)
+
+    # 8. Save cache
     save_cache(listings)
 
-    # 7. Cleanup old images
+    # 9. Cleanup old images (don't clean sold car images)
     cleanup_old_images(listings)
 
-    # 8. Done
+    # 10. Done
+    sold_count = len(sold_pages)
     print(f"\nOutput ready in: {OUTPUT_DIR}")
     print(f"  grid.html          — paste into HighLevel cars-for-sale page")
-    print(f"  detail/*.html      — {len(detail_pages)} individual car pages")
+    print(f"  detail/*.html      — {len(detail_pages)} active + {sold_count} sold pages")
     print(f"  images/            — all car photos")
-    logger.info(f"Done: 1 grid + {len(detail_pages)} detail pages")
+    logger.info(f"Done: 1 grid + {len(detail_pages)} detail + {sold_count} sold pages")
 
 
 if __name__ == "__main__":

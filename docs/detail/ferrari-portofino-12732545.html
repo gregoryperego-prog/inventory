@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferrari PORTOFINO | Perego Cars</title>
-    <meta name="description" content="Ferrari PORTOFINO 2018 — 30'560 km — CHF 179'900.--. En vente chez Perego Cars, Etoy, Suisse.">
+    <title>Portofino 3.9 V8 T | Perego Cars</title>
+    <meta name="description" content="Portofino 3.9 V8 T 2018 — 30'560 km — CHF 179'900.--. En vente chez Perego Cars, Etoy, Suisse.">
     <style>
     :root {
         --color-primary: #FF4605;
@@ -83,13 +83,13 @@
     .pcd-spec-label { color: var(--color-text-muted); font-size: 0.85rem; }
     .pcd-spec-value { font-weight: 600; font-size: 0.85rem; }
 
-    /* Leasing */
+    /* Leasing mini calculator */
     .pcd-leasing {
         background: var(--color-primary-06); border: 1px solid rgba(255,70,5,0.12);
         border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.5rem;
     }
     .pcd-leasing-header {
-        display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem;
+        display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem;
     }
     .pcd-leasing-icon {
         width: 32px; height: 32px; background: var(--color-primary-10);
@@ -97,8 +97,41 @@
         justify-content: center; color: var(--color-primary); flex-shrink: 0;
     }
     .pcd-leasing-title { font-weight: 700; font-size: 0.92rem; }
-    .pcd-leasing-amount { font-size: 1.4rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.3rem; }
+    .pcd-leasing-amount { font-size: 1.4rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.15rem; }
     .pcd-leasing-note { font-size: 0.72rem; color: var(--color-text-light); line-height: 1.4; }
+    .pcd-leasing-field { margin-bottom: 0.6rem; }
+    .pcd-leasing-label {
+        display: flex; justify-content: space-between; align-items: center;
+        font-size: 0.72rem; color: var(--color-text-muted); margin-bottom: 0.25rem;
+    }
+    .pcd-leasing-val { font-weight: 700; color: var(--color-primary); font-size: 0.75rem; }
+    .pcd-leasing-range {
+        width: 100%; -webkit-appearance: none; appearance: none;
+        height: 3px; background: var(--color-border); border-radius: 2px; outline: none;
+    }
+    .pcd-leasing-range::-webkit-slider-thumb {
+        -webkit-appearance: none; width: 16px; height: 16px;
+        background: var(--color-primary); border-radius: 50%; cursor: pointer;
+        box-shadow: 0 2px 6px rgba(255,70,5,0.3);
+    }
+    .pcd-leasing-range::-moz-range-thumb {
+        width: 16px; height: 16px; background: var(--color-primary);
+        border: none; border-radius: 50%; cursor: pointer;
+    }
+    .pcd-leasing-details {
+        margin-top: 0.6rem; padding-top: 0.6rem;
+        border-top: 1px solid rgba(255,70,5,0.1);
+    }
+    .pcd-leasing-row {
+        display: flex; justify-content: space-between;
+        font-size: 0.75rem; padding: 0.15rem 0; color: var(--color-text-muted);
+    }
+    .pcd-leasing-row span:last-child { font-weight: 600; color: var(--color-text-primary); }
+    .pcd-leasing-link {
+        display: block; text-align: center; margin-top: 0.6rem;
+        font-size: 0.72rem; color: var(--color-primary); font-weight: 600;
+    }
+    .pcd-leasing-link:hover { text-decoration: underline; }
 
     /* WhatsApp CTA */
     .pcd-cta-wa {
@@ -245,6 +278,9 @@
         .pcd-thumbs { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
         .pcd-cs-grid { grid-template-columns: repeat(2, 1fr); }
     }
+    @media (max-width: 480px) {
+        .pcd-cs-grid { grid-template-columns: 1fr; }
+    }
     </style>
 </head>
 <body>
@@ -291,16 +327,36 @@
 
                 </div>
 
-                <!-- Leasing -->
+                <!-- Leasing mini calculator -->
                 <div class="pcd-leasing" id="pcdLeasing">
                     <div class="pcd-leasing-header">
                         <div class="pcd-leasing-icon">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
                         </div>
-                        <div class="pcd-leasing-title">Leasing disponible</div>
+                        <div class="pcd-leasing-title">Simuler un leasing</div>
                     </div>
                     <div class="pcd-leasing-amount" id="pcdLeasingAmount">—</div>
-                    <div class="pcd-leasing-note">Estimation indicative sur 48 mois. Taux et conditions a definir selon votre profil.</div>
+                    <div class="pcd-leasing-note" style="margin-bottom:0.8rem;">par mois · estimation indicative</div>
+
+                    <div class="pcd-leasing-field">
+                        <div class="pcd-leasing-label"><span>Acompte</span><span class="pcd-leasing-val" id="lblDown">CHF 0</span></div>
+                        <input type="range" class="pcd-leasing-range" id="slDown" min="0" max="50" step="5" value="0">
+                    </div>
+                    <div class="pcd-leasing-field">
+                        <div class="pcd-leasing-label"><span>Duree</span><span class="pcd-leasing-val" id="lblDur">48 mois</span></div>
+                        <input type="range" class="pcd-leasing-range" id="slDur" min="12" max="72" step="12" value="48">
+                    </div>
+                    <div class="pcd-leasing-field">
+                        <div class="pcd-leasing-label"><span>Valeur residuelle</span><span class="pcd-leasing-val" id="lblRes">30%</span></div>
+                        <input type="range" class="pcd-leasing-range" id="slRes" min="0" max="30" step="5" value="30">
+                    </div>
+
+                    <div class="pcd-leasing-details">
+                        <div class="pcd-leasing-row"><span>Monte finance</span><span id="detFinanced">—</span></div>
+                        <div class="pcd-leasing-row"><span>Taux indicatif</span><span>5.9%</span></div>
+                        <div class="pcd-leasing-row"><span>Cout total</span><span id="detTotal">—</span></div>
+                    </div>
+                    <a href="https://www.peregocars.com/leasing-calculator" class="pcd-leasing-link">Calculateur complet &rarr;</a>
                 </div>
 
                 <!-- WhatsApp CTA -->
@@ -324,7 +380,7 @@
         <div class="pcd-full-width">
             <div class="pcd-guru"><h2 class="pcd-specs-title">Pourquoi cette voiture</h2><div class="pcd-guru-grid"><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Usage modere</div><div class="pcd-guru-desc">Moyenne de 3'820 km/an</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Haute performance</div><div class="pcd-guru-desc">600 ch — sensations garanties</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Plaisir a ciel ouvert</div><div class="pcd-guru-desc">Cabriolet — profitez de chaque rayon de soleil</div></div></div><div class="pcd-guru-card"><div class="pcd-guru-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="pcd-guru-text"><div class="pcd-guru-title">Vehicule suisse</div><div class="pcd-guru-desc">Entretien et historique suisse</div></div></div></div></div>
 
-            <div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">Véhicule Suisse | Apple Carplay | Volant carbone | ntérieur carbone | Scuderia Ferrari Shields | Caméra de recule | Magneride</div></div>
+            <div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">Véhicule Suisse | Apple Carplay | Volant carbone | Intérieur carbone | Scuderia Ferrari Shields | Caméra de recule | Magneride</div></div>
 
             
 
@@ -332,7 +388,7 @@
 
             
 
-            <div class="pcd-crosssell"><h2 class="pcd-specs-title">Decouvrez aussi</h2><div class="pcd-cs-grid"><a href="https://peregocars.github.io/inventory/detail/ferrari-ff-12523893.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/ferrari-ff-12523893-01.jpg" alt="FF" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">FERRARI</div><div class="pcd-cs-name">FF</div><div class="pcd-cs-price">CHF 168'500.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/ferrari-458-12918611.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/ferrari-458-12918611-01.jpg" alt="458 Spider Italia 4.5 V8" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">FERRARI</div><div class="pcd-cs-name">458</div><div class="pcd-cs-price">CHF 149'900.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/ferrari-599-12015323.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/ferrari-599-12015323-01.jpg" alt="599 GTB HGTE" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">FERRARI</div><div class="pcd-cs-name">599</div><div class="pcd-cs-price">CHF 144'900.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/ferrari-f430-20247208.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/ferrari-f430-20247208-01.jpg" alt="F430" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">FERRARI</div><div class="pcd-cs-name">F430</div><div class="pcd-cs-price">CHF 94'900.--</div></div></a></div></div>
+            <div class="pcd-crosssell"><h2 class="pcd-specs-title">Decouvrez aussi</h2><div class="pcd-cs-grid"><a href="https://peregocars.github.io/inventory/detail/ferrari-ff-12523893.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/ferrari-ff-12523893-01.jpg" alt="FF" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">FERRARI</div><div class="pcd-cs-name">FF</div><div class="pcd-cs-price">CHF 168'500.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/ferrari-458-12918611.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/ferrari-458-12918611-01.jpg" alt="458 Spider Italia 4.5 V8" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">FERRARI</div><div class="pcd-cs-name">458 Spider Italia 4.5 V8</div><div class="pcd-cs-price">CHF 149'900.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/ferrari-599-12015323.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/ferrari-599-12015323-01.jpg" alt="599 GTB HGTE" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">FERRARI</div><div class="pcd-cs-name">599 GTB HGTE</div><div class="pcd-cs-price">CHF 144'900.--</div></div></a><a href="https://peregocars.github.io/inventory/detail/ferrari-f430-20247208.html" class="pcd-cs-card"><img class="pcd-cs-img" src="https://peregocars.github.io/inventory/images/ferrari-f430-20247208-01.jpg" alt="F430" loading="lazy"><div class="pcd-cs-info"><div class="pcd-cs-brand">FERRARI</div><div class="pcd-cs-name">F430</div><div class="pcd-cs-price">CHF 94'900.--</div></div></a></div></div>
         </div>
     </div>
 
@@ -349,12 +405,41 @@
             });
         });
 
-        // Leasing calculation
+        // Leasing mini calculator
         var price = parseInt('179900') || 0;
         if (price > 0) {
-            var monthly = Math.round(price / 48);
-            var formatted = monthly.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'");
-            document.getElementById('pcdLeasingAmount').textContent = 'des CHF ' + formatted + '.-- / mois';
+            var slDown = document.getElementById('slDown');
+            var slDur  = document.getElementById('slDur');
+            var slRes  = document.getElementById('slRes');
+            var RATE = 5.9;
+
+            function fmtCHF(n) { return "CHF " + Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'"); }
+
+            function calcLeasing() {
+                var downPct = parseInt(slDown.value) || 0;
+                var months  = parseInt(slDur.value) || 48;
+                var resPct  = parseInt(slRes.value) || 0;
+                var downAmt = Math.round(price * downPct / 100);
+                var financed = price - downAmt;
+                var residual = Math.round(price * resPct / 100);
+                if (residual > financed) residual = financed;
+                var depreciation = months > 0 ? (financed - residual) / months : 0;
+                var monthlyRate = RATE / 100 / 12;
+                var interest = (financed + residual) / 2 * monthlyRate;
+                var monthly = depreciation + interest;
+                if (monthly < 0) monthly = 0;
+                var total = monthly * months;
+
+                document.getElementById('pcdLeasingAmount').textContent = fmtCHF(monthly) + '.--';
+                document.getElementById('lblDown').textContent = downPct > 0 ? fmtCHF(downAmt) + ' (' + downPct + '%)' : 'Aucun';
+                document.getElementById('lblDur').textContent = months + ' mois';
+                document.getElementById('lblRes').textContent = resPct + '%';
+                document.getElementById('detFinanced').textContent = fmtCHF(financed);
+                document.getElementById('detTotal').textContent = fmtCHF(total);
+            }
+
+            [slDown, slDur, slRes].forEach(function(el) { el.addEventListener('input', calcLeasing); });
+            calcLeasing();
         } else {
             document.getElementById('pcdLeasing').style.display = 'none';
         }

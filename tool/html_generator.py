@@ -155,6 +155,21 @@ def generate_grid_html(listings):
     return grid
 
 
+def _display_name(listing):
+    """Get display name: full_name minus make prefix, truncated to 35 chars."""
+    full = listing.get("full_name", "")
+    make = listing.get("make", "")
+    if full and full.upper().startswith(make.upper()):
+        name = full[len(make):].strip()
+    else:
+        name = full or listing.get("model", "")
+    if not name:
+        name = listing.get("model", "")
+    if len(name) > 35:
+        name = name[:32] + "..."
+    return name
+
+
 # ── YouTube Helper ──
 
 def _extract_youtube_id(url):
@@ -191,25 +206,27 @@ _EN_MARKERS = re.compile(
     r'\b(swiss delivered|delivered|all services|very beautiful|new condition|'
     r'owner|worldwide|world wide|matching number|inside|outside|front and rear|'
     r'parking assistance|camera 360|navigation|bluetooth|privacy windows|'
-    r'brake caliper|bang & olufsen|without|made by)\b',
+    r'brake? caliper|bang & olufsen|without|made by|inch wheels|wheels\b|'
+    r'\bgold\b|carbon\b|leather\b|seats\b|system\b|view\b|rear\b|front\b|'
+    r'\bnew\b|condition\b|warranty\b|approved\b)\b',
     re.IGNORECASE,
 )
 
 
 def _filter_teaser_items(teaser_text):
-    """Split teaser on | or I delimiters, remove English duplicates, return clean FR text."""
-    items = re.split(r'\s*[|I]\s*', teaser_text)
-    items = [s.strip() for s in items if len(s.strip()) > 2]
+    """Split teaser on common delimiters, remove English items, return clean FR text or empty."""
+    # Split on | or spaced I or spaced - (common AutoScout24 separators)
+    items = re.split(r'\s*\|\s*|\s+I\s+|\s+-\s+', teaser_text)
+    items = [s.strip().rstrip('-').strip() for s in items if len(s.strip()) > 2]
 
     fr_items = []
     for item in items:
-        # Skip if item is predominantly English
         if _EN_MARKERS.search(item):
             continue
         fr_items.append(item)
 
     if not fr_items:
-        return teaser_text  # Fallback: return original if everything got filtered
+        return ""  # All English — hide section entirely
     return " | ".join(fr_items)
 
 
@@ -363,11 +380,12 @@ def generate_detail_pages(listings, custom_data=None):
             f"Est-il toujours disponible ?"
         )
 
-        # Teaser block — with title and raw text for JS parsing (FR only)
+        # Teaser block — FR only, hidden if all English
         teaser_block = ""
         if listing.get("teaser"):
             clean_teaser = _filter_teaser_items(listing["teaser"])
-            teaser_block = f'<div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">{clean_teaser}</div></div>'
+            if clean_teaser:
+                teaser_block = f'<div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">{clean_teaser}</div></div>'
 
         # Sales Guru — "Pourquoi cette voiture"
         selling_points = _compute_selling_points(listing, listings)
@@ -407,7 +425,7 @@ def generate_detail_pages(listings, custom_data=None):
                     f'<img class="pcd-cs-img" src="{rel_thumb}" alt="{rel_name}" loading="lazy">'
                     f'<div class="pcd-cs-info">'
                     f'<div class="pcd-cs-brand">{rel["make"].upper()}</div>'
-                    f'<div class="pcd-cs-name">{rel["model"]}</div>'
+                    f'<div class="pcd-cs-name">{_display_name(rel)}</div>'
                     f'<div class="pcd-cs-price">{format_chf(rel.get("price"))}</div>'
                     f'</div></a>'
                 )
@@ -440,4 +458,132 @@ def generate_detail_pages(listings, custom_data=None):
         pages[slug] = page
 
     logger.info(f"Generated {len(pages)} detail pages")
+    return pages
+
+
+# ── Sold Detail Pages ──
+
+def generate_sold_detail_pages(sold_listings, active_listings, custom_data=None):
+    """Generate detail pages for sold cars with VENDU badge + cross-sell to active stock."""
+    if not sold_listings:
+        return {}
+
+    detail_tpl = _read_template("detail_page.html")
+    pages = {}
+
+    for listing in sold_listings:
+        slug = make_slug(listing["make"], listing["model"], listing["id"])
+        local_images = listing.get("local_images", [])
+        custom = custom_data.get(listing["id"], {}) if custom_data else {}
+
+        main_img = f"{IMAGE_BASE_URL}/{local_images[0]}" if local_images else ""
+
+        thumbs_html = ""
+        for i, img_file in enumerate(local_images):
+            cls = "pcd-thumb active" if i == 0 else "pcd-thumb"
+            thumbs_html += f'            <img class="{cls}" src="{IMAGE_BASE_URL}/{img_file}" alt="{listing["make"]} {listing["model"]}" loading="lazy">\n'
+
+        # Spec rows (same as active)
+        specs = []
+        if listing.get("year"):
+            specs.append(("Annee", str(listing["year"])))
+        if listing.get("mileage"):
+            specs.append(("Kilometrage", f"{format_km(listing['mileage'])} km"))
+        if listing.get("horsepower"):
+            specs.append(("Puissance", f"{listing['horsepower']} ch"))
+        if listing.get("fuel_type"):
+            specs.append(("Carburant", translate(listing["fuel_type"], FUEL_TYPE_FR)))
+        if listing.get("transmission"):
+            specs.append(("Transmission", translate(listing["transmission"], TRANSMISSION_FR)))
+        if listing.get("body_type"):
+            specs.append(("Carrosserie", translate(listing["body_type"], BODY_TYPE_FR)))
+        spec_rows_html = ""
+        for label, value in specs:
+            spec_rows_html += f'            <div class="pcd-spec-row"><span class="pcd-spec-label">{label}</span><span class="pcd-spec-value">{value}</span></div>\n'
+
+        # Custom description
+        custom_desc_html = ""
+        if custom.get("description"):
+            custom_desc_html = f'<div class="pcd-description"><h2 class="pcd-specs-title">Description</h2><div class="pcd-desc-text">{custom["description"]}</div></div>'
+
+        # YouTube videos
+        videos_html = ""
+        if custom.get("youtube_videos"):
+            embeds = ""
+            for yt_url in custom["youtube_videos"]:
+                video_id = _extract_youtube_id(yt_url)
+                if video_id:
+                    embeds += f'<div class="pcd-video-wrap"><iframe src="https://www.youtube.com/embed/{video_id}" allowfullscreen loading="lazy"></iframe></div>'
+            if embeds:
+                videos_html = f'<div class="pcd-videos"><h2 class="pcd-specs-title">Videos</h2>{embeds}</div>'
+
+        # Teaser (FR only, hidden if all English)
+        teaser_block = ""
+        if listing.get("teaser"):
+            clean_teaser = _filter_teaser_items(listing["teaser"])
+            if clean_teaser:
+                teaser_block = f'<div class="pcd-teaser"><div class="pcd-teaser-title">Points forts</div><div class="pcd-teaser-raw">{clean_teaser}</div></div>'
+
+        # Cross-sell → active stock only (the whole point for SEO)
+        related = _pick_related_cars(listing, active_listings)
+        crosssell_html = ""
+        if related:
+            cards_cs = ""
+            for rel in related:
+                rel_slug = make_slug(rel["make"], rel["model"], rel["id"])
+                rel_imgs = rel.get("local_images", [])
+                rel_thumb = f"{IMAGE_BASE_URL}/{rel_imgs[0]}" if rel_imgs else ""
+                cards_cs += (
+                    f'<a href="{GITHUB_PAGES_URL}/detail/{rel_slug}.html" class="pcd-cs-card">'
+                    f'<img class="pcd-cs-img" src="{rel_thumb}" alt="{rel["make"]} {rel["model"]}" loading="lazy">'
+                    f'<div class="pcd-cs-info">'
+                    f'<div class="pcd-cs-brand">{rel["make"].upper()}</div>'
+                    f'<div class="pcd-cs-name">{rel["model"]}</div>'
+                    f'<div class="pcd-cs-price">{format_chf(rel.get("price"))}</div>'
+                    f'</div></a>'
+                )
+            crosssell_html = f'<div class="pcd-crosssell"><h2 class="pcd-specs-title">Decouvrez notre stock</h2><div class="pcd-cs-grid">{cards_cs}</div></div>'
+
+        # VENDU badge replaces leasing + CTAs via sold_overlay
+        sold_date = listing.get("sold_date", "")
+        sold_overlay = (
+            f'<div style="background:#1A1A1A;color:#fff;padding:1rem;border-radius:0.75rem;text-align:center;margin-bottom:1rem;">'
+            f'<div style="font-size:1.4rem;font-weight:700;letter-spacing:3px;">VENDU</div>'
+            f'{"<div style=font-size:0.8rem;margin-top:0.3rem;opacity:0.7>" + sold_date + "</div>" if sold_date else ""}'
+            f'</div>'
+        )
+
+        # WhatsApp message for similar cars
+        wa_msg = quote(
+            f"Bonjour, je recherche un vehicule similaire au {listing['make']} {listing['model']}"
+            f" ({listing.get('year', '')}) que vous avez vendu. Avez-vous quelque chose de comparable ?"
+        )
+
+        page = _render(detail_tpl, {
+            "make": listing["make"],
+            "make_upper": listing["make"].upper(),
+            "model": listing.get("model", ""),
+            "full_name": listing.get("full_name", f"{listing['make']} {listing.get('model', '')}"),
+            "year": str(listing["year"]) if listing.get("year") else "",
+            "mileage_fmt": format_km(listing.get("mileage")),
+            "price_fmt": format_chf(listing.get("price")),
+            "price_raw": "0",  # Disable leasing calculator for sold cars
+            "main_image": main_img,
+            "thumbnail_images": thumbs_html,
+            "spec_rows": spec_rows_html,
+            "custom_description": custom_desc_html,
+            "service_history": "",
+            "youtube_videos": videos_html,
+            "whatsapp_number": WHATSAPP_NUMBER,
+            "whatsapp_msg": wa_msg,
+            "listing_url": listing.get("listing_url", "#"),
+            "grid_url": f"{SITE_URL}/cars-for-sale",
+            "teaser_block": teaser_block,
+            "sales_guru": sold_overlay,  # Replace guru with VENDU badge
+            "crosssell": crosssell_html,
+        })
+
+        pages[slug] = page
+
+    logger.info(f"Generated {len(pages)} sold detail pages")
     return pages
