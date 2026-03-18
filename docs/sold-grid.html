@@ -1,0 +1,300 @@
+<meta charset="UTF-8">
+<!-- Perego Cars — Previously Sold Vehicles -->
+<style>
+:root {
+    --color-primary: #FF4605;
+    --color-primary-light: #FF6B35;
+    --color-text-primary: #1A1A1A;
+    --color-text-muted: #666666;
+    --color-text-light: #999;
+    --color-surface: #FFFFFF;
+    --color-background: #FAFBFC;
+    --color-border: #E5E7EB;
+    --color-primary-10: rgba(255,70,5,0.1);
+    --color-sold: #C0392B;
+    --shadow-sm: 0 2px 12px rgba(0,0,0,0.06);
+    --shadow-md: 0 8px 30px rgba(0,0,0,0.1);
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --radius-md: 0.75rem;
+    --transition-base: 300ms ease;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-body); color: var(--color-text-primary); background: var(--color-background); }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.pc-inv-container { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; }
+.pc-inv-hero { padding: 1.5rem 0 1rem; text-align: center; }
+.pc-inv-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(192,57,43,0.08); color: var(--color-sold);
+    font-size: 0.7rem; font-weight: 700; padding: 0.5rem 1.2rem;
+    border-radius: 50px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem;
+}
+.pc-inv-title { font-size: clamp(1.8rem,4vw,2.4rem); font-weight: 700; margin-bottom: 0.5rem; }
+.pc-inv-title em { color: var(--color-primary); font-style: italic; }
+.pc-inv-sub { font-size: 1rem; color: var(--color-text-muted); max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+/* ── Filters ── */
+.pc-inv-filters { padding: 1.5rem 0; }
+.pc-filter-search-wrap {
+    position: relative; max-width: 480px; margin: 0 auto 1.5rem;
+}
+.pc-filter-search {
+    width: 100%; padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid var(--color-border); border-radius: 50px;
+    font-size: 0.9rem; font-family: var(--font-body);
+    background: var(--color-surface); outline: none; transition: var(--transition-base);
+}
+.pc-filter-search:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--color-primary-10); }
+.pc-filter-search::placeholder { color: var(--color-text-light); }
+.pc-filter-search-icon {
+    position: absolute; left: 0.9rem; top: 50%; transform: translateY(-50%);
+    color: var(--color-text-muted); pointer-events: none;
+}
+
+.pc-filter-chips {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;
+}
+.pc-filter-chip {
+    padding: 0.45rem 1rem; border-radius: 50px; cursor: pointer;
+    font-size: 0.78rem; font-weight: 500; border: 1px solid var(--color-border);
+    background: var(--color-surface); transition: var(--transition-base);
+    user-select: none;
+}
+.pc-filter-chip:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.pc-filter-chip.active {
+    background: var(--color-primary); color: #fff; border-color: var(--color-primary);
+}
+
+.pc-cars-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+    padding-bottom: 3rem;
+}
+.pc-car-card {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); overflow: hidden; transition: var(--transition-base);
+    text-decoration: none; color: inherit; display: block; position: relative;
+}
+.pc-car-card.hidden { display: none; }
+.pc-car-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.pc-car-img-wrap { position: relative; overflow: hidden; }
+.pc-car-img { width: 100%; height: 220px; object-fit: cover; }
+.pc-sold-badge {
+    position: absolute; top: 0.75rem; right: 0.75rem;
+    background: var(--color-sold); color: #fff;
+    font-size: 0.65rem; font-weight: 800; letter-spacing: 1.5px;
+    padding: 0.35rem 0.8rem; border-radius: 50px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 8px rgba(192,57,43,0.4);
+}
+.pc-car-body { padding: 1.25rem; }
+.pc-car-brand { font-size: 0.7rem; letter-spacing: 2px; color: var(--color-primary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.3rem; }
+.pc-car-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.pc-car-specs { display: flex; gap: 1rem; font-size: 0.78rem; color: var(--color-text-muted); margin-bottom: 0.75rem; }
+.pc-car-specs span { display: flex; align-items: center; gap: 0.3rem; }
+.pc-car-price { font-size: 1.1rem; font-weight: 700; color: var(--color-text-muted); text-decoration: line-through; margin-bottom: 0.25rem; }
+.pc-car-sold-date { font-size: 0.72rem; color: var(--color-sold); font-weight: 600; }
+
+.pc-inv-count {
+    text-align: center; padding: 1rem 0 2rem;
+    font-size: 0.82rem; color: var(--color-text-muted);
+}
+
+.pc-inv-no-results {
+    display: none; text-align: center; padding: 3rem 1rem;
+    font-size: 1rem; color: var(--color-text-muted);
+}
+.pc-inv-no-results.visible { display: block; }
+
+.pc-inv-loading {
+    text-align: center; padding: 4rem 1rem;
+    font-size: 0.95rem; color: var(--color-text-muted);
+}
+
+/* Hide hero when embedded in iframe */
+.in-iframe .pc-inv-hero { display: none; }
+.in-iframe body { background: transparent; }
+
+@media (max-width: 1200px) { .pc-cars-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 1024px) { .pc-cars-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
+    .pc-cars-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+    .pc-filter-chips { gap: 0.4rem; }
+    .pc-filter-chip { padding: 0.4rem 0.8rem; font-size: 0.72rem; }
+}
+</style>
+<script>if(window.self!==window.top)document.documentElement.classList.add('in-iframe');</script>
+
+<div class="pc-inv-container">
+    <div class="pc-inv-hero">
+        <div class="pc-inv-badge">Vehicules vendus</div>
+        <h1 class="pc-inv-title">Previously <em>Sold</em></h1>
+        <p class="pc-inv-sub">Decouvrez les vehicules d'exception qui ont trouve preneur chez Perego Cars. Chaque transaction temoigne de notre expertise et de la confiance de nos clients.</p>
+    </div>
+
+    <!-- Filters -->
+    <div class="pc-inv-filters">
+        <div class="pc-filter-search-wrap">
+            <svg class="pc-filter-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" class="pc-filter-search" id="pcFilterSearch" placeholder="Rechercher une marque ou un modele...">
+        </div>
+        <div class="pc-filter-chips" id="pcFilterChips">
+            <!-- Built dynamically by JS -->
+        </div>
+    </div>
+
+    <div class="pc-inv-count" id="pcInvCount"></div>
+
+    <div class="pc-cars-grid" id="pcCarsGrid">
+        <div class="pc-inv-loading" id="pcLoading">Chargement des vehicules...</div>
+    </div>
+    <div class="pc-inv-no-results" id="pcNoResults">Aucun vehicule ne correspond a votre recherche.</div>
+</div>
+
+<script>
+(function() {
+    var grid = document.getElementById('pcCarsGrid');
+    var searchInput = document.getElementById('pcFilterSearch');
+    var chipsWrap = document.getElementById('pcFilterChips');
+    var countEl = document.getElementById('pcInvCount');
+    var noResults = document.getElementById('pcNoResults');
+    var loading = document.getElementById('pcLoading');
+    var activeMake = '';
+
+    var MONTHS_FR = ['Janvier','Fevrier','Mars','Avril','Mai','Juin','Juillet','Aout','Septembre','Octobre','Novembre','Decembre'];
+    var IMAGE_BASE = 'https://peregocars.github.io/inventory/images/';
+
+    function formatCHF(price) {
+        if (!price) return 'Prix sur demande';
+        var s = String(Math.round(price));
+        var parts = [];
+        while (s.length > 0) {
+            parts.unshift(s.slice(Math.max(0, s.length - 3)));
+            s = s.slice(0, Math.max(0, s.length - 3));
+        }
+        return "CHF " + parts.join("'") + ".--";
+    }
+
+    function formatKM(km) {
+        if (!km) return '0';
+        var s = String(Math.round(km));
+        var parts = [];
+        while (s.length > 0) {
+            parts.unshift(s.slice(Math.max(0, s.length - 3)));
+            s = s.slice(0, Math.max(0, s.length - 3));
+        }
+        return parts.join("'");
+    }
+
+    function formatSoldDate(dateStr) {
+        if (!dateStr) return '';
+        var d = new Date(dateStr);
+        return MONTHS_FR[d.getMonth()] + ' ' + d.getFullYear();
+    }
+
+    function renderCard(car) {
+        var img = car.local_images && car.local_images[0]
+            ? IMAGE_BASE + car.local_images[0]
+            : (car.images && car.images[0] ? car.images[0] : '');
+        var make = car.make || '';
+        var model = car.full_name || car.model || '';
+        var html = '<div class="pc-car-card" data-make="' + make + '" data-model="' + (car.model || '').toLowerCase() + '">';
+        html += '<div class="pc-car-img-wrap">';
+        html += '<img class="pc-car-img" src="' + img + '" alt="' + make + ' ' + model + ' vendu par Perego Cars" loading="lazy" width="400" height="220">';
+        html += '<span class="pc-sold-badge">Vendu</span>';
+        html += '</div>';
+        html += '<div class="pc-car-body">';
+        html += '<div class="pc-car-brand">' + make.toUpperCase() + '</div>';
+        html += '<h3 class="pc-car-name">' + model + '</h3>';
+        html += '<div class="pc-car-specs">';
+        html += '<span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> ' + (car.year || '') + '</span>';
+        html += '<span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg> ' + formatKM(car.mileage) + ' km</span>';
+        html += '</div>';
+        html += '<div class="pc-car-price">' + formatCHF(car.price) + '</div>';
+        html += '<div class="pc-car-sold-date">Vendu en ' + formatSoldDate(car.sold_date) + '</div>';
+        html += '</div></div>';
+        return html;
+    }
+
+    fetch('sold.json')
+        .then(function(res) { return res.json(); })
+        .then(function(cars) {
+            loading.style.display = 'none';
+
+            // Sort by sold_date descending (most recent first)
+            cars.sort(function(a, b) {
+                return (b.sold_date || '').localeCompare(a.sold_date || '');
+            });
+
+            // Render cards
+            var html = '';
+            cars.forEach(function(car) { html += renderCard(car); });
+            grid.innerHTML = html;
+
+            // Build brand chips
+            var makes = [];
+            cars.forEach(function(c) {
+                if (c.make && makes.indexOf(c.make) === -1) makes.push(c.make);
+            });
+            makes.sort();
+
+            var allChip = document.createElement('span');
+            allChip.className = 'pc-filter-chip active';
+            allChip.textContent = 'Tous';
+            allChip.onclick = function() { activeMake = ''; applyFilters(); };
+            chipsWrap.appendChild(allChip);
+
+            makes.forEach(function(m) {
+                var chip = document.createElement('span');
+                chip.className = 'pc-filter-chip';
+                chip.textContent = m;
+                chip.setAttribute('data-make', m);
+                chip.onclick = function() { activeMake = m; applyFilters(); };
+                chipsWrap.appendChild(chip);
+            });
+
+            searchInput.addEventListener('input', function() { applyFilters(); });
+
+            countEl.textContent = cars.length + ' vehicule' + (cars.length !== 1 ? 's' : '') + ' vendu' + (cars.length !== 1 ? 's' : '');
+
+            function applyFilters() {
+                var query = searchInput.value.toLowerCase().trim();
+                var cards = grid.querySelectorAll('.pc-car-card');
+                var visible = 0;
+
+                chipsWrap.querySelectorAll('.pc-filter-chip').forEach(function(chip) {
+                    var chipMake = chip.getAttribute('data-make');
+                    if (!chipMake) {
+                        chip.classList.toggle('active', !activeMake);
+                    } else {
+                        chip.classList.toggle('active', chipMake === activeMake);
+                    }
+                });
+
+                cards.forEach(function(card) {
+                    var make = (card.getAttribute('data-make') || '').toLowerCase();
+                    var model = (card.getAttribute('data-model') || '').toLowerCase();
+                    var text = make + ' ' + model;
+
+                    var matchMake = !activeMake || card.getAttribute('data-make') === activeMake;
+                    var matchSearch = !query || text.indexOf(query) !== -1;
+
+                    if (matchMake && matchSearch) {
+                        card.classList.remove('hidden');
+                        visible++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+
+                countEl.textContent = visible + ' vehicule' + (visible !== 1 ? 's' : '') + ' vendu' + (visible !== 1 ? 's' : '');
+                noResults.classList.toggle('visible', visible === 0);
+            }
+        })
+        .catch(function(err) {
+            loading.textContent = 'Erreur de chargement.';
+            console.error('Failed to load sold.json:', err);
+        });
+})();
+</script>
