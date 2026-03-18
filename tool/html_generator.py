@@ -4,6 +4,7 @@ Renders listing grid and detail pages from templates.
 """
 import os
 import re
+import json
 import logging
 from datetime import datetime
 from urllib.parse import quote
@@ -66,6 +67,91 @@ def _render(template, context):
     for key, value in context.items():
         result = result.replace("{{" + key + "}}", str(value))
     return result
+
+
+# ── SEO Helpers ──
+
+def _build_schema_json(listing, slug, is_sold=False):
+    """Build Schema.org Vehicle JSON-LD for a detail page."""
+    local_images = listing.get("local_images", [])
+    og_image = f"{IMAGE_BASE_URL}/{local_images[0]}" if local_images else ""
+    full_name = listing.get("full_name", f"{listing['make']} {listing.get('model', '')}")
+
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "Vehicle",
+        "name": f"{listing['make']} {full_name}",
+        "brand": {"@type": "Brand", "name": listing["make"]},
+        "model": listing.get("model", ""),
+        "vehicleModelDate": str(listing["year"]) if listing.get("year") else "",
+        "mileageFromOdometer": {
+            "@type": "QuantitativeValue",
+            "value": listing.get("mileage", 0),
+            "unitCode": "KMT",
+        },
+        "fuelType": translate(listing.get("fuel_type", ""), FUEL_TYPE_FR),
+        "vehicleTransmission": translate(listing.get("transmission", ""), TRANSMISSION_FR),
+        "bodyType": translate(listing.get("body_type", ""), BODY_TYPE_FR),
+        "image": og_image,
+        "url": f"{GITHUB_PAGES_URL}/detail/{slug}.html",
+        "offers": {
+            "@type": "Offer",
+            "price": listing.get("price", 0),
+            "priceCurrency": "CHF",
+            "availability": "https://schema.org/SoldOut" if is_sold else "https://schema.org/InStock",
+            "seller": {
+                "@type": "AutoDealer",
+                "name": "Perego Cars",
+                "url": SITE_URL,
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Rte Suisse 2",
+                    "addressLocality": "Etoy",
+                    "postalCode": "1163",
+                    "addressCountry": "CH",
+                },
+                "telephone": "+41218698911",
+            },
+        },
+    }
+
+    # Add horsepower if available
+    if listing.get("horsepower"):
+        schema["vehicleEngine"] = {
+            "@type": "EngineSpecification",
+            "enginePower": {
+                "@type": "QuantitativeValue",
+                "value": listing["horsepower"],
+                "unitText": "ch",
+            },
+        }
+
+    # Clean empty values
+    if not schema["vehicleModelDate"]:
+        del schema["vehicleModelDate"]
+    if not schema["fuelType"]:
+        del schema["fuelType"]
+    if not schema["vehicleTransmission"]:
+        del schema["vehicleTransmission"]
+    if not schema["bodyType"]:
+        del schema["bodyType"]
+
+    return f'<script type="application/ld+json">\n    {json.dumps(schema, ensure_ascii=False, indent=4)}\n    </script>'
+
+
+def _seo_context(listing, slug, is_sold=False):
+    """Build SEO-specific context variables for a detail page."""
+    local_images = listing.get("local_images", [])
+    og_image = f"{IMAGE_BASE_URL}/{local_images[0]}" if local_images else ""
+    canonical = f"{GITHUB_PAGES_URL}/detail/{slug}.html"
+    seo_status = "Vendu" if is_sold else "En vente"
+
+    return {
+        "canonical_url": canonical,
+        "og_image": og_image,
+        "schema_json": _build_schema_json(listing, slug, is_sold),
+        "seo_status": seo_status,
+    }
 
 
 # ── Grid Page ──
@@ -431,7 +517,7 @@ def generate_detail_pages(listings, custom_data=None):
                 )
             crosssell_html = f'<div class="pcd-crosssell"><h2 class="pcd-specs-title">Decouvrez aussi</h2><div class="pcd-cs-grid">{cards_cs}</div></div>'
 
-        page = _render(detail_tpl, {
+        context = {
             "make": listing["make"],
             "make_upper": listing["make"].upper(),
             "model": listing["model"],
@@ -453,8 +539,10 @@ def generate_detail_pages(listings, custom_data=None):
             "teaser_block": teaser_block,
             "sales_guru": guru_html,
             "crosssell": crosssell_html,
-        })
+        }
+        context.update(_seo_context(listing, slug, is_sold=False))
 
+        page = _render(detail_tpl, context)
         pages[slug] = page
 
     logger.info(f"Generated {len(pages)} detail pages")
@@ -559,7 +647,7 @@ def generate_sold_detail_pages(sold_listings, active_listings, custom_data=None)
             f" ({listing.get('year', '')}) que vous avez vendu. Avez-vous quelque chose de comparable ?"
         )
 
-        page = _render(detail_tpl, {
+        context = {
             "make": listing["make"],
             "make_upper": listing["make"].upper(),
             "model": listing.get("model", ""),
@@ -581,8 +669,10 @@ def generate_sold_detail_pages(sold_listings, active_listings, custom_data=None)
             "teaser_block": teaser_block,
             "sales_guru": sold_overlay,  # Replace guru with VENDU badge
             "crosssell": crosssell_html,
-        })
+        }
+        context.update(_seo_context(listing, slug, is_sold=True))
 
+        page = _render(detail_tpl, context)
         pages[slug] = page
 
     logger.info(f"Generated {len(pages)} sold detail pages")
