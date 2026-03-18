@@ -74,8 +74,7 @@ def fetch_listings():
         if car:
             listings.append(car)
 
-    # Sort by price descending (most expensive first)
-    listings.sort(key=lambda x: x["price"], reverse=True)
+    # Keep AutoScout24's natural order (newest listings first)
 
     logger.info(f"Extracted {len(listings)} listings total")
     return listings
