@@ -1,182 +1,152 @@
 {
   "cars": [
     {
-      "id": "ferrari-f12-berlinetta",
-      "brand": "Ferrari",
-      "model": "F12 Berlinetta",
-      "year": "2012",
-      "specs": "V12 6.3L — 740 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201705/17857729273167382.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f12-berlinetta.html",
-      "categories": [
-        "ferrari"
-      ]
-    },
-    {
-      "id": "ferrari-ff",
-      "brand": "Ferrari",
-      "model": "FF",
-      "year": "2011",
-      "specs": "V12 6.3L — 660 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201903/18040312690009235.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-ff.html",
-      "categories": [
-        "ferrari"
-      ]
-    },
-    {
-      "id": "ferrari-california",
-      "brand": "Ferrari",
-      "model": "California",
-      "year": "2008",
-      "specs": "V8 4.3L — 460 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201906/17974860262263574.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-california.html",
-      "categories": [
-        "ferrari"
-      ]
-    },
-    {
-      "id": "porsche-911-carrera-rs-27",
-      "brand": "Porsche",
-      "model": "911 Carrera RS 2.7",
-      "year": "1973",
-      "specs": "Flat-6 2.7L — 210 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201611/17856122947113155.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-carrera-rs-27.html",
+      "id": "bugatti-chiron",
+      "brand": "Bugatti",
+      "model": "Chiron",
+      "year": "2016",
+      "specs": "W16 8.0L Quad Turbo — 1500 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1ed7e772ed09a1a61.jpeg",
+      "detail_url": "#",
       "categories": [
         "icones",
-        "porsche",
-        "classiques",
-        "swiss-stories"
-      ]
-    },
-    {
-      "id": "porsche-911-carrera-g",
-      "brand": "Porsche",
-      "model": "911 2.7",
-      "year": "1974",
-      "specs": "Flat-6 2.7L — 211 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202007/17861674403007612.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-carrera-g.html",
-      "categories": [
-        "porsche",
-        "classiques"
-      ]
-    },
-    {
-      "id": "porsche-911-turbo-993",
-      "brand": "Porsche",
-      "model": "911 Turbo (993)",
-      "year": "1995",
-      "specs": "Flat-6 3.6L Twin Turbo — 408 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201610/17843278504144032.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-turbo-993.html",
-      "categories": [
-        "porsche",
-        "classiques"
-      ]
-    },
-    {
-      "id": "porsche-911-turbo-s-997",
-      "brand": "Porsche",
-      "model": "911 Turbo S (997)",
-      "year": "2010",
-      "specs": "Flat-6 3.8L Twin Turbo — 530 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201609/17842170520167259.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-turbo-s-997.html",
-      "categories": [
-        "porsche",
-        "swiss-stories"
-      ]
-    },
-    {
-      "id": "porsche-911-gt3-rs-991",
-      "brand": "Porsche",
-      "model": "911 GT3 RS (991)",
-      "year": "2015",
-      "specs": "Flat-6 4.0L — 500 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201610/17843278504144032.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-gt3-rs-991.html",
-      "categories": [
-        "porsche",
-        "icones"
-      ]
-    },
-    {
-      "id": "porsche-911-gt3-991",
-      "brand": "Porsche",
-      "model": "911 GT3 (991)",
-      "year": "2013",
-      "specs": "Flat-6 3.8L — 475 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201912/17865598729565958.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-gt3-991.html",
-      "categories": [
-        "porsche",
-        "swiss-stories"
-      ]
-    },
-    {
-      "id": "porsche-911-997",
-      "brand": "Porsche",
-      "model": "911 GTS Targa",
-      "year": "2008",
-      "specs": "Flat-6 3.8L — 408 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202101/18092282161221928.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-997.html",
-      "categories": [
-        "porsche"
-      ]
-    },
-    {
-      "id": "porsche-718-boxster",
-      "brand": "Porsche",
-      "model": "718 Boxster",
-      "year": "2016",
-      "specs": "Flat-4 2.0L Turbo — 300 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202104/17876307491231706.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-718-boxster.html",
-      "categories": [
-        "porsche"
-      ]
-    },
-    {
-      "id": "pontiac-gto",
-      "brand": "Pontiac",
-      "model": "GTO",
-      "year": "1966",
-      "specs": "V8 6.4L — 360 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201901/17976893863198711.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/pontiac-gto.html",
-      "categories": [
-        "classiques",
         "autres"
       ]
     },
     {
-      "id": "porsche-997-gt3-rs",
-      "brand": "Porsche",
-      "model": "997 GT3 RS",
-      "year": "2010",
-      "specs": "Flat-6 3.8L — 450 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201705/17880312034028080.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-997-gt3-rs.html",
+      "id": "ferrari-laferrari",
+      "brand": "Ferrari",
+      "model": "LaFerrari",
+      "year": "2013",
+      "specs": "V12 6.3L Hybrid — 963 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6754812a29695a927d6faadc.jpeg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-laferrari.html",
       "categories": [
-        "porsche",
-        "icones"
+        "icones",
+        "ferrari"
       ]
     },
     {
-      "id": "porsche-carrera-gt",
+      "id": "mclaren-p1",
+      "brand": "McLaren",
+      "model": "P1",
+      "year": "2013",
+      "specs": "V8 3.8L Hybrid — 916 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d229695af5a96c37cd.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "icones",
+        "autres"
+      ]
+    },
+    {
+      "id": "porsche-918-spyder",
       "brand": "Porsche",
-      "model": "Carrera GT",
-      "year": "2004",
-      "specs": "V10 5.7L — 612 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201609/17842020796137177.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-carrera-gt.html",
+      "model": "918 Spyder",
+      "year": "2013",
+      "specs": "V8 4.6L Hybrid — 887 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6754806ca7438872df3a0ca2.jpeg",
+      "detail_url": "#",
       "categories": [
         "icones",
         "porsche"
+      ]
+    },
+    {
+      "id": "pagani-zonda",
+      "brand": "Pagani",
+      "model": "Zonda",
+      "year": "1999",
+      "specs": "V12 7.3L — 650 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6754cb8729695ab8d470219f.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "icones",
+        "autres"
+      ]
+    },
+    {
+      "id": "ferrari-f40",
+      "brand": "Ferrari",
+      "model": "F40",
+      "year": "1987",
+      "specs": "V8 2.9L Twin Turbo — 478 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d16a09d909dfcd78ed.jpeg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f40.html",
+      "categories": [
+        "icones",
+        "ferrari",
+        "classiques"
+      ]
+    },
+    {
+      "id": "ferrari-f40-lm",
+      "brand": "Ferrari",
+      "model": "F40 Le Mans",
+      "year": "1994",
+      "specs": "V8 2.9L Twin Turbo — 700 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1846fe538e4c963b0.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "icones",
+        "ferrari",
+        "classiques"
+      ]
+    },
+    {
+      "id": "ferrari-275-gtb",
+      "brand": "Ferrari",
+      "model": "275 GTB Short Nose",
+      "year": "1965",
+      "specs": "V12 3.3L — 280 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d16a09d93c28cd78ec.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "icones",
+        "ferrari",
+        "classiques"
+      ]
+    },
+    {
+      "id": "ferrari-275-gts",
+      "brand": "Ferrari",
+      "model": "275 GTS",
+      "year": "1965",
+      "specs": "V12 3.3L — 280 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6754cb8729695a77627021a0.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "icones",
+        "ferrari",
+        "classiques"
+      ]
+    },
+    {
+      "id": "ferrari-365-daytona",
+      "brand": "Ferrari",
+      "model": "365 GTB4 Daytona",
+      "year": "1968",
+      "specs": "V12 4.4L — 352 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6754807fb779b2f95286aa38.jpeg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-365-daytona.html",
+      "categories": [
+        "icones",
+        "ferrari",
+        "classiques"
+      ]
+    },
+    {
+      "id": "maserati-a6gcs",
+      "brand": "Maserati",
+      "model": "A6GCS",
+      "year": "1953",
+      "specs": "Straight-6 2.0L — 170 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/675480c8b779b2947d86aa53.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "icones",
+        "classiques",
+        "autres"
       ]
     },
     {
@@ -194,84 +164,369 @@
       ]
     },
     {
-      "id": "ferrari-550-maranello",
-      "brand": "Ferrari",
-      "model": "550 Maranello",
-      "year": "1996",
-      "specs": "V12 5.5L — 485 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201610/17843023948144521.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-550-maranello.html",
+      "id": "ac-cobra-289",
+      "brand": "AC",
+      "model": "Cobra 289",
+      "year": "1963",
+      "specs": "V8 4.7L — 271 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1988a5f7c109adad6.jpeg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ac-cobra-289.html",
       "categories": [
-        "ferrari",
+        "icones",
+        "classiques",
+        "autres"
+      ]
+    },
+    {
+      "id": "ferrari-812-superfast",
+      "brand": "Ferrari",
+      "model": "812 Superfast",
+      "year": "2017",
+      "specs": "V12 6.5L — 800 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1846fe56185c963b1.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "ferrari"
+      ]
+    },
+    {
+      "id": "ferrari-f12-tdf",
+      "brand": "Ferrari",
+      "model": "F12 TDF",
+      "year": "2015",
+      "specs": "V12 6.3L — 780 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d16a09d9d545cd78e7.jpeg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f12-tdf.html",
+      "categories": [
+        "icones",
+        "ferrari"
+      ]
+    },
+    {
+      "id": "ferrari-599-gto",
+      "brand": "Ferrari",
+      "model": "599 GTO",
+      "year": "2010",
+      "specs": "V12 6.0L — 670 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6754cb8753bb95578ca70a50.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "icones",
+        "ferrari"
+      ]
+    },
+    {
+      "id": "mercedes-slr-722",
+      "brand": "Mercedes-Benz",
+      "model": "SLR 722",
+      "year": "2006",
+      "specs": "V8 5.4L Supercharged — 650 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d16a09d9216bcd78eb.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "icones",
+        "autres"
+      ]
+    },
+    {
+      "id": "mercedes-sls-black-series",
+      "brand": "Mercedes-AMG",
+      "model": "SLS Black Series",
+      "year": "2013",
+      "specs": "V8 6.2L — 631 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/675480ed988a5f3d4f9ece3b.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "icones",
+        "autres"
+      ]
+    },
+    {
+      "id": "aston-martin-zagato-archive",
+      "brand": "Aston Martin",
+      "model": "V12 Zagato",
+      "year": "2011",
+      "specs": "V12 6.0L — 600 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d16a09d9f839cd78e9.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "icones",
+        "autres"
+      ]
+    },
+    {
+      "id": "lamborghini-aventador-sv-roadster",
+      "brand": "Lamborghini",
+      "model": "Aventador SV Roadster",
+      "year": "2015",
+      "specs": "V12 6.5L — 750 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d16a09d93677cd78e5.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "icones",
+        "lamborghini"
+      ]
+    },
+    {
+      "id": "lamborghini-lm002",
+      "brand": "Lamborghini",
+      "model": "LM002",
+      "year": "1986",
+      "specs": "V12 6.0L — 580 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/67548101b779b2289e86aa72.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "icones",
+        "lamborghini",
         "classiques"
       ]
     },
     {
-      "id": "porsche-997-gt2",
+      "id": "porsche-gt2-rs-991",
       "brand": "Porsche",
-      "model": "997 GT2",
-      "year": "2007",
-      "specs": "Flat-6 3.6L Twin Turbo — 530 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201610/17843209627165287.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-997-gt2.html",
-      "categories": [
-        "porsche",
-        "icones"
-      ]
-    },
-    {
-      "id": "porsche-930-turbo",
-      "brand": "Porsche",
-      "model": "930 Turbo",
-      "year": "1978",
-      "specs": "Flat-6 3.3L Turbo — 300 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201612/17845103830150541.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-930-turbo.html",
-      "categories": [
-        "porsche",
-        "classiques",
-        "swiss-stories"
-      ]
-    },
-    {
-      "id": "rolls-royce-ghost",
-      "brand": "Rolls-Royce",
-      "model": "Ghost",
-      "year": "2014",
-      "specs": "V12 6.6L Twin Turbo — 570 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201612/17845041760157317.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/rolls-royce-ghost.html",
-      "categories": [
-        "autres",
-        "icones"
-      ]
-    },
-    {
-      "id": "bmw-z8",
-      "brand": "BMW",
-      "model": "Z8",
-      "year": "2000",
-      "specs": "V8 4.9L — 400 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201704/17854818670147320.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/bmw-z8.html",
-      "categories": [
-        "classiques",
-        "autres",
-        "swiss-stories"
-      ]
-    },
-    {
-      "id": "mercedes-amg-gt-r",
-      "brand": "Mercedes-AMG",
-      "model": "GT R",
+      "model": "GT2 RS (991)",
       "year": "2017",
-      "specs": "V8 4.0L Biturbo — 585 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201810/17877060670301343.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/mercedes-amg-gt-r.html",
+      "specs": "Flat-6 3.8L Twin Turbo — 700 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1ed7e7711c49a1a60.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "icones",
+        "porsche"
+      ]
+    },
+    {
+      "id": "porsche-carrera-gt",
+      "brand": "Porsche",
+      "model": "Carrera GT",
+      "year": "2004",
+      "specs": "V10 5.7L — 612 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201609/17842020796137177.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-carrera-gt.html",
+      "categories": [
+        "icones",
+        "porsche"
+      ]
+    },
+    {
+      "id": "lamborghini-countach-lp400",
+      "brand": "Lamborghini",
+      "model": "Countach LP400",
+      "year": "1974",
+      "specs": "V12 4.0L — 375 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201911/17843900806835510.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-countach-lp400.html",
+      "categories": [
+        "lamborghini",
+        "icones",
+        "classiques"
+      ]
+    },
+    {
+      "id": "ferrari-512-bb",
+      "brand": "Ferrari",
+      "model": "512 BB",
+      "year": "1976",
+      "specs": "Flat-12 5.0L — 360 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202009/17862084044126691.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-512-bb.html",
+      "categories": [
+        "ferrari",
+        "icones",
+        "classiques"
+      ]
+    },
+    {
+      "id": "jaguar-e-type",
+      "brand": "Jaguar",
+      "model": "E-Type",
+      "year": "1961",
+      "specs": "L6 4.2L — 265 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202105/17876853344310145.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/jaguar-e-type.html",
       "categories": [
         "autres",
         "icones",
-        "swiss-stories"
+        "classiques"
+      ]
+    },
+    {
+      "id": "porsche-906-carrera-6",
+      "brand": "Porsche",
+      "model": "906 Carrera 6",
+      "year": "1966",
+      "specs": "Flat-6 2.0L — 210 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201904/17847194110419358.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-906-carrera-6.html",
+      "categories": [
+        "porsche",
+        "icones",
+        "classiques"
+      ]
+    },
+    {
+      "id": "alfa-romeo-8c-competizione",
+      "brand": "Alfa Romeo",
+      "model": "8C Competizione",
+      "year": "2007",
+      "specs": "V8 4.7L — 450 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201908/17849553490539500.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/alfa-romeo-8c-competizione.html",
+      "categories": [
+        "autres",
+        "icones"
+      ]
+    },
+    {
+      "id": "ferrari-testarossa",
+      "brand": "Ferrari",
+      "model": "Testarossa",
+      "year": "1984",
+      "specs": "Flat-12 4.9L — 390 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202010/17866930052075526.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-testarossa.html",
+      "categories": [
+        "ferrari",
+        "icones",
+        "classiques"
+      ]
+    },
+    {
+      "id": "lamborghini-huracan-sto",
+      "brand": "Lamborghini",
+      "model": "Huracan STO",
+      "year": "2021",
+      "specs": "V10 5.2L — 640 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1988a5f39439adada.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "lamborghini"
+      ]
+    },
+    {
+      "id": "porsche-991-gt2-rs",
+      "brand": "Porsche",
+      "model": "991 GT2 RS",
+      "year": "2017",
+      "specs": "Flat-6 3.8L Twin Turbo — 700 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6751e87a988a5f37509981a1.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "porsche"
+      ]
+    },
+    {
+      "id": "ferrari-488-pista-spider",
+      "brand": "Ferrari",
+      "model": "488 Pista Spider",
+      "year": "2018",
+      "specs": "V8 3.9L Biturbo — 720 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202106/17876736095464856.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-488-pista-spider.html",
+      "categories": [
+        "ferrari",
+        "icones"
+      ]
+    },
+    {
+      "id": "porsche-911-speedster-991",
+      "brand": "Porsche",
+      "model": "911 Speedster (991)",
+      "year": "2019",
+      "specs": "Flat-6 4.0L — 510 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201911/17847677902724699.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-speedster-991.html",
+      "categories": [
+        "porsche",
+        "icones"
+      ]
+    },
+    {
+      "id": "porsche-911-gt3-rs-991",
+      "brand": "Porsche",
+      "model": "911 GT3 RS (991)",
+      "year": "2015",
+      "specs": "Flat-6 4.0L — 500 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201610/17843278504144032.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-gt3-rs-991.html",
+      "categories": [
+        "porsche",
+        "icones"
+      ]
+    },
+    {
+      "id": "ferrari-430-scuderia",
+      "brand": "Ferrari",
+      "model": "430 Scuderia",
+      "year": "2007",
+      "specs": "V8 4.3L — 510 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202010/17866187276102576.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-430-scuderia.html",
+      "categories": [
+        "ferrari"
+      ]
+    },
+    {
+      "id": "ferrari-458-speciale",
+      "brand": "Ferrari",
+      "model": "458 Speciale",
+      "year": "2013",
+      "specs": "V8 4.5L — 605 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201706/17872147963118626.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-458-speciale.html",
+      "categories": [
+        "ferrari",
+        "icones"
+      ]
+    },
+    {
+      "id": "lamborghini-aventador-svj",
+      "brand": "Lamborghini",
+      "model": "Aventador SVJ",
+      "year": "2018",
+      "specs": "V12 6.5L — 770 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202012/17862087563296131.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-aventador-svj.html",
+      "categories": [
+        "lamborghini",
+        "icones"
+      ]
+    },
+    {
+      "id": "lamborghini-huracan-performante",
+      "brand": "Lamborghini",
+      "model": "Huracan Performante",
+      "year": "2017",
+      "specs": "V10 5.2L — 640 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201812/17877668434294159.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-huracan-performante.html",
+      "categories": [
+        "lamborghini",
+        "icones"
+      ]
+    },
+    {
+      "id": "ferrari-599-gtb-fiorano",
+      "brand": "Ferrari",
+      "model": "599 GTB Fiorano",
+      "year": "2006",
+      "specs": "V12 6.0L — 620 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202206/17885125613663239.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-599-gtb-fiorano.html",
+      "categories": [
+        "ferrari"
+      ]
+    },
+    {
+      "id": "porsche-964-turbo-36",
+      "brand": "Porsche",
+      "model": "964 3.6 Turbo",
+      "year": "1993",
+      "specs": "Flat-6 3.6L Turbo — 360 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/67548110a743880aed3a0d31.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "porsche",
+        "classiques"
       ]
     },
     {
@@ -290,105 +545,55 @@
       ]
     },
     {
-      "id": "mercedes-sls-amg",
-      "brand": "Mercedes-AMG",
-      "model": "SLS AMG",
-      "year": "2010",
-      "specs": "V8 6.2L — 571 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202006/17842352054273258.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/mercedes-sls-amg.html",
+      "id": "porsche-930-turbo",
+      "brand": "Porsche",
+      "model": "930 Turbo",
+      "year": "1978",
+      "specs": "Flat-6 3.3L Turbo — 300 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201612/17845103830150541.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-930-turbo.html",
       "categories": [
-        "autres",
+        "porsche",
+        "classiques",
+        "swiss-stories"
+      ]
+    },
+    {
+      "id": "porsche-997-gt2",
+      "brand": "Porsche",
+      "model": "997 GT2",
+      "year": "2007",
+      "specs": "Flat-6 3.6L Twin Turbo — 530 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201610/17843209627165287.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-997-gt2.html",
+      "categories": [
+        "porsche",
         "icones"
       ]
     },
     {
-      "id": "ferrari-f12-red",
-      "brand": "Ferrari",
-      "model": "F12 Berlinetta (Rosso)",
-      "year": "2012",
-      "specs": "V12 6.3L — 740 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202005/17844443243155624.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f12-red.html",
-      "categories": [
-        "ferrari"
-      ]
-    },
-    {
-      "id": "ferrari-california-t-white",
-      "brand": "Ferrari",
-      "model": "California T",
-      "year": "2014",
-      "specs": "V8 3.9L Turbo — 560 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202011/17842617389487371.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-california-t-white.html",
-      "categories": [
-        "ferrari",
-        "swiss-stories"
-      ]
-    },
-    {
-      "id": "porsche-991-targa-4s",
+      "id": "porsche-997-gt3-rs",
       "brand": "Porsche",
-      "model": "991 Targa 4S",
-      "year": "2014",
-      "specs": "Flat-6 3.8L — 400 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202102/17845888235518419.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-991-targa-4s.html",
+      "model": "997 GT3 RS",
+      "year": "2010",
+      "specs": "Flat-6 3.8L — 450 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201705/17880312034028080.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-997-gt3-rs.html",
       "categories": [
         "porsche",
-        "swiss-stories"
+        "icones"
       ]
     },
     {
-      "id": "alpine-a110",
-      "brand": "Alpine",
-      "model": "A110",
-      "year": "2018",
-      "specs": "L4 1.8L Turbo — 252 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202103/17844140303552779.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/alpine-a110.html",
+      "id": "gumpert-apollo",
+      "brand": "Gumpert",
+      "model": "Apollo",
+      "year": "2005",
+      "specs": "V8 4.2L Twin Turbo — 650 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1988a5fa73f9adad7.jpeg",
+      "detail_url": "#",
       "categories": [
         "autres"
-      ]
-    },
-    {
-      "id": "mclaren-mp4-12c",
-      "brand": "McLaren",
-      "model": "MP4-12C",
-      "year": "2011",
-      "specs": "V8 3.8L Twin Turbo — 600 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201705/17866452736091960.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/mclaren-mp4-12c.html",
-      "categories": [
-        "autres"
-      ]
-    },
-    {
-      "id": "ferrari-328-gtb",
-      "brand": "Ferrari",
-      "model": "328 GTB",
-      "year": "1985",
-      "specs": "V8 3.2L — 270 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201705/17856796618144283.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-328-gtb.html",
-      "categories": [
-        "ferrari",
-        "classiques"
-      ]
-    },
-    {
-      "id": "ferrari-250-swb-detail",
-      "brand": "Ferrari",
-      "model": "250 GT SWB (Détail)",
-      "year": "1960",
-      "specs": "V12 3.0L — 280 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201702/17848405042165490.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-250-swb-detail.html",
-      "categories": [
-        "icones",
-        "ferrari",
-        "classiques"
       ]
     },
     {
@@ -418,40 +623,29 @@
       ]
     },
     {
-      "id": "porsche-911-50th-anniversary-991",
-      "brand": "Porsche",
-      "model": "911 50th Anniversary (991)",
-      "year": "2013",
-      "specs": "Flat-6 3.8L — 400 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201811/17891968471277519.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-50th-anniversary-991.html",
+      "id": "ferrari-250-swb-detail",
+      "brand": "Ferrari",
+      "model": "250 GT SWB (Détail)",
+      "year": "1960",
+      "specs": "V12 3.0L — 280 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201702/17848405042165490.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-250-swb-detail.html",
       "categories": [
-        "porsche"
+        "icones",
+        "ferrari",
+        "classiques"
       ]
     },
     {
-      "id": "lamborghini-huracan-performante",
-      "brand": "Lamborghini",
-      "model": "Huracan Performante",
-      "year": "2017",
-      "specs": "V10 5.2L — 640 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201812/17877668434294159.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-huracan-performante.html",
+      "id": "ferrari-328-gtb",
+      "brand": "Ferrari",
+      "model": "328 GTB",
+      "year": "1985",
+      "specs": "V8 3.2L — 270 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201705/17856796618144283.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-328-gtb.html",
       "categories": [
-        "lamborghini",
-        "icones"
-      ]
-    },
-    {
-      "id": "caterham-seven-csr",
-      "brand": "Caterham",
-      "model": "Seven CSR",
-      "year": "2006",
-      "specs": "Ford Duratec 2.3L — 260 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201812/17888522212302877.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/caterham-seven-csr.html",
-      "categories": [
-        "autres",
+        "ferrari",
         "classiques"
       ]
     },
@@ -469,295 +663,28 @@
       ]
     },
     {
-      "id": "ferrari-458-italia-green",
-      "brand": "Ferrari",
-      "model": "458 Italia",
-      "year": "2009",
-      "specs": "V8 4.5L — 570 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201812/17903815642276327.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-458-italia-green.html",
-      "categories": [
-        "ferrari"
-      ]
-    },
-    {
-      "id": "porsche-906-carrera-6",
+      "id": "porsche-911-carrera-rs-27",
       "brand": "Porsche",
-      "model": "906 Carrera 6",
-      "year": "1966",
-      "specs": "Flat-6 2.0L — 210 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201904/17847194110419358.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-906-carrera-6.html",
+      "model": "911 Carrera RS 2.7",
+      "year": "1973",
+      "specs": "Flat-6 2.7L — 210 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201611/17856122947113155.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-carrera-rs-27.html",
       "categories": [
+        "icones",
         "porsche",
-        "icones",
-        "classiques"
+        "classiques",
+        "swiss-stories"
       ]
     },
     {
-      "id": "mclaren-650s",
-      "brand": "McLaren",
-      "model": "650S",
-      "year": "2014",
-      "specs": "V8 3.8L Twin Turbo — 650 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201904/17854099054378472.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/mclaren-650s.html",
-      "categories": [
-        "autres"
-      ]
-    },
-    {
-      "id": "aston-martin-virage-volante",
-      "brand": "Aston Martin",
-      "model": "Virage Volante",
-      "year": "2011",
-      "specs": "V12 6.0L — 490 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201906/17846535931477127.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/aston-martin-virage-volante.html",
-      "categories": [
-        "autres"
-      ]
-    },
-    {
-      "id": "alfa-romeo-8c-competizione",
-      "brand": "Alfa Romeo",
-      "model": "8C Competizione",
-      "year": "2007",
-      "specs": "V8 4.7L — 450 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201908/17849553490539500.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/alfa-romeo-8c-competizione.html",
-      "categories": [
-        "autres",
-        "icones"
-      ]
-    },
-    {
-      "id": "lamborghini-countach-lp400",
-      "brand": "Lamborghini",
-      "model": "Countach LP400",
-      "year": "1974",
-      "specs": "V12 4.0L — 375 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201911/17843900806835510.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-countach-lp400.html",
-      "categories": [
-        "lamborghini",
-        "icones",
-        "classiques"
-      ]
-    },
-    {
-      "id": "porsche-911-speedster-991",
+      "id": "porsche-356-cabriolet",
       "brand": "Porsche",
-      "model": "911 Speedster (991)",
-      "year": "2019",
-      "specs": "Flat-6 4.0L — 510 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201911/17847677902724699.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-speedster-991.html",
-      "categories": [
-        "porsche",
-        "icones"
-      ]
-    },
-    {
-      "id": "ferrari-gtc4lusso",
-      "brand": "Ferrari",
-      "model": "GTC4Lusso",
-      "year": "2016",
-      "specs": "V12 6.3L — 690 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201903/17931340873272024.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-gtc4lusso.html",
-      "categories": [
-        "ferrari"
-      ]
-    },
-    {
-      "id": "ferrari-512-bb",
-      "brand": "Ferrari",
-      "model": "512 BB",
-      "year": "1976",
-      "specs": "Flat-12 5.0L — 360 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202009/17862084044126691.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-512-bb.html",
-      "categories": [
-        "ferrari",
-        "icones",
-        "classiques"
-      ]
-    },
-    {
-      "id": "ferrari-430-scuderia",
-      "brand": "Ferrari",
-      "model": "430 Scuderia",
-      "year": "2007",
-      "specs": "V8 4.3L — 510 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202010/17866187276102576.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-430-scuderia.html",
-      "categories": [
-        "ferrari"
-      ]
-    },
-    {
-      "id": "ferrari-456-gt",
-      "brand": "Ferrari",
-      "model": "456 GT",
-      "year": "1992",
-      "specs": "V12 5.5L — 442 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202010/17847298610417125.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-456-gt.html",
-      "categories": [
-        "ferrari",
-        "classiques"
-      ]
-    },
-    {
-      "id": "ferrari-testarossa",
-      "brand": "Ferrari",
-      "model": "Testarossa",
-      "year": "1984",
-      "specs": "Flat-12 4.9L — 390 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202010/17866930052075526.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-testarossa.html",
-      "categories": [
-        "ferrari",
-        "icones",
-        "classiques"
-      ]
-    },
-    {
-      "id": "ford-mustang-1965",
-      "brand": "Ford",
-      "model": "Mustang (1965)",
-      "year": "1965",
-      "specs": "V8 4.7L — 225 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202012/17860463351336584.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ford-mustang-1965.html",
-      "categories": [
-        "autres",
-        "classiques"
-      ]
-    },
-    {
-      "id": "porsche-993-carrera-4-cabriolet",
-      "brand": "Porsche",
-      "model": "993 Carrera 4 Cabriolet",
-      "year": "1995",
-      "specs": "Flat-6 3.6L — 272 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202012/17852669726434063.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-993-carrera-4-cabriolet.html",
-      "categories": [
-        "porsche",
-        "classiques"
-      ]
-    },
-    {
-      "id": "lamborghini-aventador-svj",
-      "brand": "Lamborghini",
-      "model": "Aventador SVJ",
-      "year": "2018",
-      "specs": "V12 6.5L — 770 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202012/17862087563296131.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-aventador-svj.html",
-      "categories": [
-        "lamborghini",
-        "icones"
-      ]
-    },
-    {
-      "id": "lamborghini-gallardo",
-      "brand": "Lamborghini",
-      "model": "Gallardo",
-      "year": "2003",
-      "specs": "V10 5.0L — 520 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202105/17870617667389773.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-gallardo.html",
-      "categories": [
-        "lamborghini"
-      ]
-    },
-    {
-      "id": "jaguar-e-type",
-      "brand": "Jaguar",
-      "model": "E-Type",
-      "year": "1961",
-      "specs": "L6 4.2L — 265 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202105/17876853344310145.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/jaguar-e-type.html",
-      "categories": [
-        "autres",
-        "icones",
-        "classiques"
-      ]
-    },
-    {
-      "id": "aston-martin-v12-vantage-s-roadster",
-      "brand": "Aston Martin",
-      "model": "V12 Vantage S Roadster",
-      "year": "2014",
-      "specs": "V12 5.9L — 573 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202105/17872633193357147.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/aston-martin-v12-vantage-s-roadster.html",
-      "categories": [
-        "autres"
-      ]
-    },
-    {
-      "id": "alfa-romeo-4c",
-      "brand": "Alfa Romeo",
-      "model": "4C",
-      "year": "2013",
-      "specs": "L4 1.75L Turbo — 240 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202106/17857664903557454.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/alfa-romeo-4c.html",
-      "categories": [
-        "autres"
-      ]
-    },
-    {
-      "id": "ferrari-488-pista-spider",
-      "brand": "Ferrari",
-      "model": "488 Pista Spider",
-      "year": "2018",
-      "specs": "V8 3.9L Biturbo — 720 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202106/17876736095464856.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-488-pista-spider.html",
-      "categories": [
-        "ferrari",
-        "icones"
-      ]
-    },
-    {
-      "id": "rolls-royce-silver-seraph",
-      "brand": "Rolls-Royce",
-      "model": "Silver Seraph",
-      "year": "1998",
-      "specs": "V12 5.4L — 326 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202106/17877747398460123.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/rolls-royce-silver-seraph.html",
-      "categories": [
-        "autres",
-        "classiques"
-      ]
-    },
-    {
-      "id": "porsche-718-spyder",
-      "brand": "Porsche",
-      "model": "718 Spyder",
-      "year": "2019",
-      "specs": "Flat-6 4.0L — 420 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202110/17861750618597759.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-718-spyder.html",
-      "categories": [
-        "porsche"
-      ]
-    },
-    {
-      "id": "porsche-911-carrera-sc",
-      "brand": "Porsche",
-      "model": "911 Carrera SC",
-      "year": "1982",
-      "specs": "Flat-6 3.0L — 204 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202110/17887804838380910.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-carrera-sc.html",
+      "model": "356 Cabriolet",
+      "year": "1960",
+      "specs": "Flat-4 1.6L — 75 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202202/17911755632368620.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-356-cabriolet.html",
       "categories": [
         "porsche",
         "classiques"
@@ -777,25 +704,153 @@
       ]
     },
     {
-      "id": "ferrari-599-gtb-fiorano",
+      "id": "ferrari-f12-berlinetta",
       "brand": "Ferrari",
-      "model": "599 GTB Fiorano",
-      "year": "2006",
-      "specs": "V12 6.0L — 620 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202206/17885125613663239.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-599-gtb-fiorano.html",
+      "model": "F12 Berlinetta",
+      "year": "2012",
+      "specs": "V12 6.3L — 740 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201705/17857729273167382.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f12-berlinetta.html",
       "categories": [
         "ferrari"
       ]
     },
     {
-      "id": "ferrari-f430",
+      "id": "ferrari-f12-red",
       "brand": "Ferrari",
-      "model": "F430",
-      "year": "2004",
-      "specs": "V8 4.3L — 490 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202206/17863368668700110.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f430.html",
+      "model": "F12 Berlinetta (Rosso)",
+      "year": "2012",
+      "specs": "V12 6.3L — 740 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202005/17844443243155624.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f12-red.html",
+      "categories": [
+        "ferrari"
+      ]
+    },
+    {
+      "id": "bmw-z8",
+      "brand": "BMW",
+      "model": "Z8",
+      "year": "2000",
+      "specs": "V8 4.9L — 400 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201704/17854818670147320.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/bmw-z8.html",
+      "categories": [
+        "classiques",
+        "autres",
+        "swiss-stories"
+      ]
+    },
+    {
+      "id": "mercedes-sls-amg",
+      "brand": "Mercedes-AMG",
+      "model": "SLS AMG",
+      "year": "2010",
+      "specs": "V8 6.2L — 571 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202006/17842352054273258.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/mercedes-sls-amg.html",
+      "categories": [
+        "autres",
+        "icones"
+      ]
+    },
+    {
+      "id": "mercedes-amg-gt-r",
+      "brand": "Mercedes-AMG",
+      "model": "GT R",
+      "year": "2017",
+      "specs": "V8 4.0L Biturbo — 585 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201810/17877060670301343.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/mercedes-amg-gt-r.html",
+      "categories": [
+        "autres",
+        "icones",
+        "swiss-stories"
+      ]
+    },
+    {
+      "id": "ferrari-550-maranello",
+      "brand": "Ferrari",
+      "model": "550 Maranello",
+      "year": "1996",
+      "specs": "V12 5.5L — 485 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201610/17843023948144521.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-550-maranello.html",
+      "categories": [
+        "ferrari",
+        "classiques"
+      ]
+    },
+    {
+      "id": "ferrari-ff",
+      "brand": "Ferrari",
+      "model": "FF",
+      "year": "2011",
+      "specs": "V12 6.3L — 660 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201903/18040312690009235.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-ff.html",
+      "categories": [
+        "ferrari"
+      ]
+    },
+    {
+      "id": "ferrari-california",
+      "brand": "Ferrari",
+      "model": "California",
+      "year": "2008",
+      "specs": "V8 4.3L — 460 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201906/17974860262263574.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-california.html",
+      "categories": [
+        "ferrari"
+      ]
+    },
+    {
+      "id": "ferrari-california-t-white",
+      "brand": "Ferrari",
+      "model": "California T",
+      "year": "2014",
+      "specs": "V8 3.9L Turbo — 560 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202011/17842617389487371.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-california-t-white.html",
+      "categories": [
+        "ferrari",
+        "swiss-stories"
+      ]
+    },
+    {
+      "id": "ferrari-gtc4lusso",
+      "brand": "Ferrari",
+      "model": "GTC4Lusso",
+      "year": "2016",
+      "specs": "V12 6.3L — 690 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201903/17931340873272024.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-gtc4lusso.html",
+      "categories": [
+        "ferrari"
+      ]
+    },
+    {
+      "id": "ferrari-456-gt",
+      "brand": "Ferrari",
+      "model": "456 GT",
+      "year": "1992",
+      "specs": "V12 5.5L — 442 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202010/17847298610417125.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-456-gt.html",
+      "categories": [
+        "ferrari",
+        "classiques"
+      ]
+    },
+    {
+      "id": "ferrari-458-italia-green",
+      "brand": "Ferrari",
+      "model": "458 Italia",
+      "year": "2009",
+      "specs": "V8 4.5L — 570 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201812/17903815642276327.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-458-italia-green.html",
       "categories": [
         "ferrari"
       ]
@@ -813,53 +868,53 @@
       ]
     },
     {
-      "id": "ferrari-458-speciale",
+      "id": "ferrari-f430",
       "brand": "Ferrari",
-      "model": "458 Speciale",
-      "year": "2013",
-      "specs": "V8 4.5L — 605 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201706/17872147963118626.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-458-speciale.html",
+      "model": "F430",
+      "year": "2004",
+      "specs": "V8 4.3L — 490 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202206/17863368668700110.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f430.html",
       "categories": [
-        "ferrari",
+        "ferrari"
+      ]
+    },
+    {
+      "id": "rolls-royce-ghost",
+      "brand": "Rolls-Royce",
+      "model": "Ghost",
+      "year": "2014",
+      "specs": "V12 6.6L Twin Turbo — 570 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201612/17845041760157317.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/rolls-royce-ghost.html",
+      "categories": [
+        "autres",
         "icones"
       ]
     },
     {
-      "id": "porsche-356-cabriolet",
-      "brand": "Porsche",
-      "model": "356 Cabriolet",
-      "year": "1960",
-      "specs": "Flat-4 1.6L — 75 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202202/17911755632368620.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-356-cabriolet.html",
-      "categories": [
-        "porsche",
-        "classiques"
-      ]
-    },
-    {
-      "id": "maserati-granturismo-sport",
-      "brand": "Maserati",
-      "model": "GranTurismo Sport",
-      "year": "2012",
-      "specs": "V8 4.7L — 460 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202203/17885818202551564.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/maserati-granturismo-sport.html",
+      "id": "aston-martin-virage-volante",
+      "brand": "Aston Martin",
+      "model": "Virage Volante",
+      "year": "2011",
+      "specs": "V12 6.0L — 490 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201906/17846535931477127.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/aston-martin-virage-volante.html",
       "categories": [
         "autres"
       ]
     },
     {
-      "id": "maserati-levante-trofeo",
-      "brand": "Maserati",
-      "model": "Levante Trofeo",
-      "year": "2019",
-      "specs": "V8 3.8L Biturbo — 590 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/202203/17904909491374656.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/maserati-levante-trofeo.html",
+      "id": "aston-martin-dbs",
+      "brand": "Aston Martin",
+      "model": "DBS",
+      "year": "2007",
+      "specs": "V12 5.9L — 510 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201709/17877804217143343.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/aston-martin-dbs.html",
       "categories": [
-        "autres"
+        "autres",
+        "icones"
       ]
     },
     {
@@ -889,26 +944,312 @@
       ]
     },
     {
-      "id": "aston-martin-dbs",
+      "id": "aston-martin-v12-vantage-s-roadster",
       "brand": "Aston Martin",
-      "model": "DBS",
-      "year": "2007",
-      "specs": "V12 5.9L — 510 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201709/17877804217143343.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/aston-martin-dbs.html",
+      "model": "V12 Vantage S Roadster",
+      "year": "2014",
+      "specs": "V12 5.9L — 573 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202105/17872633193357147.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/aston-martin-v12-vantage-s-roadster.html",
       "categories": [
-        "autres",
-        "icones"
+        "autres"
       ]
     },
     {
-      "id": "mercedes-amg-c63-coupe",
-      "brand": "Mercedes-AMG",
-      "model": "C63 Coupé",
+      "id": "mclaren-mp4-12c",
+      "brand": "McLaren",
+      "model": "MP4-12C",
+      "year": "2011",
+      "specs": "V8 3.8L Twin Turbo — 600 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201705/17866452736091960.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/mclaren-mp4-12c.html",
+      "categories": [
+        "autres"
+      ]
+    },
+    {
+      "id": "mclaren-650s",
+      "brand": "McLaren",
+      "model": "650S",
+      "year": "2014",
+      "specs": "V8 3.8L Twin Turbo — 650 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201904/17854099054378472.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/mclaren-650s.html",
+      "categories": [
+        "autres"
+      ]
+    },
+    {
+      "id": "audi-r8-archive",
+      "brand": "Audi",
+      "model": "R8",
+      "year": "2014",
+      "specs": "V10 5.2L — 525 ch",
+      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1ed7e7792c99a1a5d.jpeg",
+      "detail_url": "#",
+      "categories": [
+        "autres"
+      ]
+    },
+    {
+      "id": "lamborghini-gallardo",
+      "brand": "Lamborghini",
+      "model": "Gallardo",
+      "year": "2003",
+      "specs": "V10 5.0L — 520 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202105/17870617667389773.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-gallardo.html",
+      "categories": [
+        "lamborghini"
+      ]
+    },
+    {
+      "id": "porsche-911-turbo-993",
+      "brand": "Porsche",
+      "model": "911 Turbo (993)",
+      "year": "1995",
+      "specs": "Flat-6 3.6L Twin Turbo — 408 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201610/17843278504144032.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-turbo-993.html",
+      "categories": [
+        "porsche",
+        "classiques"
+      ]
+    },
+    {
+      "id": "porsche-911-turbo-s-997",
+      "brand": "Porsche",
+      "model": "911 Turbo S (997)",
+      "year": "2010",
+      "specs": "Flat-6 3.8L Twin Turbo — 530 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201609/17842170520167259.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-turbo-s-997.html",
+      "categories": [
+        "porsche",
+        "swiss-stories"
+      ]
+    },
+    {
+      "id": "porsche-911-gt3-991",
+      "brand": "Porsche",
+      "model": "911 GT3 (991)",
+      "year": "2013",
+      "specs": "Flat-6 3.8L — 475 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201912/17865598729565958.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-gt3-991.html",
+      "categories": [
+        "porsche",
+        "swiss-stories"
+      ]
+    },
+    {
+      "id": "porsche-991-targa-4s",
+      "brand": "Porsche",
+      "model": "991 Targa 4S",
+      "year": "2014",
+      "specs": "Flat-6 3.8L — 400 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202102/17845888235518419.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-991-targa-4s.html",
+      "categories": [
+        "porsche",
+        "swiss-stories"
+      ]
+    },
+    {
+      "id": "porsche-911-50th-anniversary-991",
+      "brand": "Porsche",
+      "model": "911 50th Anniversary (991)",
+      "year": "2013",
+      "specs": "Flat-6 3.8L — 400 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201811/17891968471277519.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-50th-anniversary-991.html",
+      "categories": [
+        "porsche"
+      ]
+    },
+    {
+      "id": "porsche-911-turbo-s-cabriolet-991",
+      "brand": "Porsche",
+      "model": "911 Turbo S Cabriolet (991)",
+      "year": "2013",
+      "specs": "Flat-6 3.8L Twin Turbo — 580 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201706/17868858580080783.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-turbo-s-cabriolet-991.html",
+      "categories": [
+        "porsche"
+      ]
+    },
+    {
+      "id": "porsche-993-carrera-4-cabriolet",
+      "brand": "Porsche",
+      "model": "993 Carrera 4 Cabriolet",
+      "year": "1995",
+      "specs": "Flat-6 3.6L — 272 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202012/17852669726434063.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-993-carrera-4-cabriolet.html",
+      "categories": [
+        "porsche",
+        "classiques"
+      ]
+    },
+    {
+      "id": "porsche-911-carrera-sc",
+      "brand": "Porsche",
+      "model": "911 Carrera SC",
+      "year": "1982",
+      "specs": "Flat-6 3.0L — 204 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202110/17887804838380910.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-carrera-sc.html",
+      "categories": [
+        "porsche",
+        "classiques"
+      ]
+    },
+    {
+      "id": "alpine-a110",
+      "brand": "Alpine",
+      "model": "A110",
+      "year": "2018",
+      "specs": "L4 1.8L Turbo — 252 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202103/17844140303552779.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/alpine-a110.html",
+      "categories": [
+        "autres"
+      ]
+    },
+    {
+      "id": "pontiac-gto",
+      "brand": "Pontiac",
+      "model": "GTO",
+      "year": "1966",
+      "specs": "V8 6.4L — 360 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201901/17976893863198711.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/pontiac-gto.html",
+      "categories": [
+        "classiques",
+        "autres"
+      ]
+    },
+    {
+      "id": "ford-mustang-1965",
+      "brand": "Ford",
+      "model": "Mustang (1965)",
+      "year": "1965",
+      "specs": "V8 4.7L — 225 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202012/17860463351336584.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ford-mustang-1965.html",
+      "categories": [
+        "autres",
+        "classiques"
+      ]
+    },
+    {
+      "id": "porsche-718-boxster",
+      "brand": "Porsche",
+      "model": "718 Boxster",
       "year": "2016",
-      "specs": "V8 4.0L Biturbo — 510 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201709/17870447089168568.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/mercedes-amg-c63-coupe.html",
+      "specs": "Flat-4 2.0L Turbo — 300 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202104/17876307491231706.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-718-boxster.html",
+      "categories": [
+        "porsche"
+      ]
+    },
+    {
+      "id": "porsche-718-spyder",
+      "brand": "Porsche",
+      "model": "718 Spyder",
+      "year": "2019",
+      "specs": "Flat-6 4.0L — 420 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202110/17861750618597759.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-718-spyder.html",
+      "categories": [
+        "porsche"
+      ]
+    },
+    {
+      "id": "porsche-911-carrera-g",
+      "brand": "Porsche",
+      "model": "911 2.7",
+      "year": "1974",
+      "specs": "Flat-6 2.7L — 211 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202007/17861674403007612.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-carrera-g.html",
+      "categories": [
+        "porsche",
+        "classiques"
+      ]
+    },
+    {
+      "id": "porsche-911-997",
+      "brand": "Porsche",
+      "model": "911 GTS Targa",
+      "year": "2008",
+      "specs": "Flat-6 3.8L — 408 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202101/18092282161221928.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-997.html",
+      "categories": [
+        "porsche"
+      ]
+    },
+    {
+      "id": "caterham-seven-csr",
+      "brand": "Caterham",
+      "model": "Seven CSR",
+      "year": "2006",
+      "specs": "Ford Duratec 2.3L — 260 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201812/17888522212302877.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/caterham-seven-csr.html",
+      "categories": [
+        "autres",
+        "classiques"
+      ]
+    },
+    {
+      "id": "alfa-romeo-4c",
+      "brand": "Alfa Romeo",
+      "model": "4C",
+      "year": "2013",
+      "specs": "L4 1.75L Turbo — 240 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202106/17857664903557454.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/alfa-romeo-4c.html",
+      "categories": [
+        "autres"
+      ]
+    },
+    {
+      "id": "rolls-royce-silver-seraph",
+      "brand": "Rolls-Royce",
+      "model": "Silver Seraph",
+      "year": "1998",
+      "specs": "V12 5.4L — 326 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202106/17877747398460123.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/rolls-royce-silver-seraph.html",
+      "categories": [
+        "autres",
+        "classiques"
+      ]
+    },
+    {
+      "id": "maserati-granturismo-sport",
+      "brand": "Maserati",
+      "model": "GranTurismo Sport",
+      "year": "2012",
+      "specs": "V8 4.7L — 460 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202203/17885818202551564.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/maserati-granturismo-sport.html",
+      "categories": [
+        "autres"
+      ]
+    },
+    {
+      "id": "maserati-levante-trofeo",
+      "brand": "Maserati",
+      "model": "Levante Trofeo",
+      "year": "2019",
+      "specs": "V8 3.8L Biturbo — 590 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/202203/17904909491374656.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/maserati-levante-trofeo.html",
       "categories": [
         "autres"
       ]
@@ -926,356 +1267,15 @@
       ]
     },
     {
-      "id": "porsche-911-turbo-s-cabriolet-991",
-      "brand": "Porsche",
-      "model": "911 Turbo S Cabriolet (991)",
-      "year": "2013",
-      "specs": "Flat-6 3.8L Twin Turbo — 580 ch",
-      "image": "https://peregocars.github.io/inventory/heritage/images/201706/17868858580080783.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-turbo-s-cabriolet-991.html",
-      "categories": [
-        "porsche"
-      ]
-    },
-    {
-      "id": "bugatti-chiron",
-      "brand": "Bugatti",
-      "model": "Chiron",
-      "year": "2016",
-      "specs": "W16 8.0L Quad Turbo — 1500 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1ed7e772ed09a1a61.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "icones",
-        "autres"
-      ]
-    },
-    {
-      "id": "ferrari-275-gtb",
-      "brand": "Ferrari",
-      "model": "275 GTB Short Nose",
-      "year": "1965",
-      "specs": "V12 3.3L — 280 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d16a09d93c28cd78ec.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "icones",
-        "ferrari",
-        "classiques"
-      ]
-    },
-    {
-      "id": "ferrari-365-daytona",
-      "brand": "Ferrari",
-      "model": "365 GTB4 Daytona",
-      "year": "1968",
-      "specs": "V12 4.4L — 352 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6754807fb779b2f95286aa38.jpeg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-365-daytona.html",
-      "categories": [
-        "icones",
-        "ferrari",
-        "classiques"
-      ]
-    },
-    {
-      "id": "porsche-918-spyder",
-      "brand": "Porsche",
-      "model": "918 Spyder",
-      "year": "2013",
-      "specs": "V8 4.6L Hybrid — 887 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6754806ca7438872df3a0ca2.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "icones",
-        "porsche"
-      ]
-    },
-    {
-      "id": "mercedes-slr-722",
-      "brand": "Mercedes-Benz",
-      "model": "SLR 722",
-      "year": "2006",
-      "specs": "V8 5.4L Supercharged — 650 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d16a09d9216bcd78eb.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "icones",
-        "autres"
-      ]
-    },
-    {
-      "id": "aston-martin-zagato-archive",
-      "brand": "Aston Martin",
-      "model": "V12 Zagato",
-      "year": "2011",
-      "specs": "V12 6.0L — 600 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d16a09d9f839cd78e9.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "icones",
-        "autres"
-      ]
-    },
-    {
-      "id": "audi-r8-archive",
-      "brand": "Audi",
-      "model": "R8",
-      "year": "2014",
-      "specs": "V10 5.2L — 525 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1ed7e7792c99a1a5d.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "autres"
-      ]
-    },
-    {
-      "id": "mclaren-p1",
-      "brand": "McLaren",
-      "model": "P1",
-      "year": "2013",
-      "specs": "V8 3.8L Hybrid — 916 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d229695af5a96c37cd.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "icones",
-        "autres"
-      ]
-    },
-    {
-      "id": "ferrari-812-superfast",
-      "brand": "Ferrari",
-      "model": "812 Superfast",
-      "year": "2017",
-      "specs": "V12 6.5L — 800 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1846fe56185c963b1.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "ferrari"
-      ]
-    },
-    {
-      "id": "ac-cobra-289",
-      "brand": "AC",
-      "model": "Cobra 289",
-      "year": "1963",
-      "specs": "V8 4.7L — 271 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1988a5f7c109adad6.jpeg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ac-cobra-289.html",
-      "categories": [
-        "icones",
-        "classiques",
-        "autres"
-      ]
-    },
-    {
-      "id": "gumpert-apollo",
-      "brand": "Gumpert",
-      "model": "Apollo",
-      "year": "2005",
-      "specs": "V8 4.2L Twin Turbo — 650 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1988a5fa73f9adad7.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "autres"
-      ]
-    },
-    {
-      "id": "porsche-gt2-rs-991",
-      "brand": "Porsche",
-      "model": "GT2 RS (991)",
-      "year": "2017",
-      "specs": "Flat-6 3.8L Twin Turbo — 700 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1ed7e7711c49a1a60.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "icones",
-        "porsche"
-      ]
-    },
-    {
-      "id": "lamborghini-aventador-sv-roadster",
-      "brand": "Lamborghini",
-      "model": "Aventador SV Roadster",
-      "year": "2015",
-      "specs": "V12 6.5L — 750 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d16a09d93677cd78e5.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "icones",
-        "lamborghini"
-      ]
-    },
-    {
-      "id": "lamborghini-huracan-sto",
-      "brand": "Lamborghini",
-      "model": "Huracan STO",
-      "year": "2021",
-      "specs": "V10 5.2L — 640 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1988a5f39439adada.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "lamborghini"
-      ]
-    },
-    {
-      "id": "porsche-991-gt2-rs",
-      "brand": "Porsche",
-      "model": "991 GT2 RS",
-      "year": "2017",
-      "specs": "Flat-6 3.8L Twin Turbo — 700 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6751e87a988a5f37509981a1.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "porsche"
-      ]
-    },
-    {
-      "id": "ferrari-f12-tdf",
-      "brand": "Ferrari",
-      "model": "F12 TDF",
-      "year": "2015",
-      "specs": "V12 6.3L — 780 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d16a09d9d545cd78e7.jpeg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f12-tdf.html",
-      "categories": [
-        "icones",
-        "ferrari"
-      ]
-    },
-    {
-      "id": "ferrari-f40-lm",
-      "brand": "Ferrari",
-      "model": "F40 Le Mans",
-      "year": "1994",
-      "specs": "V8 2.9L Twin Turbo — 700 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d1846fe538e4c963b0.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "icones",
-        "ferrari",
-        "classiques"
-      ]
-    },
-    {
-      "id": "ferrari-f40",
-      "brand": "Ferrari",
-      "model": "F40",
-      "year": "1987",
-      "specs": "V8 2.9L Twin Turbo — 478 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6752d7d16a09d909dfcd78ed.jpeg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f40.html",
-      "categories": [
-        "icones",
-        "ferrari",
-        "classiques"
-      ]
-    },
-    {
-      "id": "ferrari-laferrari",
-      "brand": "Ferrari",
-      "model": "LaFerrari",
-      "year": "2013",
-      "specs": "V12 6.3L Hybrid — 963 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6754812a29695a927d6faadc.jpeg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-laferrari.html",
-      "categories": [
-        "icones",
-        "ferrari"
-      ]
-    },
-    {
-      "id": "maserati-a6gcs",
-      "brand": "Maserati",
-      "model": "A6GCS",
-      "year": "1953",
-      "specs": "Straight-6 2.0L — 170 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/675480c8b779b2947d86aa53.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "icones",
-        "classiques",
-        "autres"
-      ]
-    },
-    {
-      "id": "porsche-964-turbo-36",
-      "brand": "Porsche",
-      "model": "964 3.6 Turbo",
-      "year": "1993",
-      "specs": "Flat-6 3.6L Turbo — 360 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/67548110a743880aed3a0d31.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "porsche",
-        "classiques"
-      ]
-    },
-    {
-      "id": "ferrari-599-gto",
-      "brand": "Ferrari",
-      "model": "599 GTO",
-      "year": "2010",
-      "specs": "V12 6.0L — 670 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6754cb8753bb95578ca70a50.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "icones",
-        "ferrari"
-      ]
-    },
-    {
-      "id": "mercedes-sls-black-series",
+      "id": "mercedes-amg-c63-coupe",
       "brand": "Mercedes-AMG",
-      "model": "SLS Black Series",
-      "year": "2013",
-      "specs": "V8 6.2L — 631 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/675480ed988a5f3d4f9ece3b.jpeg",
-      "detail_url": "#",
+      "model": "C63 Coupé",
+      "year": "2016",
+      "specs": "V8 4.0L Biturbo — 510 ch",
+      "image": "https://peregocars.github.io/inventory/heritage/images/201709/17870447089168568.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/mercedes-amg-c63-coupe.html",
       "categories": [
-        "icones",
         "autres"
-      ]
-    },
-    {
-      "id": "pagani-zonda",
-      "brand": "Pagani",
-      "model": "Zonda",
-      "year": "1999",
-      "specs": "V12 7.3L — 650 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6754cb8729695ab8d470219f.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "icones",
-        "autres"
-      ]
-    },
-    {
-      "id": "lamborghini-lm002",
-      "brand": "Lamborghini",
-      "model": "LM002",
-      "year": "1986",
-      "specs": "V12 6.0L — 580 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/67548101b779b2289e86aa72.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "icones",
-        "lamborghini",
-        "classiques"
-      ]
-    },
-    {
-      "id": "ferrari-275-gts",
-      "brand": "Ferrari",
-      "model": "275 GTS",
-      "year": "1965",
-      "specs": "V12 3.3L — 280 ch",
-      "image": "https://assets.cdn.filesafe.space/2MEx3h3sJRa8LiOV8J8Y/media/6754cb8729695a77627021a0.jpeg",
-      "detail_url": "#",
-      "categories": [
-        "icones",
-        "ferrari",
-        "classiques"
       ]
     }
   ]
