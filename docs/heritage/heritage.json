@@ -1,22 +1,6 @@
 {
   "cars": [
     {
-      "id": "ferrari-f40",
-      "brand": "Ferrari",
-      "model": "F40",
-      "year": "1987",
-      "specs": "V8 2.9L Twin Turbo — 478 ch",
-      "description": "Le testament d'Enzo Ferrari cristallisé en métal et passion. Notre F40 a été photographiée dans les plus beaux décors suisses — des forêts alpines aux cols enneigés.",
-      "categories": [
-        "icones",
-        "ferrari",
-        "classiques",
-        "swiss-stories"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-f40-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f40.html"
-    },
-    {
       "id": "ferrari-f12-berlinetta",
       "brand": "Ferrari",
       "model": "F12 Berlinetta",
@@ -28,50 +12,6 @@
       ],
       "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-f12-berlinetta-00-thumb.jpg",
       "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f12-berlinetta.html"
-    },
-    {
-      "id": "lamborghini-miura-s-showroom",
-      "brand": "Lamborghini",
-      "model": "Miura S",
-      "year": "1969",
-      "specs": "V12 4.0L — 370 ch",
-      "description": "La Miura S rouge à la sortie du showroom Perego Cars.",
-      "categories": [
-        "icones",
-        "lamborghini",
-        "classiques"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/lamborghini-miura-s-showroom-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-miura-s-showroom.html"
-    },
-    {
-      "id": "ferrari-365-daytona",
-      "brand": "Ferrari",
-      "model": "365 GTB/4 Daytona",
-      "year": "1968",
-      "specs": "V12 4.4L — 352 ch",
-      "description": "L'aristocratie automobile italienne dans sa forme la plus pure. Notre Daytona en jaune vif sur les routes suisses — un spectacle inoubliable.",
-      "categories": [
-        "ferrari",
-        "classiques",
-        "swiss-stories"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-365-daytona-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-365-daytona.html"
-    },
-    {
-      "id": "ferrari-f12-tdf",
-      "brand": "Ferrari",
-      "model": "F12 TdF",
-      "year": "2015",
-      "specs": "V12 6.3L — 780 ch",
-      "description": "Un hommage vibrant au Tour de France automobile. Élégance et brutalité mécanique en harmonie saisissante.",
-      "categories": [
-        "ferrari",
-        "icones"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-f12-tdf-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f12-tdf.html"
     },
     {
       "id": "ferrari-ff",
@@ -212,76 +152,6 @@
       "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-718-boxster.html"
     },
     {
-      "id": "ferrari-laferrari",
-      "brand": "Ferrari",
-      "model": "LaFerrari",
-      "year": "2013",
-      "specs": "V12 6.3L Hybrid — 963 ch",
-      "description": "La LaFerrari rouge — l'hypercar hybride ultime de Maranello.",
-      "categories": [
-        "icones",
-        "ferrari"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-laferrari-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-laferrari.html"
-    },
-    {
-      "id": "ac-cobra-289",
-      "brand": "AC",
-      "model": "Cobra 289",
-      "year": "1963",
-      "specs": "V8 4.7L — 271 ch",
-      "description": "L'alliance légendaire entre l'artisanat britannique et la puissance américaine. Photographiée en bleu et en vert dans des décors industriels suisses.",
-      "categories": [
-        "classiques",
-        "swiss-stories",
-        "autres"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/ac-cobra-289-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ac-cobra-289.html"
-    },
-    {
-      "id": "ferrari-f40-industrial",
-      "brand": "Ferrari",
-      "model": "F40 (Industriel)",
-      "year": "1987",
-      "specs": "V8 2.9L Twin Turbo — 478 ch",
-      "description": "La F40 dans son décor industriel, brute et authentique.",
-      "categories": [
-        "icones",
-        "ferrari"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-f40-industrial-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f40-industrial.html"
-    },
-    {
-      "id": "audi-r8-spyder",
-      "brand": "Audi",
-      "model": "R8 V10 Spyder",
-      "year": "2010",
-      "specs": "V10 5.2L — 525 ch",
-      "description": "La précision allemande à l'état pur. Photographiée dans notre atelier avec le badge Perego Cars.",
-      "categories": [
-        "autres"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/audi-r8-spyder-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/audi-r8-spyder.html"
-    },
-    {
-      "id": "porsche-964-turbo",
-      "brand": "Porsche",
-      "model": "964 Turbo",
-      "year": "1991",
-      "specs": "Flat-6 3.3L Turbo — 320 ch",
-      "description": "La 964 Turbo blanche dans le showroom Perego Cars. La dernière génération de la légendaire ligne Turbo refroidie par air.",
-      "categories": [
-        "porsche",
-        "classiques"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-964-turbo-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-964-turbo.html"
-    },
-    {
       "id": "pontiac-gto",
       "brand": "Pontiac",
       "model": "GTO",
@@ -294,20 +164,6 @@
       ],
       "image": "https://peregocars.github.io/inventory/heritage/images/pontiac-gto-00-thumb.jpg",
       "detail_url": "https://peregocars.github.io/inventory/heritage/pontiac-gto.html"
-    },
-    {
-      "id": "aston-martin-zagato",
-      "brand": "Aston Martin",
-      "model": "V12 Zagato",
-      "year": "2011",
-      "specs": "V12 6.0L — 510 ch",
-      "description": "L'artisanat italien de Zagato rencontre l'élégance britannique d'Aston Martin. Sièges brodés du Z emblématique.",
-      "categories": [
-        "icones",
-        "autres"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/aston-martin-zagato-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/aston-martin-zagato.html"
     },
     {
       "id": "porsche-997-gt3-rs",
@@ -379,21 +235,6 @@
       ],
       "image": "https://peregocars.github.io/inventory/heritage/images/porsche-997-gt2-00-thumb.jpg",
       "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-997-gt2.html"
-    },
-    {
-      "id": "lamborghini-miura-s-bull",
-      "brand": "Lamborghini",
-      "model": "Miura S (Taureau)",
-      "year": "1969",
-      "specs": "V12 4.0L — 370 ch",
-      "description": "La Miura S rouge avec la statue du taureau. Perego Cars.",
-      "categories": [
-        "icones",
-        "lamborghini",
-        "classiques"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/lamborghini-miura-s-bull-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-miura-s-bull.html"
     },
     {
       "id": "porsche-930-turbo",
