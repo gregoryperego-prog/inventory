@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche | Patrimoine Perego Cars</title>
+    <meta name="description" content="Porsche — Une décennie de 911 — chaque génération représentée Patrimoine Perego Cars.">
+    <meta property="og:title" content="Porsche | Patrimoine Perego Cars">
+    <meta property="og:description" content="Porsche — Une décennie de 911 — chaque génération représentée Patrimoine Perego Cars.">
+    <meta property="og:type" content="website">
+    <style>
+    :root {
+        --color-primary: #FF4605;
+        --color-primary-light: #FF6B35;
+        --color-primary-10: rgba(255, 70, 5, 0.1);
+        --color-text-primary: #1A1A1A;
+        --color-text-secondary: #333333;
+        --color-text-muted: #666666;
+        --color-surface: #FFFFFF;
+        --color-background: #FAFBFC;
+        --color-border: #E5E7EB;
+        --shadow-sm: 0 2px 12px rgba(0,0,0,0.06);
+        --shadow-md: 0 8px 30px rgba(0,0,0,0.10);
+        --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        --radius-md: 0.75rem;
+        --radius-lg: 1rem;
+        --transition-base: 300ms ease;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font-body); color: var(--color-text-primary); background: var(--color-background); line-height: 1.6; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .htg-breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1.5rem 0; display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--color-text-muted); flex-wrap: wrap; }
+    .htg-breadcrumb a { color: var(--color-primary); }
+    .htg-breadcrumb a:hover { text-decoration: underline; }
+    .htg-breadcrumb-sep { opacity: 0.4; }
+
+    .htg-page-hero { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem 1rem; text-align: center; }
+    .htg-page-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--color-primary-10); color: var(--color-primary); font-size: 0.7rem; font-weight: 700; padding: 0.5rem 1.2rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; }
+    .htg-page-title { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 0.5rem; }
+    .htg-page-sub { font-size: 1.05rem; color: var(--color-text-muted); max-width: 650px; margin: 0 auto; line-height: 1.7; }
+
+    .htg-count { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 1rem; text-align: center; font-size: 0.85rem; color: var(--color-text-muted); }
+    .htg-count strong { color: var(--color-primary); }
+
+    .htg-grid { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 3rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+
+    .htg-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition-base); display: block; }
+    .htg-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .htg-card-img { position: relative; aspect-ratio: 16/10; overflow: hidden; }
+    .htg-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .htg-card:hover .htg-card-img img { transform: scale(1.05); }
+    .htg-card-overlay { position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(transparent, rgba(0,0,0,0.4)); pointer-events: none; }
+    .htg-card-badge { position: absolute; top: 0.75rem; left: 0.75rem; background: rgba(0,0,0,0.7); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 1.5px; backdrop-filter: blur(8px); }
+    .htg-card-badge--ferrari { background: rgba(200,0,0,0.85); }
+    .htg-card-badge--porsche { background: rgba(0,0,0,0.85); }
+    .htg-card-badge--lamborghini { background: rgba(180,150,0,0.85); }
+    .htg-card-body { padding: 1.2rem 1.5rem; }
+    .htg-card-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .htg-card-specs { font-size: 0.85rem; color: var(--color-primary); font-weight: 500; }
+
+    .htg-back-wrap { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 3rem; text-align: center; }
+    .htg-back { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--color-surface); border: 1px solid var(--color-border); padding: 0.75rem 1.5rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; transition: var(--transition-base); }
+    .htg-back:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+    @media (max-width: 768px) {
+        .htg-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+</head>
+<body>
+    <nav class="htg-breadcrumb">
+        <a href="https://www.peregocars.com">Perego Cars</a>
+        <span class="htg-breadcrumb-sep">/</span>
+        <a href="index.html">Patrimoine</a>
+        <span class="htg-breadcrumb-sep">/</span>
+        <span>Porsche</span>
+    </nav>
+
+    <div class="htg-page-hero">
+        <span class="htg-page-badge">Patrimoine</span>
+        <h1 class="htg-page-title">Porsche</h1>
+        <p class="htg-page-sub">Une décennie de 911 — chaque génération représentée</p>
+    </div>
+
+    <p class="htg-count"><strong>21</strong> vehicules dans cette categorie</p>
+
+    <div class="htg-grid">
+        <a href="porsche-911-carrera-rs-27.html" class="htg-card" data-brand="porsche" data-categories="icones,porsche,classiques,swiss-stories">
+    <div class="htg-card-img">
+        <img src="images/porsche-911-carrera-rs-27-00-thumb.jpg" alt="Porsche 911 Carrera RS 2.7" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 911 Carrera RS 2.7</h3>
+        <p class="htg-card-specs">Flat-6 2.7L — 210 ch</p>
+    </div>
+</a>
+
+<a href="porsche-911-carrera-g.html" class="htg-card" data-brand="porsche" data-categories="porsche,classiques">
+    <div class="htg-card-img">
+        <img src="images/porsche-911-carrera-g-00-thumb.jpg" alt="Porsche 911 Carrera (G-body)" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 911 Carrera (G-body)</h3>
+        <p class="htg-card-specs">Flat-6 3.2L — 231 ch</p>
+    </div>
+</a>
+
+<a href="porsche-911-turbo-993.html" class="htg-card" data-brand="porsche" data-categories="porsche,classiques">
+    <div class="htg-card-img">
+        <img src="images/porsche-911-turbo-993-00-thumb.jpg" alt="Porsche 911 Turbo (993)" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 911 Turbo (993)</h3>
+        <p class="htg-card-specs">Flat-6 3.6L Twin Turbo — 408 ch</p>
+    </div>
+</a>
+
+<a href="porsche-911-turbo-s-997.html" class="htg-card" data-brand="porsche" data-categories="porsche,swiss-stories">
+    <div class="htg-card-img">
+        <img src="images/porsche-911-turbo-s-997-00-thumb.jpg" alt="Porsche 911 Turbo S (997)" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 911 Turbo S (997)</h3>
+        <p class="htg-card-specs">Flat-6 3.8L Twin Turbo — 530 ch</p>
+    </div>
+</a>
+
+<a href="porsche-911-gt3-rs-991.html" class="htg-card" data-brand="porsche" data-categories="porsche,icones">
+    <div class="htg-card-img">
+        <img src="images/porsche-911-gt3-rs-991-00-thumb.jpg" alt="Porsche 911 GT3 RS (991)" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 911 GT3 RS (991)</h3>
+        <p class="htg-card-specs">Flat-6 4.0L — 500 ch</p>
+    </div>
+</a>
+
+<a href="porsche-911-gt3-991.html" class="htg-card" data-brand="porsche" data-categories="porsche,swiss-stories">
+    <div class="htg-card-img">
+        <img src="images/porsche-911-gt3-991-00-thumb.jpg" alt="Porsche 911 GT3 (991)" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 911 GT3 (991)</h3>
+        <p class="htg-card-specs">Flat-6 3.8L — 475 ch</p>
+    </div>
+</a>
+
+<a href="porsche-911-turbo-s-cab-991.html" class="htg-card" data-brand="porsche" data-categories="porsche">
+    <div class="htg-card-img">
+        <img src="images/porsche-911-turbo-s-cab-991-00-thumb.jpg" alt="Porsche 911 Turbo S Cabriolet (991)" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 911 Turbo S Cabriolet (991)</h3>
+        <p class="htg-card-specs">Flat-6 3.8L Twin Turbo — 580 ch</p>
+    </div>
+</a>
+
+<a href="porsche-panamera-turbo.html" class="htg-card" data-brand="porsche" data-categories="porsche">
+    <div class="htg-card-img">
+        <img src="images/porsche-panamera-turbo-00-thumb.jpg" alt="Porsche Panamera Turbo" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche Panamera Turbo</h3>
+        <p class="htg-card-specs">V8 4.0L Twin Turbo — 550 ch</p>
+    </div>
+</a>
+
+<a href="porsche-911-997.html" class="htg-card" data-brand="porsche" data-categories="porsche">
+    <div class="htg-card-img">
+        <img src="images/porsche-911-997-00-thumb.jpg" alt="Porsche 911 Carrera (997)" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 911 Carrera (997)</h3>
+        <p class="htg-card-specs">Flat-6 3.6L — 345 ch</p>
+    </div>
+</a>
+
+<a href="porsche-718-boxster.html" class="htg-card" data-brand="porsche" data-categories="porsche">
+    <div class="htg-card-img">
+        <img src="images/porsche-718-boxster-00-thumb.jpg" alt="Porsche 718 Boxster" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 718 Boxster</h3>
+        <p class="htg-card-specs">Flat-4 2.0L Turbo — 300 ch</p>
+    </div>
+</a>
+
+<a href="porsche-964-turbo.html" class="htg-card" data-brand="porsche" data-categories="porsche,classiques">
+    <div class="htg-card-img">
+        <img src="images/porsche-964-turbo-00-thumb.jpg" alt="Porsche 964 Turbo" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 964 Turbo</h3>
+        <p class="htg-card-specs">Flat-6 3.3L Turbo — 320 ch</p>
+    </div>
+</a>
+
+<a href="porsche-997-gt3-rs.html" class="htg-card" data-brand="porsche" data-categories="porsche,icones">
+    <div class="htg-card-img">
+        <img src="images/porsche-997-gt3-rs-00-thumb.jpg" alt="Porsche 997 GT3 RS" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 997 GT3 RS</h3>
+        <p class="htg-card-specs">Flat-6 3.8L — 450 ch</p>
+    </div>
+</a>
+
+<a href="porsche-carrera-gt.html" class="htg-card" data-brand="porsche" data-categories="icones,porsche">
+    <div class="htg-card-img">
+        <img src="images/porsche-carrera-gt-00-thumb.jpg" alt="Porsche Carrera GT" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche Carrera GT</h3>
+        <p class="htg-card-specs">V10 5.7L — 612 ch</p>
+    </div>
+</a>
+
+<a href="porsche-997-gt2.html" class="htg-card" data-brand="porsche" data-categories="porsche,icones">
+    <div class="htg-card-img">
+        <img src="images/porsche-997-gt2-00-thumb.jpg" alt="Porsche 997 GT2" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 997 GT2</h3>
+        <p class="htg-card-specs">Flat-6 3.6L Twin Turbo — 530 ch</p>
+    </div>
+</a>
+
+<a href="porsche-356.html" class="htg-card" data-brand="porsche" data-categories="porsche,classiques">
+    <div class="htg-card-img">
+        <img src="images/porsche-356-00-thumb.jpg" alt="Porsche 356" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 356</h3>
+        <p class="htg-card-specs">Flat-4 1.6L — 75 ch</p>
+    </div>
+</a>
+
+<a href="porsche-930-turbo.html" class="htg-card" data-brand="porsche" data-categories="porsche,classiques,swiss-stories">
+    <div class="htg-card-img">
+        <img src="images/porsche-930-turbo-00-thumb.jpg" alt="Porsche 930 Turbo" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 930 Turbo</h3>
+        <p class="htg-card-specs">Flat-6 3.3L Turbo — 300 ch</p>
+    </div>
+</a>
+
+<a href="porsche-964-carrera-rs.html" class="htg-card" data-brand="porsche" data-categories="porsche,classiques,swiss-stories,icones">
+    <div class="htg-card-img">
+        <img src="images/porsche-964-carrera-rs-00-thumb.jpg" alt="Porsche 964 Carrera RS" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 964 Carrera RS</h3>
+        <p class="htg-card-specs">Flat-6 3.6L — 260 ch</p>
+    </div>
+</a>
+
+<a href="porsche-cayman-gts-981.html" class="htg-card" data-brand="porsche" data-categories="porsche,swiss-stories">
+    <div class="htg-card-img">
+        <img src="images/porsche-cayman-gts-981-00-thumb.jpg" alt="Porsche Cayman GTS (981)" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche Cayman GTS (981)</h3>
+        <p class="htg-card-specs">Flat-6 3.4L — 340 ch</p>
+    </div>
+</a>
+
+<a href="porsche-991-targa-4s.html" class="htg-card" data-brand="porsche" data-categories="porsche,swiss-stories">
+    <div class="htg-card-img">
+        <img src="images/porsche-991-targa-4s-00-thumb.jpg" alt="Porsche 991 Targa 4S" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 991 Targa 4S</h3>
+        <p class="htg-card-specs">Flat-6 3.8L — 400 ch</p>
+    </div>
+</a>
+
+<a href="porsche-997-turbo-black.html" class="htg-card" data-brand="porsche" data-categories="porsche">
+    <div class="htg-card-img">
+        <img src="images/porsche-997-turbo-black-00-thumb.jpg" alt="Porsche 997 Turbo" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 997 Turbo</h3>
+        <p class="htg-card-specs">Flat-6 3.6L Twin Turbo — 480 ch</p>
+    </div>
+</a>
+
+<a href="porsche-911-rs-27-autumn.html" class="htg-card" data-brand="porsche" data-categories="porsche,classiques,swiss-stories,icones">
+    <div class="htg-card-img">
+        <img src="images/porsche-911-rs-27-autumn-00-thumb.jpg" alt="Porsche 911 Carrera RS 2.7 (Automne)" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 911 Carrera RS 2.7 (Automne)</h3>
+        <p class="htg-card-specs">Flat-6 2.7L — 210 ch</p>
+    </div>
+</a>
+
+    </div>
+
+    <div class="htg-back-wrap">
+        <a href="index.html" class="htg-back">&larr; Retour au patrimoine</a>
+    </div>
+</body>
+</html>

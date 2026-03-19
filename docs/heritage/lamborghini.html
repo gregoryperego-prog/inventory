@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamborghini | Patrimoine Perego Cars</title>
+    <meta name="description" content="Lamborghini — La furie du taureau — de Sant'Agata à la Suisse Patrimoine Perego Cars.">
+    <meta property="og:title" content="Lamborghini | Patrimoine Perego Cars">
+    <meta property="og:description" content="Lamborghini — La furie du taureau — de Sant'Agata à la Suisse Patrimoine Perego Cars.">
+    <meta property="og:type" content="website">
+    <style>
+    :root {
+        --color-primary: #FF4605;
+        --color-primary-light: #FF6B35;
+        --color-primary-10: rgba(255, 70, 5, 0.1);
+        --color-text-primary: #1A1A1A;
+        --color-text-secondary: #333333;
+        --color-text-muted: #666666;
+        --color-surface: #FFFFFF;
+        --color-background: #FAFBFC;
+        --color-border: #E5E7EB;
+        --shadow-sm: 0 2px 12px rgba(0,0,0,0.06);
+        --shadow-md: 0 8px 30px rgba(0,0,0,0.10);
+        --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        --radius-md: 0.75rem;
+        --radius-lg: 1rem;
+        --transition-base: 300ms ease;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font-body); color: var(--color-text-primary); background: var(--color-background); line-height: 1.6; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .htg-breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1.5rem 0; display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--color-text-muted); flex-wrap: wrap; }
+    .htg-breadcrumb a { color: var(--color-primary); }
+    .htg-breadcrumb a:hover { text-decoration: underline; }
+    .htg-breadcrumb-sep { opacity: 0.4; }
+
+    .htg-page-hero { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem 1rem; text-align: center; }
+    .htg-page-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--color-primary-10); color: var(--color-primary); font-size: 0.7rem; font-weight: 700; padding: 0.5rem 1.2rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; }
+    .htg-page-title { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 0.5rem; }
+    .htg-page-sub { font-size: 1.05rem; color: var(--color-text-muted); max-width: 650px; margin: 0 auto; line-height: 1.7; }
+
+    .htg-count { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 1rem; text-align: center; font-size: 0.85rem; color: var(--color-text-muted); }
+    .htg-count strong { color: var(--color-primary); }
+
+    .htg-grid { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 3rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+
+    .htg-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition-base); display: block; }
+    .htg-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .htg-card-img { position: relative; aspect-ratio: 16/10; overflow: hidden; }
+    .htg-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .htg-card:hover .htg-card-img img { transform: scale(1.05); }
+    .htg-card-overlay { position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(transparent, rgba(0,0,0,0.4)); pointer-events: none; }
+    .htg-card-badge { position: absolute; top: 0.75rem; left: 0.75rem; background: rgba(0,0,0,0.7); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 1.5px; backdrop-filter: blur(8px); }
+    .htg-card-badge--ferrari { background: rgba(200,0,0,0.85); }
+    .htg-card-badge--porsche { background: rgba(0,0,0,0.85); }
+    .htg-card-badge--lamborghini { background: rgba(180,150,0,0.85); }
+    .htg-card-body { padding: 1.2rem 1.5rem; }
+    .htg-card-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .htg-card-specs { font-size: 0.85rem; color: var(--color-primary); font-weight: 500; }
+
+    .htg-back-wrap { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 3rem; text-align: center; }
+    .htg-back { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--color-surface); border: 1px solid var(--color-border); padding: 0.75rem 1.5rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; transition: var(--transition-base); }
+    .htg-back:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+    @media (max-width: 768px) {
+        .htg-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+</head>
+<body>
+    <nav class="htg-breadcrumb">
+        <a href="https://www.peregocars.com">Perego Cars</a>
+        <span class="htg-breadcrumb-sep">/</span>
+        <a href="index.html">Patrimoine</a>
+        <span class="htg-breadcrumb-sep">/</span>
+        <span>Lamborghini</span>
+    </nav>
+
+    <div class="htg-page-hero">
+        <span class="htg-page-badge">Patrimoine</span>
+        <h1 class="htg-page-title">Lamborghini</h1>
+        <p class="htg-page-sub">La furie du taureau — de Sant'Agata à la Suisse</p>
+    </div>
+
+    <p class="htg-count"><strong>2</strong> vehicules dans cette categorie</p>
+
+    <div class="htg-grid">
+        <a href="lamborghini-miura.html" class="htg-card" data-brand="lamborghini" data-categories="icones,lamborghini,classiques">
+    <div class="htg-card-img">
+        <img src="images/lamborghini-miura-00-thumb.jpg" alt="Lamborghini Miura S" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--lamborghini">Lamborghini</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Lamborghini Miura S</h3>
+        <p class="htg-card-specs">V12 4.0L — 385 ch</p>
+    </div>
+</a>
+
+<a href="lamborghini-miura-sv-green.html" class="htg-card" data-brand="lamborghini" data-categories="icones,lamborghini,classiques">
+    <div class="htg-card-img">
+        <img src="images/lamborghini-miura-sv-green-00-thumb.jpg" alt="Lamborghini Miura SV (Verde)" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--lamborghini">Lamborghini</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Lamborghini Miura SV (Verde)</h3>
+        <p class="htg-card-specs">V12 4.0L — 385 ch</p>
+    </div>
+</a>
+
+    </div>
+
+    <div class="htg-back-wrap">
+        <a href="index.html" class="htg-back">&larr; Retour au patrimoine</a>
+    </div>
+</body>
+</html>

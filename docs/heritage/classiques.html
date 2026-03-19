@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classiques | Patrimoine Perego Cars</title>
+    <meta name="description" content="Classiques — Machines intemporelles d'avant 1990 — l'âge d'or de l'automobile Patrimoine Perego Cars.">
+    <meta property="og:title" content="Classiques | Patrimoine Perego Cars">
+    <meta property="og:description" content="Classiques — Machines intemporelles d'avant 1990 — l'âge d'or de l'automobile Patrimoine Perego Cars.">
+    <meta property="og:type" content="website">
+    <style>
+    :root {
+        --color-primary: #FF4605;
+        --color-primary-light: #FF6B35;
+        --color-primary-10: rgba(255, 70, 5, 0.1);
+        --color-text-primary: #1A1A1A;
+        --color-text-secondary: #333333;
+        --color-text-muted: #666666;
+        --color-surface: #FFFFFF;
+        --color-background: #FAFBFC;
+        --color-border: #E5E7EB;
+        --shadow-sm: 0 2px 12px rgba(0,0,0,0.06);
+        --shadow-md: 0 8px 30px rgba(0,0,0,0.10);
+        --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        --radius-md: 0.75rem;
+        --radius-lg: 1rem;
+        --transition-base: 300ms ease;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font-body); color: var(--color-text-primary); background: var(--color-background); line-height: 1.6; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .htg-breadcrumb { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1.5rem 0; display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--color-text-muted); flex-wrap: wrap; }
+    .htg-breadcrumb a { color: var(--color-primary); }
+    .htg-breadcrumb a:hover { text-decoration: underline; }
+    .htg-breadcrumb-sep { opacity: 0.4; }
+
+    .htg-page-hero { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem 1rem; text-align: center; }
+    .htg-page-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--color-primary-10); color: var(--color-primary); font-size: 0.7rem; font-weight: 700; padding: 0.5rem 1.2rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; }
+    .htg-page-title { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 0.5rem; }
+    .htg-page-sub { font-size: 1.05rem; color: var(--color-text-muted); max-width: 650px; margin: 0 auto; line-height: 1.7; }
+
+    .htg-count { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 1rem; text-align: center; font-size: 0.85rem; color: var(--color-text-muted); }
+    .htg-count strong { color: var(--color-primary); }
+
+    .htg-grid { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 3rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+
+    .htg-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition-base); display: block; }
+    .htg-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .htg-card-img { position: relative; aspect-ratio: 16/10; overflow: hidden; }
+    .htg-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .htg-card:hover .htg-card-img img { transform: scale(1.05); }
+    .htg-card-overlay { position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(transparent, rgba(0,0,0,0.4)); pointer-events: none; }
+    .htg-card-badge { position: absolute; top: 0.75rem; left: 0.75rem; background: rgba(0,0,0,0.7); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 1.5px; backdrop-filter: blur(8px); }
+    .htg-card-badge--ferrari { background: rgba(200,0,0,0.85); }
+    .htg-card-badge--porsche { background: rgba(0,0,0,0.85); }
+    .htg-card-badge--lamborghini { background: rgba(180,150,0,0.85); }
+    .htg-card-body { padding: 1.2rem 1.5rem; }
+    .htg-card-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .htg-card-specs { font-size: 0.85rem; color: var(--color-primary); font-weight: 500; }
+
+    .htg-back-wrap { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 3rem; text-align: center; }
+    .htg-back { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--color-surface); border: 1px solid var(--color-border); padding: 0.75rem 1.5rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; transition: var(--transition-base); }
+    .htg-back:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+    @media (max-width: 768px) {
+        .htg-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+</head>
+<body>
+    <nav class="htg-breadcrumb">
+        <a href="https://www.peregocars.com">Perego Cars</a>
+        <span class="htg-breadcrumb-sep">/</span>
+        <a href="index.html">Patrimoine</a>
+        <span class="htg-breadcrumb-sep">/</span>
+        <span>Classiques</span>
+    </nav>
+
+    <div class="htg-page-hero">
+        <span class="htg-page-badge">Patrimoine</span>
+        <h1 class="htg-page-title">Classiques</h1>
+        <p class="htg-page-sub">Machines intemporelles d'avant 1990 — l'âge d'or de l'automobile</p>
+    </div>
+
+    <p class="htg-count"><strong>20</strong> vehicules dans cette categorie</p>
+
+    <div class="htg-grid">
+        <a href="ferrari-f40.html" class="htg-card" data-brand="ferrari" data-categories="icones,ferrari,classiques,swiss-stories">
+    <div class="htg-card-img">
+        <img src="images/ferrari-f40-00-thumb.jpg" alt="Ferrari F40" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--ferrari">Ferrari</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Ferrari F40</h3>
+        <p class="htg-card-specs">V8 2.9L Twin Turbo — 478 ch</p>
+    </div>
+</a>
+
+<a href="ferrari-testarossa.html" class="htg-card" data-brand="ferrari" data-categories="ferrari,classiques">
+    <div class="htg-card-img">
+        <img src="images/ferrari-testarossa-00-thumb.jpg" alt="Ferrari Testarossa" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--ferrari">Ferrari</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Ferrari Testarossa</h3>
+        <p class="htg-card-specs">Flat-12 4.9L — 390 ch</p>
+    </div>
+</a>
+
+<a href="ferrari-365-daytona.html" class="htg-card" data-brand="ferrari" data-categories="ferrari,classiques,swiss-stories">
+    <div class="htg-card-img">
+        <img src="images/ferrari-365-daytona-00-thumb.jpg" alt="Ferrari 365 GTB/4 Daytona" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--ferrari">Ferrari</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Ferrari 365 GTB/4 Daytona</h3>
+        <p class="htg-card-specs">V12 4.4L — 352 ch</p>
+    </div>
+</a>
+
+<a href="porsche-911-carrera-rs-27.html" class="htg-card" data-brand="porsche" data-categories="icones,porsche,classiques,swiss-stories">
+    <div class="htg-card-img">
+        <img src="images/porsche-911-carrera-rs-27-00-thumb.jpg" alt="Porsche 911 Carrera RS 2.7" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 911 Carrera RS 2.7</h3>
+        <p class="htg-card-specs">Flat-6 2.7L — 210 ch</p>
+    </div>
+</a>
+
+<a href="porsche-911-carrera-g.html" class="htg-card" data-brand="porsche" data-categories="porsche,classiques">
+    <div class="htg-card-img">
+        <img src="images/porsche-911-carrera-g-00-thumb.jpg" alt="Porsche 911 Carrera (G-body)" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 911 Carrera (G-body)</h3>
+        <p class="htg-card-specs">Flat-6 3.2L — 231 ch</p>
+    </div>
+</a>
+
+<a href="porsche-911-turbo-993.html" class="htg-card" data-brand="porsche" data-categories="porsche,classiques">
+    <div class="htg-card-img">
+        <img src="images/porsche-911-turbo-993-00-thumb.jpg" alt="Porsche 911 Turbo (993)" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 911 Turbo (993)</h3>
+        <p class="htg-card-specs">Flat-6 3.6L Twin Turbo — 408 ch</p>
+    </div>
+</a>
+
+<a href="lamborghini-miura.html" class="htg-card" data-brand="lamborghini" data-categories="icones,lamborghini,classiques">
+    <div class="htg-card-img">
+        <img src="images/lamborghini-miura-00-thumb.jpg" alt="Lamborghini Miura S" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--lamborghini">Lamborghini</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Lamborghini Miura S</h3>
+        <p class="htg-card-specs">V12 4.0L — 385 ch</p>
+    </div>
+</a>
+
+<a href="ac-cobra-289.html" class="htg-card" data-brand="ac" data-categories="classiques,swiss-stories,autres">
+    <div class="htg-card-img">
+        <img src="images/ac-cobra-289-00-thumb.jpg" alt="AC Cobra 289" loading="lazy">
+        <span class="htg-card-badge ">AC</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">AC Cobra 289</h3>
+        <p class="htg-card-specs">V8 4.7L — 271 ch</p>
+    </div>
+</a>
+
+<a href="mercedes-300-sl.html" class="htg-card" data-brand="mercedes-benz" data-categories="icones,classiques,autres">
+    <div class="htg-card-img">
+        <img src="images/mercedes-300-sl-00-thumb.jpg" alt="Mercedes-Benz 300 SLR & 300 SL Roadster" loading="lazy">
+        <span class="htg-card-badge ">Mercedes-Benz</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Mercedes-Benz 300 SLR & 300 SL Roadster</h3>
+        <p class="htg-card-specs">L6 3.0L — 310 ch</p>
+    </div>
+</a>
+
+<a href="porsche-964-turbo.html" class="htg-card" data-brand="porsche" data-categories="porsche,classiques">
+    <div class="htg-card-img">
+        <img src="images/porsche-964-turbo-00-thumb.jpg" alt="Porsche 964 Turbo" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 964 Turbo</h3>
+        <p class="htg-card-specs">Flat-6 3.3L Turbo — 320 ch</p>
+    </div>
+</a>
+
+<a href="pontiac-gto.html" class="htg-card" data-brand="pontiac" data-categories="classiques,autres">
+    <div class="htg-card-img">
+        <img src="images/pontiac-gto-00-thumb.jpg" alt="Pontiac GTO" loading="lazy">
+        <span class="htg-card-badge ">Pontiac</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Pontiac GTO</h3>
+        <p class="htg-card-specs">V8 6.4L — 360 ch</p>
+    </div>
+</a>
+
+<a href="lamborghini-miura-sv-green.html" class="htg-card" data-brand="lamborghini" data-categories="icones,lamborghini,classiques">
+    <div class="htg-card-img">
+        <img src="images/lamborghini-miura-sv-green-00-thumb.jpg" alt="Lamborghini Miura SV (Verde)" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--lamborghini">Lamborghini</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Lamborghini Miura SV (Verde)</h3>
+        <p class="htg-card-specs">V12 4.0L — 385 ch</p>
+    </div>
+</a>
+
+<a href="ferrari-550-maranello.html" class="htg-card" data-brand="ferrari" data-categories="ferrari,classiques">
+    <div class="htg-card-img">
+        <img src="images/ferrari-550-maranello-00-thumb.jpg" alt="Ferrari 550 Maranello" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--ferrari">Ferrari</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Ferrari 550 Maranello</h3>
+        <p class="htg-card-specs">V12 5.5L — 485 ch</p>
+    </div>
+</a>
+
+<a href="ferrari-250-gt-swb.html" class="htg-card" data-brand="ferrari" data-categories="icones,ferrari,classiques">
+    <div class="htg-card-img">
+        <img src="images/ferrari-250-gt-swb-00-thumb.jpg" alt="Ferrari 250 GT Berlinetta SWB" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--ferrari">Ferrari</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Ferrari 250 GT Berlinetta SWB</h3>
+        <p class="htg-card-specs">V12 3.0L — 280 ch</p>
+    </div>
+</a>
+
+<a href="porsche-356.html" class="htg-card" data-brand="porsche" data-categories="porsche,classiques">
+    <div class="htg-card-img">
+        <img src="images/porsche-356-00-thumb.jpg" alt="Porsche 356" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 356</h3>
+        <p class="htg-card-specs">Flat-4 1.6L — 75 ch</p>
+    </div>
+</a>
+
+<a href="porsche-930-turbo.html" class="htg-card" data-brand="porsche" data-categories="porsche,classiques,swiss-stories">
+    <div class="htg-card-img">
+        <img src="images/porsche-930-turbo-00-thumb.jpg" alt="Porsche 930 Turbo" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 930 Turbo</h3>
+        <p class="htg-card-specs">Flat-6 3.3L Turbo — 300 ch</p>
+    </div>
+</a>
+
+<a href="bmw-z8.html" class="htg-card" data-brand="bmw" data-categories="classiques,autres,swiss-stories">
+    <div class="htg-card-img">
+        <img src="images/bmw-z8-00-thumb.jpg" alt="BMW Z8" loading="lazy">
+        <span class="htg-card-badge ">BMW</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">BMW Z8</h3>
+        <p class="htg-card-specs">V8 4.9L — 400 ch</p>
+    </div>
+</a>
+
+<a href="porsche-964-carrera-rs.html" class="htg-card" data-brand="porsche" data-categories="porsche,classiques,swiss-stories,icones">
+    <div class="htg-card-img">
+        <img src="images/porsche-964-carrera-rs-00-thumb.jpg" alt="Porsche 964 Carrera RS" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 964 Carrera RS</h3>
+        <p class="htg-card-specs">Flat-6 3.6L — 260 ch</p>
+    </div>
+</a>
+
+<a href="ferrari-328-gtb.html" class="htg-card" data-brand="ferrari" data-categories="ferrari,classiques">
+    <div class="htg-card-img">
+        <img src="images/ferrari-328-gtb-00-thumb.jpg" alt="Ferrari 328 GTB" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--ferrari">Ferrari</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Ferrari 328 GTB</h3>
+        <p class="htg-card-specs">V8 3.2L — 270 ch</p>
+    </div>
+</a>
+
+<a href="porsche-911-rs-27-autumn.html" class="htg-card" data-brand="porsche" data-categories="porsche,classiques,swiss-stories,icones">
+    <div class="htg-card-img">
+        <img src="images/porsche-911-rs-27-autumn-00-thumb.jpg" alt="Porsche 911 Carrera RS 2.7 (Automne)" loading="lazy">
+        <span class="htg-card-badge htg-card-badge--porsche">Porsche</span>
+        <div class="htg-card-overlay"></div>
+    </div>
+    <div class="htg-card-body">
+        <h3 class="htg-card-title">Porsche 911 Carrera RS 2.7 (Automne)</h3>
+        <p class="htg-card-specs">Flat-6 2.7L — 210 ch</p>
+    </div>
+</a>
+
+    </div>
+
+    <div class="htg-back-wrap">
+        <a href="index.html" class="htg-back">&larr; Retour au patrimoine</a>
+    </div>
+</body>
+</html>

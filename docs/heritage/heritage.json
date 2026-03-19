@@ -1,0 +1,778 @@
+{
+  "cars": [
+    {
+      "id": "ferrari-f40",
+      "brand": "Ferrari",
+      "model": "F40",
+      "year": "1987",
+      "specs": "V8 2.9L Twin Turbo — 478 ch",
+      "description": "Le testament d'Enzo Ferrari cristallisé en métal et passion. Notre F40 a été photographiée dans les plus beaux décors suisses — des forêts alpines aux cols enneigés.",
+      "categories": [
+        "icones",
+        "ferrari",
+        "classiques",
+        "swiss-stories"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-f40-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f40.html"
+    },
+    {
+      "id": "ferrari-f12-berlinetta",
+      "brand": "Ferrari",
+      "model": "F12 Berlinetta",
+      "year": "2012",
+      "specs": "V12 6.3L — 740 ch",
+      "description": "La GT ultime de Maranello en bleu Tour de France. V12 atmosphérique, 740 chevaux, dans le showroom Perego Cars.",
+      "categories": [
+        "ferrari"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-f12-berlinetta-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f12-berlinetta.html"
+    },
+    {
+      "id": "ferrari-testarossa",
+      "brand": "Ferrari",
+      "model": "Testarossa",
+      "year": "1984",
+      "specs": "Flat-12 4.9L — 390 ch",
+      "description": "L'icône des années 80, reconnaissable entre mille avec ses striées latérales. Photographiée dans la campagne vaudoise avec les plaques Perego Cars.",
+      "categories": [
+        "ferrari",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-testarossa-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-testarossa.html"
+    },
+    {
+      "id": "ferrari-365-daytona",
+      "brand": "Ferrari",
+      "model": "365 GTB/4 Daytona",
+      "year": "1968",
+      "specs": "V12 4.4L — 352 ch",
+      "description": "L'aristocratie automobile italienne dans sa forme la plus pure. Notre Daytona en jaune vif sur les routes suisses — un spectacle inoubliable.",
+      "categories": [
+        "ferrari",
+        "classiques",
+        "swiss-stories"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-365-daytona-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-365-daytona.html"
+    },
+    {
+      "id": "ferrari-f12-tdf",
+      "brand": "Ferrari",
+      "model": "F12 TdF",
+      "year": "2015",
+      "specs": "V12 6.3L — 780 ch",
+      "description": "Un hommage vibrant au Tour de France automobile. Élégance et brutalité mécanique en harmonie saisissante.",
+      "categories": [
+        "ferrari",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-f12-tdf-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f12-tdf.html"
+    },
+    {
+      "id": "ferrari-ff",
+      "brand": "Ferrari",
+      "model": "FF",
+      "year": "2011",
+      "specs": "V12 6.3L — 660 ch",
+      "description": "La Gran Turismo par excellence — quatre places, quatre roues motrices, un V12 atmosphérique. L'alliance parfaite du luxe et de la sportivité.",
+      "categories": [
+        "ferrari"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-ff-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-ff.html"
+    },
+    {
+      "id": "ferrari-california",
+      "brand": "Ferrari",
+      "model": "California",
+      "year": "2008",
+      "specs": "V8 4.3L — 460 ch",
+      "description": "L'élégance décapotable de Maranello dans une robe vert foncé d'une rareté absolue. Plaque Perego Cars fièrement affichée.",
+      "categories": [
+        "ferrari"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-california-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-california.html"
+    },
+    {
+      "id": "porsche-911-carrera-rs-27",
+      "brand": "Porsche",
+      "model": "911 Carrera RS 2.7",
+      "year": "1973",
+      "specs": "Flat-6 2.7L — 210 ch",
+      "description": "La 911 ultime, celle qui a tout changé. Photographiée devant une grange vaudoise au coucher du soleil — intemporelle.",
+      "categories": [
+        "icones",
+        "porsche",
+        "classiques",
+        "swiss-stories"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-carrera-rs-27-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-carrera-rs-27.html"
+    },
+    {
+      "id": "porsche-911-carrera-g",
+      "brand": "Porsche",
+      "model": "911 Carrera (G-body)",
+      "year": "1984",
+      "specs": "Flat-6 3.2L — 231 ch",
+      "description": "La génération G dans sa robe jaune soleil. Architecture brutaliste en arrière-plan, plaque Perego Cars — le contraste parfait.",
+      "categories": [
+        "porsche",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-carrera-g-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-carrera-g.html"
+    },
+    {
+      "id": "porsche-911-turbo-993",
+      "brand": "Porsche",
+      "model": "911 Turbo (993)",
+      "year": "1995",
+      "specs": "Flat-6 3.6L Twin Turbo — 408 ch",
+      "description": "La dernière 911 refroidie par air en version Turbo. Silhouette noire aperçue dans notre showroom aux côtés d'une GT3 RS.",
+      "categories": [
+        "porsche",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-turbo-993-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-turbo-993.html"
+    },
+    {
+      "id": "porsche-911-turbo-s-997",
+      "brand": "Porsche",
+      "model": "911 Turbo S (997)",
+      "year": "2010",
+      "specs": "Flat-6 3.8L Twin Turbo — 530 ch",
+      "description": "Gris anthracite dans les vignobles vaudois — la puissance discrète à la suisse.",
+      "categories": [
+        "porsche",
+        "swiss-stories"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-turbo-s-997-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-turbo-s-997.html"
+    },
+    {
+      "id": "porsche-911-gt3-rs-991",
+      "brand": "Porsche",
+      "model": "911 GT3 RS (991)",
+      "year": "2015",
+      "specs": "Flat-6 4.0L — 500 ch",
+      "description": "L'essence pure de Stuttgart concentrée en une machine de course légale. Aperçue dans notre showroom en argent.",
+      "categories": [
+        "porsche",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-gt3-rs-991-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-gt3-rs-991.html"
+    },
+    {
+      "id": "porsche-911-gt3-991",
+      "brand": "Porsche",
+      "model": "911 GT3 (991)",
+      "year": "2013",
+      "specs": "Flat-6 3.8L — 475 ch",
+      "description": "Bleu vif sur la jetée du lac — un contraste saisissant entre la puissance allemande et la sérénité lémanique. Plaque Perego Cars.",
+      "categories": [
+        "porsche",
+        "swiss-stories"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-gt3-991-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-gt3-991.html"
+    },
+    {
+      "id": "porsche-911-turbo-s-cab-991",
+      "brand": "Porsche",
+      "model": "911 Turbo S Cabriolet (991)",
+      "year": "2016",
+      "specs": "Flat-6 3.8L Twin Turbo — 580 ch",
+      "description": "Argentée sous les néons roses, cette Turbo S Cabriolet incarne le luxe sportif à ciel ouvert. Freins céramique jaunes, plaque VD.",
+      "categories": [
+        "porsche"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-turbo-s-cab-991-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-turbo-s-cab-991.html"
+    },
+    {
+      "id": "porsche-panamera-turbo",
+      "brand": "Porsche",
+      "model": "Panamera Turbo",
+      "year": "2017",
+      "specs": "V8 4.0L Twin Turbo — 550 ch",
+      "description": "La berline sportive rouge carmin dans le parking souterrain — plaque Perego Cars. Quatre portes, zéro compromis.",
+      "categories": [
+        "porsche"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-panamera-turbo-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-panamera-turbo.html"
+    },
+    {
+      "id": "porsche-911-997",
+      "brand": "Porsche",
+      "model": "911 Carrera (997)",
+      "year": "2008",
+      "specs": "Flat-6 3.6L — 345 ch",
+      "description": "Blanche immaculée devant un château suisse — la 997, l'équilibre parfait entre tradition et modernité.",
+      "categories": [
+        "porsche"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-997-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-997.html"
+    },
+    {
+      "id": "porsche-718-boxster",
+      "brand": "Porsche",
+      "model": "718 Boxster",
+      "year": "2016",
+      "specs": "Flat-4 2.0L Turbo — 300 ch",
+      "description": "Le roadster par excellence, nimble et précis sur les routes de campagne suisses.",
+      "categories": [
+        "porsche"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-718-boxster-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-718-boxster.html"
+    },
+    {
+      "id": "lamborghini-miura",
+      "brand": "Lamborghini",
+      "model": "Miura S",
+      "year": "1969",
+      "specs": "V12 4.0L — 385 ch",
+      "description": "La révolution automobile incarnée. Cette légende rouge a été photographiée devant la statue du taureau — un clin d'œil parfait.",
+      "categories": [
+        "icones",
+        "lamborghini",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/lamborghini-miura-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-miura.html"
+    },
+    {
+      "id": "ac-cobra-289",
+      "brand": "AC",
+      "model": "Cobra 289",
+      "year": "1963",
+      "specs": "V8 4.7L — 271 ch",
+      "description": "L'alliance légendaire entre l'artisanat britannique et la puissance américaine. Photographiée en bleu et en vert dans des décors industriels suisses.",
+      "categories": [
+        "classiques",
+        "swiss-stories",
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ac-cobra-289-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ac-cobra-289.html"
+    },
+    {
+      "id": "mercedes-300-sl",
+      "brand": "Mercedes-Benz",
+      "model": "300 SLR & 300 SL Roadster",
+      "year": "1955",
+      "specs": "L6 3.0L — 310 ch",
+      "description": "Un moment d'exception — la 300 SLR Uhlenhaut (l'une des voitures les plus chères au monde) aux côtés d'une 300 SL Roadster, devant un palazzo italien.",
+      "categories": [
+        "icones",
+        "classiques",
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/mercedes-300-sl-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/mercedes-300-sl.html"
+    },
+    {
+      "id": "audi-r8-spyder",
+      "brand": "Audi",
+      "model": "R8 V10 Spyder",
+      "year": "2010",
+      "specs": "V10 5.2L — 525 ch",
+      "description": "La précision allemande à l'état pur. Photographiée dans notre atelier avec le badge Perego Cars.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/audi-r8-spyder-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/audi-r8-spyder.html"
+    },
+    {
+      "id": "porsche-964-turbo",
+      "brand": "Porsche",
+      "model": "964 Turbo",
+      "year": "1991",
+      "specs": "Flat-6 3.3L Turbo — 320 ch",
+      "description": "La 964 Turbo blanche dans le showroom Perego Cars. La dernière génération de la légendaire ligne Turbo refroidie par air.",
+      "categories": [
+        "porsche",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-964-turbo-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-964-turbo.html"
+    },
+    {
+      "id": "pontiac-gto",
+      "brand": "Pontiac",
+      "model": "GTO",
+      "year": "1966",
+      "specs": "V8 6.4L — 360 ch",
+      "description": "Le muscle car américain par excellence. Détail de la calandre GTO en rouge vif — l'esprit rebelle des années 60.",
+      "categories": [
+        "classiques",
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/pontiac-gto-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/pontiac-gto.html"
+    },
+    {
+      "id": "aston-martin-zagato",
+      "brand": "Aston Martin",
+      "model": "V12 Zagato",
+      "year": "2011",
+      "specs": "V12 6.0L — 510 ch",
+      "description": "L'artisanat italien de Zagato rencontre l'élégance britannique d'Aston Martin. Sièges brodés du Z emblématique.",
+      "categories": [
+        "icones",
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/aston-martin-zagato-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/aston-martin-zagato.html"
+    },
+    {
+      "id": "porsche-997-gt3-rs",
+      "brand": "Porsche",
+      "model": "997 GT3 RS",
+      "year": "2010",
+      "specs": "Flat-6 3.8L — 450 ch",
+      "description": "Grise avec jantes rouges, photographiée dans un décor industriel. La 997 GT3 RS dans toute sa brutalité sur circuit et sur route.",
+      "categories": [
+        "porsche",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-997-gt3-rs-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-997-gt3-rs.html"
+    },
+    {
+      "id": "porsche-carrera-gt",
+      "brand": "Porsche",
+      "model": "Carrera GT",
+      "year": "2004",
+      "specs": "V10 5.7L — 612 ch",
+      "description": "La supercar ultime de Stuttgart dans l'ascenseur de notre atelier. V10 atmosphérique, embrayage céramique — la plus pure des Porsche.",
+      "categories": [
+        "icones",
+        "porsche"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-carrera-gt-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-carrera-gt.html"
+    },
+    {
+      "id": "lamborghini-miura-sv-green",
+      "brand": "Lamborghini",
+      "model": "Miura SV (Verde)",
+      "year": "1971",
+      "specs": "V12 4.0L — 385 ch",
+      "description": "La Miura SV en Verde Metallizzato, partiellement dévoilée dans l'atelier. Un chef-d’œuvre italien d’une rareté absolue.",
+      "categories": [
+        "icones",
+        "lamborghini",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/lamborghini-miura-sv-green-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-miura-sv-green.html"
+    },
+    {
+      "id": "ferrari-550-maranello",
+      "brand": "Ferrari",
+      "model": "550 Maranello",
+      "year": "1996",
+      "specs": "V12 5.5L — 485 ch",
+      "description": "La Gran Turismo en jaune Modena dans le showroom Perego Cars. V12 à l’avant, propulsion — l’équilibre parfait.",
+      "categories": [
+        "ferrari",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-550-maranello-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-550-maranello.html"
+    },
+    {
+      "id": "porsche-997-gt2",
+      "brand": "Porsche",
+      "model": "997 GT2",
+      "year": "2007",
+      "specs": "Flat-6 3.6L Twin Turbo — 530 ch",
+      "description": "La 997 GT2 noire dans notre showroom. Turbo, propulsion, sans compromis — la 911 la plus radicale de sa génération.",
+      "categories": [
+        "porsche",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-997-gt2-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-997-gt2.html"
+    },
+    {
+      "id": "ferrari-250-gt-swb",
+      "brand": "Ferrari",
+      "model": "250 GT Berlinetta SWB",
+      "year": "1960",
+      "specs": "V12 3.0L — 280 ch",
+      "description": "La légendaire 250 GT SWB avec bande tricolore italienne. L’une des Ferrari les plus désirées au monde, dans notre showroom.",
+      "categories": [
+        "icones",
+        "ferrari",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-250-gt-swb-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-250-gt-swb.html"
+    },
+    {
+      "id": "porsche-356",
+      "brand": "Porsche",
+      "model": "356",
+      "year": "1960",
+      "specs": "Flat-4 1.6L — 75 ch",
+      "description": "La 356 verte aux phares jaunes dans le showroom Perego Cars. Là où tout a commencé pour Porsche.",
+      "categories": [
+        "porsche",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-356-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-356.html"
+    },
+    {
+      "id": "porsche-930-turbo",
+      "brand": "Porsche",
+      "model": "930 Turbo",
+      "year": "1978",
+      "specs": "Flat-6 3.3L Turbo — 300 ch",
+      "description": "La 930 Turbo dans la brume matinale suisse, plaque Perego Cars. La Widowmaker dans toute sa gloire.",
+      "categories": [
+        "porsche",
+        "classiques",
+        "swiss-stories"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-930-turbo-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-930-turbo.html"
+    },
+    {
+      "id": "rolls-royce-ghost",
+      "brand": "Rolls-Royce",
+      "model": "Ghost",
+      "year": "2014",
+      "specs": "V12 6.6L Twin Turbo — 570 ch",
+      "description": "La Ghost en noir mat, portes suicide ouvertes, devant le mur graffiti Perego Cars. Le luxe absolu rencontre le street art.",
+      "categories": [
+        "autres",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/rolls-royce-ghost-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/rolls-royce-ghost.html"
+    },
+    {
+      "id": "bmw-z8",
+      "brand": "BMW",
+      "model": "Z8",
+      "year": "2000",
+      "specs": "V8 4.9L — 400 ch",
+      "description": "Le roadster BMW Z8 argent au bord du lac, Alpes en arrière-plan, intérieur rouge. Design rétro-futuriste par Henrik Fisker.",
+      "categories": [
+        "classiques",
+        "autres",
+        "swiss-stories"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/bmw-z8-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/bmw-z8.html"
+    },
+    {
+      "id": "mercedes-amg-gt-r",
+      "brand": "Mercedes-AMG",
+      "model": "GT R",
+      "year": "2017",
+      "specs": "V8 4.0L Biturbo — 585 ch",
+      "description": "La Bête du Nürburgring en argent mat dans les vignobles vaudois, plaques VD Perego Cars. Pneus Michelin marqués.",
+      "categories": [
+        "autres",
+        "icones",
+        "swiss-stories"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/mercedes-amg-gt-r-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/mercedes-amg-gt-r.html"
+    },
+    {
+      "id": "porsche-964-carrera-rs",
+      "brand": "Porsche",
+      "model": "964 Carrera RS",
+      "year": "1992",
+      "specs": "Flat-6 3.6L — 260 ch",
+      "description": "La 964 RS blanche dans la neige suisse. Allégée, puriste — la quintessence de la 911 des années 90.",
+      "categories": [
+        "porsche",
+        "classiques",
+        "swiss-stories",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-964-carrera-rs-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-964-carrera-rs.html"
+    },
+    {
+      "id": "bmw-alpina-b3",
+      "brand": "BMW Alpina",
+      "model": "B3",
+      "year": "2018",
+      "specs": "L6 3.0L Biturbo — 462 ch",
+      "description": "L’Alpina B3 bleue dans la forêt automnale, plaque Perego. La discrétion sportive à l’allemande.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/bmw-alpina-b3-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/bmw-alpina-b3.html"
+    },
+    {
+      "id": "ferrari-gtc4lusso",
+      "brand": "Ferrari",
+      "model": "GTC4Lusso",
+      "year": "2016",
+      "specs": "V12 6.3L — 690 ch",
+      "description": "Vue aérienne de la GTC4Lusso argentée sur un chemin de campagne, plaque Perego Cars. Quatre places, V12, quatre roues motrices.",
+      "categories": [
+        "ferrari"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-gtc4lusso-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-gtc4lusso.html"
+    },
+    {
+      "id": "bentley-continental-gt",
+      "brand": "Bentley",
+      "model": "Continental GT",
+      "year": "2012",
+      "specs": "W12 6.0L Biturbo — 575 ch",
+      "description": "Détail de la montre Breitling sur le tableau de bord en bois précieux. L’horlogerie suisse rencontre le luxe britannique.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/bentley-continental-gt-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/bentley-continental-gt.html"
+    },
+    {
+      "id": "porsche-cayman-gts-981",
+      "brand": "Porsche",
+      "model": "Cayman GTS (981)",
+      "year": "2014",
+      "specs": "Flat-6 3.4L — 340 ch",
+      "description": "Le Cayman GTS gris au coucher du soleil sur le lac, plaque PEREGO CARS. Le moteur central parfait.",
+      "categories": [
+        "porsche",
+        "swiss-stories"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-cayman-gts-981-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-cayman-gts-981.html"
+    },
+    {
+      "id": "mercedes-sls-amg",
+      "brand": "Mercedes-AMG",
+      "model": "SLS AMG",
+      "year": "2010",
+      "specs": "V8 6.2L — 571 ch",
+      "description": "La SLS AMG noire, porte papillon ouverte, plaque PEREGO CARS à Etoy. L’héritière de la 300 SL.",
+      "categories": [
+        "autres",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/mercedes-sls-amg-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/mercedes-sls-amg.html"
+    },
+    {
+      "id": "ferrari-f12-red",
+      "brand": "Ferrari",
+      "model": "F12 Berlinetta (Rosso)",
+      "year": "2012",
+      "specs": "V12 6.3L — 740 ch",
+      "description": "La F12 rouge, capot ouvert révélant le V12 atmosphérique. Perego Cars, parking souterrain.",
+      "categories": [
+        "ferrari"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-f12-red-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f12-red.html"
+    },
+    {
+      "id": "ferrari-california-t-white",
+      "brand": "Ferrari",
+      "model": "California T",
+      "year": "2014",
+      "specs": "V8 3.9L Turbo — 560 ch",
+      "description": "La California T blanche au port, lac Léman et Alpes en toile de fond, plaque PEREGO CARS. Dolce vita suisse.",
+      "categories": [
+        "ferrari",
+        "swiss-stories"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-california-t-white-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-california-t-white.html"
+    },
+    {
+      "id": "porsche-991-targa-4s",
+      "brand": "Porsche",
+      "model": "991 Targa 4S",
+      "year": "2014",
+      "specs": "Flat-6 3.8L — 400 ch",
+      "description": "La Targa blanche dans les vignobles, plaque PEREGO CARS. Le toit Targa emblématique au cœur de la Suisse.",
+      "categories": [
+        "porsche",
+        "swiss-stories"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-991-targa-4s-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-991-targa-4s.html"
+    },
+    {
+      "id": "alpine-a110",
+      "brand": "Alpine",
+      "model": "A110",
+      "year": "2018",
+      "specs": "L4 1.8L Turbo — 252 ch",
+      "description": "Le renouveau français du sport automobile. Intérieur avec surpiqûres bleues et volant siglé A.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/alpine-a110-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/alpine-a110.html"
+    },
+    {
+      "id": "porsche-997-turbo-black",
+      "brand": "Porsche",
+      "model": "997 Turbo",
+      "year": "2006",
+      "specs": "Flat-6 3.6L Twin Turbo — 480 ch",
+      "description": "La 997 Turbo noire, détail de la jante et du frein céramique rouge. Puissance brute.",
+      "categories": [
+        "porsche"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-997-turbo-black-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-997-turbo-black.html"
+    },
+    {
+      "id": "bmw-m6-cabriolet",
+      "brand": "BMW",
+      "model": "M6 Cabriolet",
+      "year": "2015",
+      "specs": "V8 4.4L Biturbo — 560 ch",
+      "description": "Intérieur de la M6 Cabriolet, volant M, vignobles vaudois à travers le pare-brise. Le grand tourisme bavarois.",
+      "categories": [
+        "autres",
+        "swiss-stories"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/bmw-m6-cabriolet-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/bmw-m6-cabriolet.html"
+    },
+    {
+      "id": "ferrari-488-gtb-white",
+      "brand": "Ferrari",
+      "model": "488 GTB",
+      "year": "2015",
+      "specs": "V8 3.9L Biturbo — 670 ch",
+      "description": "La 488 GTB blanche, phares allumés, plaque PEREGO CARS dans le parking souterrain. Prédateur urbain.",
+      "categories": [
+        "ferrari"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-488-gtb-white-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-488-gtb-white.html"
+    },
+    {
+      "id": "maserati-levante-trofeo",
+      "brand": "Maserati",
+      "model": "Levante Trofeo",
+      "year": "2019",
+      "specs": "V8 3.8L Biturbo — 590 ch",
+      "description": "Le Levante Trofeo gris dans la brume des vignobles. Le SUV du trident avec un V8 Ferrari.",
+      "categories": [
+        "autres",
+        "swiss-stories"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/maserati-levante-trofeo-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/maserati-levante-trofeo.html"
+    },
+    {
+      "id": "mclaren-mp4-12c",
+      "brand": "McLaren",
+      "model": "MP4-12C",
+      "year": "2011",
+      "specs": "V8 3.8L Twin Turbo — 600 ch",
+      "description": "La MP4-12C orange dans le parking souterrain, plaques VD. L'héritage de Woking en orange vif.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/mclaren-mp4-12c-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/mclaren-mp4-12c.html"
+    },
+    {
+      "id": "ferrari-328-gtb",
+      "brand": "Ferrari",
+      "model": "328 GTB",
+      "year": "1985",
+      "specs": "V8 3.2L — 270 ch",
+      "description": "La 328 GTB rouge, détail arrière dans le showroom Perego Cars. L’élégance des années 80.",
+      "categories": [
+        "ferrari",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-328-gtb-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-328-gtb.html"
+    },
+    {
+      "id": "porsche-911-rs-27-autumn",
+      "brand": "Porsche",
+      "model": "911 Carrera RS 2.7 (Automne)",
+      "year": "1973",
+      "specs": "Flat-6 2.7L — 210 ch",
+      "description": "La RS 2.7 blanche dans les feuilles d’automne, jantes Fuchs noires. Intemporelle à chaque saison.",
+      "categories": [
+        "porsche",
+        "classiques",
+        "swiss-stories",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-rs-27-autumn-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-rs-27-autumn.html"
+    }
+  ],
+  "categories": [
+    {
+      "id": "icones",
+      "name": "Icônes",
+      "description": "Les voitures les plus légendaires qui sont passées entre nos mains",
+      "icon": "★"
+    },
+    {
+      "id": "ferrari",
+      "name": "Ferrari",
+      "description": "Du Daytona à LaFerrari — l'excellence du cheval cabré",
+      "icon": "🏇"
+    },
+    {
+      "id": "porsche",
+      "name": "Porsche",
+      "description": "Une décennie de 911 — chaque génération représentée",
+      "icon": "🏁"
+    },
+    {
+      "id": "lamborghini",
+      "name": "Lamborghini",
+      "description": "La furie du taureau — de Sant'Agata à la Suisse",
+      "icon": "🐂"
+    },
+    {
+      "id": "classiques",
+      "name": "Classiques",
+      "description": "Machines intemporelles d'avant 1990 — l'âge d'or de l'automobile",
+      "icon": "🕰️"
+    },
+    {
+      "id": "swiss-stories",
+      "name": "Swiss Stories",
+      "description": "Nos voitures dans leur élément suisse — montagnes, lacs, neige",
+      "icon": "🇨🇭"
+    },
+    {
+      "id": "autres",
+      "name": "Autres Marques",
+      "description": "Mercedes, Audi, Aston Martin, et bien d'autres",
+      "icon": "🚗"
+    }
+  ],
+  "generated": "2026-03-19"
+}
