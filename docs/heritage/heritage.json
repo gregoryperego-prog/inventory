@@ -546,19 +546,6 @@
       "detail_url": "https://peregocars.github.io/inventory/heritage/mclaren-650s.html"
     },
     {
-      "id": "tesla-model-x",
-      "brand": "Tesla",
-      "model": "Model X",
-      "year": "2016",
-      "specs": "Electric Dual Motor — 525 ch",
-      "description": "Le Tesla Model X gris foncé, portes Falcon Wing déployées. L'avenir de l'automobile selon Perego Cars, silencieux et fulgurant.",
-      "categories": [
-        "autres"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/tesla-model-x-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/tesla-model-x.html"
-    },
-    {
       "id": "aston-martin-virage-volante",
       "brand": "Aston Martin",
       "model": "Virage Volante",
@@ -613,46 +600,6 @@
       ],
       "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-speedster-991-00-thumb.jpg",
       "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-speedster-991.html"
-    },
-    {
-      "id": "jaguar-xkr-s",
-      "brand": "Jaguar",
-      "model": "XKR-S",
-      "year": "2011",
-      "specs": "V8 5.0L Supercharged — 550 ch",
-      "description": "La Jaguar XKR-S en vert foncé, la plus puissante des Jaguar de série de son époque. Le rugissement du V8 compressé chez Perego Cars.",
-      "categories": [
-        "autres"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/jaguar-xkr-s-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/jaguar-xkr-s.html"
-    },
-    {
-      "id": "triumph-tr4a",
-      "brand": "Triumph",
-      "model": "TR4A",
-      "year": "1965",
-      "specs": "L4 2.1L — 104 ch",
-      "description": "La Triumph TR4A en British Racing Green, roadster anglais des sixties dans sa plus belle expression. Un charme intemporel chez Perego Cars.",
-      "categories": [
-        "autres",
-        "classiques"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/triumph-tr4a-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/triumph-tr4a.html"
-    },
-    {
-      "id": "lotus-exige-s",
-      "brand": "Lotus",
-      "model": "Exige S",
-      "year": "2012",
-      "specs": "V6 3.5L Supercharged — 350 ch",
-      "description": "La Lotus Exige S blanche, légèreté et agilité à l'état pur. Colin Chapman aurait approuvé cette machine passée par Perego Cars.",
-      "categories": [
-        "autres"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/lotus-exige-s-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/lotus-exige-s.html"
     },
     {
       "id": "ferrari-gtc4lusso",
@@ -751,20 +698,6 @@
       ],
       "image": "https://peregocars.github.io/inventory/heritage/images/porsche-993-carrera-4-cabriolet-00-thumb.jpg",
       "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-993-carrera-4-cabriolet.html"
-    },
-    {
-      "id": "maserati-3200-gt",
-      "brand": "Maserati",
-      "model": "3200 GT",
-      "year": "1998",
-      "specs": "V8 3.2L Biturbo — 370 ch",
-      "description": "La Maserati 3200 GT bleu foncé, dessinée par Giugiaro avec ses feux boomerang iconiques. Le grand tourisme italien dans toute sa noblesse chez Perego Cars.",
-      "categories": [
-        "autres",
-        "classiques"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/maserati-3200-gt-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/maserati-3200-gt.html"
     },
     {
       "id": "lamborghini-aventador-svj",
