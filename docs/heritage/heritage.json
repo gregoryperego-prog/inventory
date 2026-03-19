@@ -420,6 +420,488 @@
       ],
       "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-250-swb-detail-00-thumb.jpg",
       "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-250-swb-detail.html"
+    },
+    {
+      "id": "mclaren-675lt",
+      "brand": "McLaren",
+      "model": "675LT",
+      "year": "2015",
+      "specs": "V8 3.8L Twin Turbo — 675 ch",
+      "description": "La 675LT grise, concentré de technologie issue de la compétition. Une Longtail rare et radicale passée par Perego Cars.",
+      "categories": [
+        "autres",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/mclaren-675lt-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/mclaren-675lt.html"
+    },
+    {
+      "id": "ford-gt-2005",
+      "brand": "Ford",
+      "model": "GT (2005)",
+      "year": "2005",
+      "specs": "V8 5.4L Supercharged — 550 ch",
+      "description": "La Ford GT en livrée rouge et blanche, hommage direct aux GT40 du Mans. Un monument américain dans le garage Perego Cars.",
+      "categories": [
+        "autres",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ford-gt-2005-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ford-gt-2005.html"
+    },
+    {
+      "id": "porsche-911-50th-anniversary-991",
+      "brand": "Porsche",
+      "model": "911 50th Anniversary (991)",
+      "year": "2013",
+      "specs": "Flat-6 3.8L — 400 ch",
+      "description": "L'édition 50e anniversaire de la 911 en vert foncé, un hommage aux origines de Stuttgart. Numérotée et exclusive, passée entre nos mains.",
+      "categories": [
+        "porsche"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-50th-anniversary-991-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-50th-anniversary-991.html"
+    },
+    {
+      "id": "lamborghini-huracan-performante",
+      "brand": "Lamborghini",
+      "model": "Huracan Performante",
+      "year": "2017",
+      "specs": "V10 5.2L — 640 ch",
+      "description": "La Huracan Performante en gris mat, aérodynamique active ALA et V10 hurlant. Une machine de record passée par Perego Cars.",
+      "categories": [
+        "lamborghini",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/lamborghini-huracan-performante-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-huracan-performante.html"
+    },
+    {
+      "id": "caterham-seven-csr",
+      "brand": "Caterham",
+      "model": "Seven CSR",
+      "year": "2006",
+      "specs": "Ford Duratec 2.3L — 260 ch",
+      "description": "La Caterham Seven CSR jaune et verte, l'essence du pilotage pur. Moins de 600 kg pour un rapport poids-puissance imbattable chez Perego Cars.",
+      "categories": [
+        "autres",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/caterham-seven-csr-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/caterham-seven-csr.html"
+    },
+    {
+      "id": "ferrari-308-gtbi",
+      "brand": "Ferrari",
+      "model": "308 GTBi",
+      "year": "1980",
+      "specs": "V8 2.9L — 214 ch",
+      "description": "La 308 GTBi blanche, icône des années 80 rendue célèbre par Magnum. Un classique Ferrari dans sa robe la plus rare chez Perego Cars.",
+      "categories": [
+        "ferrari",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-308-gtbi-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-308-gtbi.html"
+    },
+    {
+      "id": "ferrari-458-italia-green",
+      "brand": "Ferrari",
+      "model": "458 Italia",
+      "year": "2009",
+      "specs": "V8 4.5L — 570 ch",
+      "description": "La 458 Italia en vert foncé, une configuration d'une élégance rare. Le V8 atmosphérique le plus abouti de Maranello, passé par Perego Cars.",
+      "categories": [
+        "ferrari"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-458-italia-green-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-458-italia-green.html"
+    },
+    {
+      "id": "porsche-906-carrera-6",
+      "brand": "Porsche",
+      "model": "906 Carrera 6",
+      "year": "1966",
+      "specs": "Flat-6 2.0L — 210 ch",
+      "description": "La 906 Carrera 6 blanc et rouge, véritable voiture de course des années 60 homologuée pour la route. Une pièce de musée passée par Perego Cars.",
+      "categories": [
+        "porsche",
+        "icones",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-906-carrera-6-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-906-carrera-6.html"
+    },
+    {
+      "id": "mclaren-650s",
+      "brand": "McLaren",
+      "model": "650S",
+      "year": "2014",
+      "specs": "V8 3.8L Twin Turbo — 650 ch",
+      "description": "La McLaren 650S noire, héritière directe de la P1. Technologie de Formule 1 sur route ouverte, dans le showroom Perego Cars.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/mclaren-650s-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/mclaren-650s.html"
+    },
+    {
+      "id": "tesla-model-x",
+      "brand": "Tesla",
+      "model": "Model X",
+      "year": "2016",
+      "specs": "Electric Dual Motor — 525 ch",
+      "description": "Le Tesla Model X gris foncé, portes Falcon Wing déployées. L'avenir de l'automobile selon Perego Cars, silencieux et fulgurant.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/tesla-model-x-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/tesla-model-x.html"
+    },
+    {
+      "id": "aston-martin-virage-volante",
+      "brand": "Aston Martin",
+      "model": "Virage Volante",
+      "year": "2011",
+      "specs": "V12 6.0L — 490 ch",
+      "description": "L'Aston Martin Virage Volante orange, cabriolet grand tourisme au V12 envoûtant. L'élégance britannique décapotée chez Perego Cars.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/aston-martin-virage-volante-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/aston-martin-virage-volante.html"
+    },
+    {
+      "id": "alfa-romeo-8c-competizione",
+      "brand": "Alfa Romeo",
+      "model": "8C Competizione",
+      "year": "2007",
+      "specs": "V8 4.7L — 450 ch",
+      "description": "L'Alfa Romeo 8C Competizione noire, chef-d'œuvre de design limité à 500 exemplaires. Une sculpture italienne d'exception passée par Perego Cars.",
+      "categories": [
+        "autres",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/alfa-romeo-8c-competizione-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/alfa-romeo-8c-competizione.html"
+    },
+    {
+      "id": "lamborghini-countach-lp400",
+      "brand": "Lamborghini",
+      "model": "Countach LP400",
+      "year": "1974",
+      "specs": "V12 4.0L — 375 ch",
+      "description": "La Countach LP400 rouge, la version originale et la plus pure du mythe. Un poster devenu réalité dans le garage Perego Cars.",
+      "categories": [
+        "lamborghini",
+        "icones",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/lamborghini-countach-lp400-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-countach-lp400.html"
+    },
+    {
+      "id": "porsche-911-speedster-991",
+      "brand": "Porsche",
+      "model": "911 Speedster (991)",
+      "year": "2019",
+      "specs": "Flat-6 4.0L — 510 ch",
+      "description": "La 911 Speedster en blanc Heritage Design, limitée à 1948 exemplaires. Le chant du cygne de la 991, atmosphérique et manuelle, chez Perego Cars.",
+      "categories": [
+        "porsche",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-speedster-991-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-speedster-991.html"
+    },
+    {
+      "id": "jaguar-xkr-s",
+      "brand": "Jaguar",
+      "model": "XKR-S",
+      "year": "2011",
+      "specs": "V8 5.0L Supercharged — 550 ch",
+      "description": "La Jaguar XKR-S en vert foncé, la plus puissante des Jaguar de série de son époque. Le rugissement du V8 compressé chez Perego Cars.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/jaguar-xkr-s-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/jaguar-xkr-s.html"
+    },
+    {
+      "id": "triumph-tr4a",
+      "brand": "Triumph",
+      "model": "TR4A",
+      "year": "1965",
+      "specs": "L4 2.1L — 104 ch",
+      "description": "La Triumph TR4A en British Racing Green, roadster anglais des sixties dans sa plus belle expression. Un charme intemporel chez Perego Cars.",
+      "categories": [
+        "autres",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/triumph-tr4a-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/triumph-tr4a.html"
+    },
+    {
+      "id": "lotus-exige-s",
+      "brand": "Lotus",
+      "model": "Exige S",
+      "year": "2012",
+      "specs": "V6 3.5L Supercharged — 350 ch",
+      "description": "La Lotus Exige S blanche, légèreté et agilité à l'état pur. Colin Chapman aurait approuvé cette machine passée par Perego Cars.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/lotus-exige-s-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/lotus-exige-s.html"
+    },
+    {
+      "id": "ferrari-gtc4lusso",
+      "brand": "Ferrari",
+      "model": "GTC4Lusso",
+      "year": "2016",
+      "specs": "V12 6.3L — 690 ch",
+      "description": "La GTC4Lusso grise, GT familiale au V12 atmosphérique et quatre roues motrices. Le voyage en première classe selon Perego Cars.",
+      "categories": [
+        "ferrari"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-gtc4lusso-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-gtc4lusso.html"
+    },
+    {
+      "id": "ferrari-512-bb",
+      "brand": "Ferrari",
+      "model": "512 BB",
+      "year": "1976",
+      "specs": "Flat-12 5.0L — 360 ch",
+      "description": "La 512 BB noire, moteur central Flat-12 et lignes de Pininfarina à couper le souffle. Une légende des années 70 dans l'écurie Perego Cars.",
+      "categories": [
+        "ferrari",
+        "icones",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-512-bb-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-512-bb.html"
+    },
+    {
+      "id": "ferrari-430-scuderia",
+      "brand": "Ferrari",
+      "model": "430 Scuderia",
+      "year": "2007",
+      "specs": "V8 4.3L — 510 ch",
+      "description": "La 430 Scuderia en gris mat, allégée et affûtée pour le circuit. Le V8 atmosphérique le plus expressif de sa génération chez Perego Cars.",
+      "categories": [
+        "ferrari"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-430-scuderia-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-430-scuderia.html"
+    },
+    {
+      "id": "ferrari-456-gt",
+      "brand": "Ferrari",
+      "model": "456 GT",
+      "year": "1992",
+      "specs": "V12 5.5L — 442 ch",
+      "description": "La 456 GT noire, grande routière au V12 frontal et à la ligne signée Pininfarina. L'élégance discrète de Maranello chez Perego Cars.",
+      "categories": [
+        "ferrari",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-456-gt-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-456-gt.html"
+    },
+    {
+      "id": "ferrari-testarossa",
+      "brand": "Ferrari",
+      "model": "Testarossa",
+      "year": "1984",
+      "specs": "Flat-12 4.9L — 390 ch",
+      "description": "La Testarossa rouge, icône absolue des années 80 avec ses écopes latérales mythiques. Miami Vice en version Perego Cars.",
+      "categories": [
+        "ferrari",
+        "icones",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-testarossa-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-testarossa.html"
+    },
+    {
+      "id": "ford-mustang-1965",
+      "brand": "Ford",
+      "model": "Mustang (1965)",
+      "year": "1965",
+      "specs": "V8 4.7L — 225 ch",
+      "description": "La Ford Mustang 1965 turquoise, le pony car qui a conquis l'Amérique. Un classique absolu dans sa plus belle couleur chez Perego Cars.",
+      "categories": [
+        "autres",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ford-mustang-1965-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ford-mustang-1965.html"
+    },
+    {
+      "id": "porsche-993-carrera-4-cabriolet",
+      "brand": "Porsche",
+      "model": "993 Carrera 4 Cabriolet",
+      "year": "1995",
+      "specs": "Flat-6 3.6L — 272 ch",
+      "description": "La 993 Carrera 4 Cabriolet en améthyste, dernière 911 refroidie par air en version décapotable. Une couleur rare et envoûtante chez Perego Cars.",
+      "categories": [
+        "porsche",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-993-carrera-4-cabriolet-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-993-carrera-4-cabriolet.html"
+    },
+    {
+      "id": "maserati-3200-gt",
+      "brand": "Maserati",
+      "model": "3200 GT",
+      "year": "1998",
+      "specs": "V8 3.2L Biturbo — 370 ch",
+      "description": "La Maserati 3200 GT bleu foncé, dessinée par Giugiaro avec ses feux boomerang iconiques. Le grand tourisme italien dans toute sa noblesse chez Perego Cars.",
+      "categories": [
+        "autres",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/maserati-3200-gt-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/maserati-3200-gt.html"
+    },
+    {
+      "id": "lamborghini-aventador-svj",
+      "brand": "Lamborghini",
+      "model": "Aventador SVJ",
+      "year": "2018",
+      "specs": "V12 6.5L — 770 ch",
+      "description": "L'Aventador SVJ blanche, recordwoman du Nürburgring et sommet de la lignée V12 atmosphérique. La furie ultime de Sant'Agata chez Perego Cars.",
+      "categories": [
+        "lamborghini",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/lamborghini-aventador-svj-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-aventador-svj.html"
+    },
+    {
+      "id": "lamborghini-gallardo",
+      "brand": "Lamborghini",
+      "model": "Gallardo",
+      "year": "2003",
+      "specs": "V10 5.0L — 520 ch",
+      "description": "La Gallardo blanche, celle qui a démocratisé le rêve Lamborghini. V10 hurlant et lignes acérées dans le showroom Perego Cars.",
+      "categories": [
+        "lamborghini"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/lamborghini-gallardo-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-gallardo.html"
+    },
+    {
+      "id": "jaguar-e-type",
+      "brand": "Jaguar",
+      "model": "E-Type",
+      "year": "1961",
+      "specs": "L6 4.2L — 265 ch",
+      "description": "La Jaguar E-Type vert foncé, qualifiée de plus belle voiture jamais dessinée par Enzo Ferrari lui-même. Un joyau britannique chez Perego Cars.",
+      "categories": [
+        "autres",
+        "icones",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/jaguar-e-type-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/jaguar-e-type.html"
+    },
+    {
+      "id": "aston-martin-v12-vantage-s-roadster",
+      "brand": "Aston Martin",
+      "model": "V12 Vantage S Roadster",
+      "year": "2014",
+      "specs": "V12 5.9L — 573 ch",
+      "description": "L'Aston Martin V12 Vantage S Roadster argent, un V12 dans le plus petit châssis de Gaydon. Puissance brute et ciel ouvert chez Perego Cars.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/aston-martin-v12-vantage-s-roadster-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/aston-martin-v12-vantage-s-roadster.html"
+    },
+    {
+      "id": "alfa-romeo-4c",
+      "brand": "Alfa Romeo",
+      "model": "4C",
+      "year": "2013",
+      "specs": "L4 1.75L Turbo — 240 ch",
+      "description": "L'Alfa Romeo 4C blanche, châssis carbone et moteur central pour moins d'une tonne. La sportive italienne dans sa forme la plus pure chez Perego Cars.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/alfa-romeo-4c-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/alfa-romeo-4c.html"
+    },
+    {
+      "id": "ferrari-488-pista-spider",
+      "brand": "Ferrari",
+      "model": "488 Pista Spider",
+      "year": "2018",
+      "specs": "V8 3.9L Biturbo — 720 ch",
+      "description": "La 488 Pista Spider argent, version décapotable de la plus radicale des 488. Puissance et ciel ouvert réunis chez Perego Cars.",
+      "categories": [
+        "ferrari",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-488-pista-spider-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-488-pista-spider.html"
+    },
+    {
+      "id": "rolls-royce-silver-seraph",
+      "brand": "Rolls-Royce",
+      "model": "Silver Seraph",
+      "year": "1998",
+      "specs": "V12 5.4L — 326 ch",
+      "description": "La Rolls-Royce Silver Seraph vert foncé, dernière Rolls produite à Crewe avant l'ère BMW. Un luxe d'un autre temps chez Perego Cars.",
+      "categories": [
+        "autres",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/rolls-royce-silver-seraph-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/rolls-royce-silver-seraph.html"
+    },
+    {
+      "id": "porsche-718-spyder",
+      "brand": "Porsche",
+      "model": "718 Spyder",
+      "year": "2019",
+      "specs": "Flat-6 4.0L — 420 ch",
+      "description": "Le 718 Spyder argent, Flat-6 atmosphérique 4.0L dans un roadster à capote manuelle. L'esprit puriste de Stuttgart chez Perego Cars.",
+      "categories": [
+        "porsche"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-718-spyder-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-718-spyder.html"
+    },
+    {
+      "id": "porsche-911-carrera-sc",
+      "brand": "Porsche",
+      "model": "911 Carrera SC",
+      "year": "1982",
+      "specs": "Flat-6 3.0L — 204 ch",
+      "description": "La 911 SC bleu pétrole, la 911 des puristes des années 80. Fiabilité légendaire et charme intemporel dans le garage Perego Cars.",
+      "categories": [
+        "porsche",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-carrera-sc-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-carrera-sc.html"
+    },
+    {
+      "id": "porsche-911-gt3-rs-40-997",
+      "brand": "Porsche",
+      "model": "911 GT3 RS 4.0 (997)",
+      "year": "2011",
+      "specs": "Flat-6 4.0L — 500 ch",
+      "description": "La 997 GT3 RS 4.0 blanche, limitée à 600 exemplaires et considérée comme la meilleure 911 jamais produite. Le Graal de Stuttgart chez Perego Cars.",
+      "categories": [
+        "porsche",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-gt3-rs-40-997-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-gt3-rs-40-997.html"
     }
   ],
   "categories": [
