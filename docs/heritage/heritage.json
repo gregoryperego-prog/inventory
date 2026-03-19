@@ -30,18 +30,19 @@
       "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f12-berlinetta.html"
     },
     {
-      "id": "ferrari-testarossa",
-      "brand": "Ferrari",
-      "model": "Testarossa",
-      "year": "1984",
-      "specs": "Flat-12 4.9L — 390 ch",
-      "description": "L'icône des années 80, reconnaissable entre mille avec ses striées latérales. Photographiée dans la campagne vaudoise avec les plaques Perego Cars.",
+      "id": "lamborghini-miura-s-showroom",
+      "brand": "Lamborghini",
+      "model": "Miura S",
+      "year": "1969",
+      "specs": "V12 4.0L — 370 ch",
+      "description": "La Miura S rouge à la sortie du showroom Perego Cars.",
       "categories": [
-        "ferrari",
+        "icones",
+        "lamborghini",
         "classiques"
       ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-testarossa-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-testarossa.html"
+      "image": "https://peregocars.github.io/inventory/heritage/images/lamborghini-miura-s-showroom-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-miura-s-showroom.html"
     },
     {
       "id": "ferrari-365-daytona",
@@ -117,10 +118,10 @@
     {
       "id": "porsche-911-carrera-g",
       "brand": "Porsche",
-      "model": "911 Carrera (G-body)",
-      "year": "1984",
-      "specs": "Flat-6 3.2L — 231 ch",
-      "description": "La génération G dans sa robe jaune soleil. Architecture brutaliste en arrière-plan, plaque Perego Cars — le contraste parfait.",
+      "model": "911 2.7",
+      "year": "1974",
+      "specs": "Flat-6 2.7L — 211 ch",
+      "description": "La 911 2.7 jaune de 1974 — l'ère classique de Stuttgart dans toute sa pureté.",
       "categories": [
         "porsche",
         "classiques"
@@ -185,38 +186,12 @@
       "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-gt3-991.html"
     },
     {
-      "id": "porsche-911-turbo-s-cab-991",
-      "brand": "Porsche",
-      "model": "911 Turbo S Cabriolet (991)",
-      "year": "2016",
-      "specs": "Flat-6 3.8L Twin Turbo — 580 ch",
-      "description": "Argentée sous les néons roses, cette Turbo S Cabriolet incarne le luxe sportif à ciel ouvert. Freins céramique jaunes, plaque VD.",
-      "categories": [
-        "porsche"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-turbo-s-cab-991-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-turbo-s-cab-991.html"
-    },
-    {
-      "id": "porsche-panamera-turbo",
-      "brand": "Porsche",
-      "model": "Panamera Turbo",
-      "year": "2017",
-      "specs": "V8 4.0L Twin Turbo — 550 ch",
-      "description": "La berline sportive rouge carmin dans le parking souterrain — plaque Perego Cars. Quatre portes, zéro compromis.",
-      "categories": [
-        "porsche"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-panamera-turbo-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-panamera-turbo.html"
-    },
-    {
       "id": "porsche-911-997",
       "brand": "Porsche",
-      "model": "911 Carrera (997)",
+      "model": "911 GTS Targa",
       "year": "2008",
-      "specs": "Flat-6 3.6L — 345 ch",
-      "description": "Blanche immaculée devant un château suisse — la 997, l'équilibre parfait entre tradition et modernité.",
+      "specs": "Flat-6 3.8L — 408 ch",
+      "description": "La 911 GTS Targa blanche, plaque PEREGO CARS. Le meilleur des deux mondes.",
       "categories": [
         "porsche"
       ],
@@ -237,19 +212,18 @@
       "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-718-boxster.html"
     },
     {
-      "id": "lamborghini-miura",
-      "brand": "Lamborghini",
-      "model": "Miura S",
-      "year": "1969",
-      "specs": "V12 4.0L — 385 ch",
-      "description": "La révolution automobile incarnée. Cette légende rouge a été photographiée devant la statue du taureau — un clin d'œil parfait.",
+      "id": "ferrari-laferrari",
+      "brand": "Ferrari",
+      "model": "LaFerrari",
+      "year": "2013",
+      "specs": "V12 6.3L Hybrid — 963 ch",
+      "description": "La LaFerrari rouge — l'hypercar hybride ultime de Maranello.",
       "categories": [
         "icones",
-        "lamborghini",
-        "classiques"
+        "ferrari"
       ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/lamborghini-miura-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-miura.html"
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-laferrari-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-laferrari.html"
     },
     {
       "id": "ac-cobra-289",
@@ -267,19 +241,18 @@
       "detail_url": "https://peregocars.github.io/inventory/heritage/ac-cobra-289.html"
     },
     {
-      "id": "mercedes-300-sl",
-      "brand": "Mercedes-Benz",
-      "model": "300 SLR & 300 SL Roadster",
-      "year": "1955",
-      "specs": "L6 3.0L — 310 ch",
-      "description": "Un moment d'exception — la 300 SLR Uhlenhaut (l'une des voitures les plus chères au monde) aux côtés d'une 300 SL Roadster, devant un palazzo italien.",
+      "id": "ferrari-f40-industrial",
+      "brand": "Ferrari",
+      "model": "F40 (Industriel)",
+      "year": "1987",
+      "specs": "V8 2.9L Twin Turbo — 478 ch",
+      "description": "La F40 dans son décor industriel, brute et authentique.",
       "categories": [
         "icones",
-        "classiques",
-        "autres"
+        "ferrari"
       ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/mercedes-300-sl-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/mercedes-300-sl.html"
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-f40-industrial-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f40-industrial.html"
     },
     {
       "id": "audi-r8-spyder",
@@ -408,33 +381,19 @@
       "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-997-gt2.html"
     },
     {
-      "id": "ferrari-250-gt-swb",
-      "brand": "Ferrari",
-      "model": "250 GT Berlinetta SWB",
-      "year": "1960",
-      "specs": "V12 3.0L — 280 ch",
-      "description": "La légendaire 250 GT SWB avec bande tricolore italienne. L’une des Ferrari les plus désirées au monde, dans notre showroom.",
+      "id": "lamborghini-miura-s-bull",
+      "brand": "Lamborghini",
+      "model": "Miura S (Taureau)",
+      "year": "1969",
+      "specs": "V12 4.0L — 370 ch",
+      "description": "La Miura S rouge avec la statue du taureau. Perego Cars.",
       "categories": [
         "icones",
-        "ferrari",
+        "lamborghini",
         "classiques"
       ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-250-gt-swb-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-250-gt-swb.html"
-    },
-    {
-      "id": "porsche-356",
-      "brand": "Porsche",
-      "model": "356",
-      "year": "1960",
-      "specs": "Flat-4 1.6L — 75 ch",
-      "description": "La 356 verte aux phares jaunes dans le showroom Perego Cars. Là où tout a commencé pour Porsche.",
-      "categories": [
-        "porsche",
-        "classiques"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-356-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-356.html"
+      "image": "https://peregocars.github.io/inventory/heritage/images/lamborghini-miura-s-bull-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/lamborghini-miura-s-bull.html"
     },
     {
       "id": "porsche-930-turbo",
@@ -512,59 +471,6 @@
       "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-964-carrera-rs.html"
     },
     {
-      "id": "bmw-alpina-b3",
-      "brand": "BMW Alpina",
-      "model": "B3",
-      "year": "2018",
-      "specs": "L6 3.0L Biturbo — 462 ch",
-      "description": "L’Alpina B3 bleue dans la forêt automnale, plaque Perego. La discrétion sportive à l’allemande.",
-      "categories": [
-        "autres"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/bmw-alpina-b3-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/bmw-alpina-b3.html"
-    },
-    {
-      "id": "ferrari-gtc4lusso",
-      "brand": "Ferrari",
-      "model": "GTC4Lusso",
-      "year": "2016",
-      "specs": "V12 6.3L — 690 ch",
-      "description": "Vue aérienne de la GTC4Lusso argentée sur un chemin de campagne, plaque Perego Cars. Quatre places, V12, quatre roues motrices.",
-      "categories": [
-        "ferrari"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-gtc4lusso-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-gtc4lusso.html"
-    },
-    {
-      "id": "bentley-continental-gt",
-      "brand": "Bentley",
-      "model": "Continental GT",
-      "year": "2012",
-      "specs": "W12 6.0L Biturbo — 575 ch",
-      "description": "Détail de la montre Breitling sur le tableau de bord en bois précieux. L’horlogerie suisse rencontre le luxe britannique.",
-      "categories": [
-        "autres"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/bentley-continental-gt-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/bentley-continental-gt.html"
-    },
-    {
-      "id": "porsche-cayman-gts-981",
-      "brand": "Porsche",
-      "model": "Cayman GTS (981)",
-      "year": "2014",
-      "specs": "Flat-6 3.4L — 340 ch",
-      "description": "Le Cayman GTS gris au coucher du soleil sur le lac, plaque PEREGO CARS. Le moteur central parfait.",
-      "categories": [
-        "porsche",
-        "swiss-stories"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-cayman-gts-981-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-cayman-gts-981.html"
-    },
-    {
       "id": "mercedes-sls-amg",
       "brand": "Mercedes-AMG",
       "model": "SLS AMG",
@@ -633,60 +539,6 @@
       "detail_url": "https://peregocars.github.io/inventory/heritage/alpine-a110.html"
     },
     {
-      "id": "porsche-997-turbo-black",
-      "brand": "Porsche",
-      "model": "997 Turbo",
-      "year": "2006",
-      "specs": "Flat-6 3.6L Twin Turbo — 480 ch",
-      "description": "La 997 Turbo noire, détail de la jante et du frein céramique rouge. Puissance brute.",
-      "categories": [
-        "porsche"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-997-turbo-black-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-997-turbo-black.html"
-    },
-    {
-      "id": "bmw-m6-cabriolet",
-      "brand": "BMW",
-      "model": "M6 Cabriolet",
-      "year": "2015",
-      "specs": "V8 4.4L Biturbo — 560 ch",
-      "description": "Intérieur de la M6 Cabriolet, volant M, vignobles vaudois à travers le pare-brise. Le grand tourisme bavarois.",
-      "categories": [
-        "autres",
-        "swiss-stories"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/bmw-m6-cabriolet-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/bmw-m6-cabriolet.html"
-    },
-    {
-      "id": "ferrari-488-gtb-white",
-      "brand": "Ferrari",
-      "model": "488 GTB",
-      "year": "2015",
-      "specs": "V8 3.9L Biturbo — 670 ch",
-      "description": "La 488 GTB blanche, phares allumés, plaque PEREGO CARS dans le parking souterrain. Prédateur urbain.",
-      "categories": [
-        "ferrari"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-488-gtb-white-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-488-gtb-white.html"
-    },
-    {
-      "id": "maserati-levante-trofeo",
-      "brand": "Maserati",
-      "model": "Levante Trofeo",
-      "year": "2019",
-      "specs": "V8 3.8L Biturbo — 590 ch",
-      "description": "Le Levante Trofeo gris dans la brume des vignobles. Le SUV du trident avec un V8 Ferrari.",
-      "categories": [
-        "autres",
-        "swiss-stories"
-      ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/maserati-levante-trofeo-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/maserati-levante-trofeo.html"
-    },
-    {
       "id": "mclaren-mp4-12c",
       "brand": "McLaren",
       "model": "MP4-12C",
@@ -714,20 +566,19 @@
       "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-328-gtb.html"
     },
     {
-      "id": "porsche-911-rs-27-autumn",
-      "brand": "Porsche",
-      "model": "911 Carrera RS 2.7 (Automne)",
-      "year": "1973",
-      "specs": "Flat-6 2.7L — 210 ch",
-      "description": "La RS 2.7 blanche dans les feuilles d’automne, jantes Fuchs noires. Intemporelle à chaque saison.",
+      "id": "ferrari-250-swb-detail",
+      "brand": "Ferrari",
+      "model": "250 GT SWB (Détail)",
+      "year": "1960",
+      "specs": "V12 3.0L — 280 ch",
+      "description": "La légendaire 250 GT SWB, détail du phare et de la calandre.",
       "categories": [
-        "porsche",
-        "classiques",
-        "swiss-stories",
-        "icones"
+        "icones",
+        "ferrari",
+        "classiques"
       ],
-      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-rs-27-autumn-00-thumb.jpg",
-      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-rs-27-autumn.html"
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-250-swb-detail-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-250-swb-detail.html"
     }
   ],
   "categories": [
