@@ -835,6 +835,180 @@
       ],
       "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-gt3-rs-40-997-00-thumb.jpg",
       "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-gt3-rs-40-997.html"
+    },
+    {
+      "id": "ferrari-599-gtb-fiorano",
+      "brand": "Ferrari",
+      "model": "599 GTB Fiorano",
+      "year": "2006",
+      "specs": "V12 6.0L — 620 ch",
+      "description": "La 599 GTB Fiorano en gris foncé, héritière directe de l'Enzo avec son V12 de 620 chevaux. Une gran turismo d'exception qui a marqué l'histoire de Perego Cars par sa puissance brute et son élégance discrète.",
+      "categories": [
+        "ferrari"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-599-gtb-fiorano-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-599-gtb-fiorano.html"
+    },
+    {
+      "id": "ferrari-f430",
+      "brand": "Ferrari",
+      "model": "F430",
+      "year": "2004",
+      "specs": "V8 4.3L — 490 ch",
+      "description": "La F430 noire, berlinetta mythique au V8 de 490 chevaux qui a redéfini les standards de la sportive italienne. Un modèle emblématique de la collection Perego Cars, alliant agressivité et raffinement.",
+      "categories": [
+        "ferrari"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-f430-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-f430.html"
+    },
+    {
+      "id": "ferrari-458-italia-rosso",
+      "brand": "Ferrari",
+      "model": "458 Italia (Rosso)",
+      "year": "2009",
+      "specs": "V8 4.5L — 570 ch",
+      "description": "La 458 Italia en Rosso Corsa, chef-d'œuvre de Pininfarina équipé du dernier V8 atmosphérique de Maranello à 570 chevaux. Passée entre les mains de Perego Cars, elle incarne la quintessence de la sportive italienne.",
+      "categories": [
+        "ferrari"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-458-italia-rosso-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-458-italia-rosso.html"
+    },
+    {
+      "id": "ferrari-458-speciale",
+      "brand": "Ferrari",
+      "model": "458 Speciale",
+      "year": "2013",
+      "specs": "V8 4.5L — 605 ch",
+      "description": "La 458 Speciale blanche à bandes tricolores, version ultime de la 458 avec 605 chevaux atmosphériques et un châssis affûté pour la piste. Une pièce rare et convoitée ayant figuré parmi les icônes de Perego Cars.",
+      "categories": [
+        "ferrari",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/ferrari-458-speciale-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/ferrari-458-speciale.html"
+    },
+    {
+      "id": "porsche-356-cabriolet",
+      "brand": "Porsche",
+      "model": "356 Cabriolet",
+      "year": "1960",
+      "specs": "Flat-4 1.6L — 75 ch",
+      "description": "La Porsche 356 Cabriolet rouge de 1960, ancêtre de toutes les 911 et joyau de l'âge d'or automobile. Un classique intemporel qui a trouvé sa place dans la sélection Perego Cars avec une élégance incomparable.",
+      "categories": [
+        "porsche",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-356-cabriolet-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-356-cabriolet.html"
+    },
+    {
+      "id": "maserati-granturismo-sport",
+      "brand": "Maserati",
+      "model": "GranTurismo Sport",
+      "year": "2012",
+      "specs": "V8 4.7L — 460 ch",
+      "description": "La Maserati GranTurismo Sport en blanc nacré, grande routière au V8 Ferrari de 460 chevaux et à la sonorité envoûtante. Proposée par Perego Cars, elle marie le luxe italien à un tempérament sportif affirmé.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/maserati-granturismo-sport-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/maserati-granturismo-sport.html"
+    },
+    {
+      "id": "maserati-levante-trofeo",
+      "brand": "Maserati",
+      "model": "Levante Trofeo",
+      "year": "2019",
+      "specs": "V8 3.8L Biturbo — 590 ch",
+      "description": "Le Maserati Levante Trofeo en gris graphite, SUV le plus puissant du Trident avec son V8 biturbo Ferrari de 590 chevaux. Perego Cars a eu l'honneur de proposer cette machine capable de rivaliser avec les sportives sur route ouverte.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/maserati-levante-trofeo-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/maserati-levante-trofeo.html"
+    },
+    {
+      "id": "aston-martin-db11",
+      "brand": "Aston Martin",
+      "model": "DB11",
+      "year": "2016",
+      "specs": "V12 5.2L Biturbo — 608 ch",
+      "description": "L'Aston Martin DB11 noire, nouvelle ère du grand tourisme britannique avec son V12 biturbo de 608 chevaux. Une présence magistrale dans le showroom Perego Cars, conjuguant puissance et distinction à la James Bond.",
+      "categories": [
+        "autres",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/aston-martin-db11-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/aston-martin-db11.html"
+    },
+    {
+      "id": "aston-martin-db9-volante",
+      "brand": "Aston Martin",
+      "model": "DB9 Volante",
+      "year": "2004",
+      "specs": "V12 5.9L — 470 ch",
+      "description": "L'Aston Martin DB9 Volante noire, cabriolet au V12 de 470 chevaux dessiné par Ian Callum, incarnation du luxe décapotable britannique. Un classique moderne passé par Perego Cars, taillé pour les routes suisses au bord du lac.",
+      "categories": [
+        "autres",
+        "classiques"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/aston-martin-db9-volante-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/aston-martin-db9-volante.html"
+    },
+    {
+      "id": "aston-martin-dbs",
+      "brand": "Aston Martin",
+      "model": "DBS",
+      "year": "2007",
+      "specs": "V12 5.9L — 510 ch",
+      "description": "L'Aston Martin DBS noire, GT surpuissante au V12 de 510 chevaux rendue célèbre par Casino Royale. Perego Cars a eu le privilège de proposer cette icône britannique, alliance parfaite de brutalité mécanique et d'élégance racée.",
+      "categories": [
+        "autres",
+        "icones"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/aston-martin-dbs-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/aston-martin-dbs.html"
+    },
+    {
+      "id": "mercedes-amg-c63-coupe",
+      "brand": "Mercedes-AMG",
+      "model": "C63 Coupé",
+      "year": "2016",
+      "specs": "V8 4.0L Biturbo — 510 ch",
+      "description": "La Mercedes-AMG C63 Coupé en gris mat, berline musclée au V8 biturbo de 510 chevaux au caractère affirmé. Un pur produit d'Affalterbach proposé par Perego Cars, alliant confort quotidien et performances de supercar.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/mercedes-amg-c63-coupe-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/mercedes-amg-c63-coupe.html"
+    },
+    {
+      "id": "mercedes-amg-gt",
+      "brand": "Mercedes-AMG",
+      "model": "GT",
+      "year": "2014",
+      "specs": "V8 4.0L Biturbo — 462 ch",
+      "description": "La Mercedes-AMG GT en argent mat, sportive à moteur avant au V8 biturbo de 462 chevaux héritée de la SLS. Présentée chez Perego Cars, elle offre une silhouette sculpturale et des sensations de conduite exceptionnelles.",
+      "categories": [
+        "autres"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/mercedes-amg-gt-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/mercedes-amg-gt.html"
+    },
+    {
+      "id": "porsche-911-turbo-s-cabriolet-991",
+      "brand": "Porsche",
+      "model": "911 Turbo S Cabriolet (991)",
+      "year": "2013",
+      "specs": "Flat-6 3.8L Twin Turbo — 580 ch",
+      "description": "La Porsche 911 Turbo S Cabriolet blanche en génération 991, sommet de la gamme avec 580 chevaux et quatre roues motrices. Passée par Perego Cars, elle combine performances de supercar et plaisir décapotable au quotidien.",
+      "categories": [
+        "porsche"
+      ],
+      "image": "https://peregocars.github.io/inventory/heritage/images/porsche-911-turbo-s-cabriolet-991-00-thumb.jpg",
+      "detail_url": "https://peregocars.github.io/inventory/heritage/porsche-911-turbo-s-cabriolet-991.html"
     }
   ],
   "categories": [
