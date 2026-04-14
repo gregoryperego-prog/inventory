@@ -2,9 +2,8 @@ name: Update Perego Cars Inventory
 
 on:
   schedule:
-    # Every Monday at 08:00 UTC (09:00 Swiss time)
-    - cron: '0 8 * * 1'
-  workflow_dispatch:  # Allow manual trigger from GitHub UI
+    - cron: '0 8 * * 1,4'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -44,4 +45,6 @@ jobs:
           git add -A docs/
           git add custom.json || true
           git commit -m "Update inventory $(date +%Y-%m-%d)"
-          git push
+          git fetch origin main
+          git pull --rebase origin main
+          git push origin main
