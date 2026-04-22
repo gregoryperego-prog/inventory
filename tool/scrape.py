@@ -88,12 +88,21 @@ def save_sold(sold):
 
 def archive_removed(removed, sold):
     """Move removed listings to sold archive with date stamp."""
-    sold_ids = {s["id"] for s in sold}
+    sold_ids = {str(s.get("id")) for s in sold}
     for car in removed:
-        if car["id"] not in sold_ids:
+        if str(car.get("id")) not in sold_ids:
             car["sold_date"] = datetime.now().strftime("%Y-%m-%d")
             sold.append(car)
+            sold_ids.add(str(car.get("id")))
     return sold
+
+
+def remove_active_from_sold(sold, active_listings):
+    """Remove cars from sold archive if they are currently active again."""
+    active_ids = {str(car.get("id")) for car in active_listings}
+    cleaned = [car for car in sold if str(car.get("id")) not in active_ids]
+    removed_count = len(sold) - len(cleaned)
+    return cleaned, removed_count
 
 
 def print_summary(listings, added, removed, price_changes):
@@ -167,12 +176,19 @@ def main():
 
     os.makedirs(CUSTOM_IMAGES_DIR, exist_ok=True)
 
-    # 5. Archive sold cars
+    # 5. Archive sold cars, and self-heal stale sold entries.
     sold = load_sold()
+    sold, restored_count = remove_active_from_sold(sold, listings)
+
+    if restored_count:
+        print(f"Removed {restored_count} active cars from sold archive")
+
     if removed:
         sold = archive_removed(removed, sold)
-        save_sold(sold)
         print(f"Archived {len(removed)} sold cars (total sold: {len(sold)})")
+
+    if restored_count or removed:
+        save_sold(sold)
 
     # 6. Generate HTML
     print("Generating HTML pages...")
