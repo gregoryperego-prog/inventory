@@ -66,48 +66,6 @@
     ]
   },
   {
-    "id": "20029708",
-    "make": "Porsche",
-    "full_name": "2.4 S",
-    "model": "911",
-    "year": 1972,
-    "price": 159900,
-    "sold_date": "2026-03",
-    "local_images": [
-      "porsche-911-20029708-01.png",
-      "porsche-911-20029708-02.png",
-      "porsche-911-20029708-03.png",
-      "porsche-911-20029708-04.png",
-      "porsche-911-20029708-05.png",
-      "porsche-911-20029708-06.png",
-      "porsche-911-20029708-07.png",
-      "porsche-911-20029708-08.png",
-      "porsche-911-20029708-09.png",
-      "porsche-911-20029708-10.png"
-    ]
-  },
-  {
-    "id": "12894619",
-    "make": "Jaguar",
-    "full_name": "S Cabriolet 4WD",
-    "model": "F-TYPE",
-    "year": 2017,
-    "price": 37500,
-    "sold_date": "2026-03",
-    "local_images": [
-      "jaguar-f-type-12894619-01.jpg",
-      "jaguar-f-type-12894619-02.jpg",
-      "jaguar-f-type-12894619-03.jpg",
-      "jaguar-f-type-12894619-04.jpg",
-      "jaguar-f-type-12894619-05.jpg",
-      "jaguar-f-type-12894619-06.jpg",
-      "jaguar-f-type-12894619-07.jpg",
-      "jaguar-f-type-12894619-08.jpg",
-      "jaguar-f-type-12894619-09.jpg",
-      "jaguar-f-type-12894619-10.jpg"
-    ]
-  },
-  {
     "id": "20314667",
     "make": "Porsche",
     "model": "CAYENNE",
