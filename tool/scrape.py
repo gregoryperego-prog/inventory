@@ -118,7 +118,8 @@ def repair_sold_images(sold):
             not os.path.exists(os.path.join(SOLD_IMAGES_DIR, img_file))
             for img_file in local_images
         )
-        if has_missing and car.get("images"):
+        can_add_more = len(car.get("images", [])) > len(local_images)
+        if (has_missing or can_add_more) and car.get("images"):
             new_local_images = download_sold_images(car)
             if new_local_images:
                 car["local_images"] = new_local_images
