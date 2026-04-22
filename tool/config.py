@@ -30,12 +30,14 @@ CACHE_FILE = os.path.join(OUTPUT_DIR, "inventory.json")
 LOG_DIR = os.path.join(BASE_DIR, "logs")
 
 # ── Image Settings ──
-MAX_IMAGES_PER_CAR = 10
+MAX_IMAGES_PER_CAR = 16
 IMAGE_BASE_URL = f"{GITHUB_PAGES_URL}/images"  # Public URL for images
 
 # ── Custom Data ──
-CUSTOM_JSON = os.path.join(ROOT_DIR, "..", "custom.json")  # Bridge writes here
+CUSTOM_JSON = os.path.join(ROOT_DIR, "custom.json")  # Backdoor custom data committed in repo root
 SOLD_JSON = os.path.join(OUTPUT_DIR, "sold.json")  # Archived sold cars
+SOLD_IMAGES_DIR = os.path.join(OUTPUT_DIR, "sold-images")
+SOLD_IMAGES_URL = f"{GITHUB_PAGES_URL}/sold-images"
 CUSTOM_IMAGES_DIR = os.path.join(OUTPUT_DIR, "custom-images")
 CUSTOM_IMAGES_URL = f"{GITHUB_PAGES_URL}/custom-images"
 

@@ -4,9 +4,9 @@ Downloads and manages car images locally.
 """
 import os
 import re
-import urllib.request
 import logging
-from config import IMAGES_DIR, MAX_IMAGES_PER_CAR, REQUEST_HEADERS
+import urllib.request
+from config import IMAGES_DIR, SOLD_IMAGES_DIR, MAX_IMAGES_PER_CAR, REQUEST_HEADERS
 
 logger = logging.getLogger(__name__)
 
@@ -18,10 +18,9 @@ def make_slug(make, model, listing_id):
     return f"{slug}-{listing_id}"
 
 
-def download_images(listing):
-    """Download images for a listing, return list of local filenames."""
-    os.makedirs(IMAGES_DIR, exist_ok=True)
-
+def _download_listing_images(listing, target_dir):
+    """Download listing images into target_dir and return local filenames."""
+    os.makedirs(target_dir, exist_ok=True)
     slug = make_slug(listing["make"], listing["model"], listing["id"])
     images = listing.get("images", [])[:MAX_IMAGES_PER_CAR]
     local_files = []
@@ -41,7 +40,7 @@ def download_images(listing):
             ext = "png"
 
         filename = f"{slug}-{i + 1:02d}.{ext}"
-        filepath = os.path.join(IMAGES_DIR, filename)
+        filepath = os.path.join(target_dir, filename)
 
         if os.path.exists(filepath):
             local_files.append(filename)
@@ -58,6 +57,16 @@ def download_images(listing):
             logger.warning(f"  Failed to download {image_url}: {e}")
 
     return local_files
+
+
+def download_images(listing):
+    """Download active listing images, return list of local filenames."""
+    return _download_listing_images(listing, IMAGES_DIR)
+
+
+def download_sold_images(listing):
+    """Download sold listing images, return list of local filenames."""
+    return _download_listing_images(listing, SOLD_IMAGES_DIR)
 
 
 def cleanup_old_images(current_listings):

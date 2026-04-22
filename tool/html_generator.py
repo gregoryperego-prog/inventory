@@ -12,7 +12,7 @@ from urllib.parse import quote
 from config import (
     TEMPLATES_DIR, IMAGES_DIR, IMAGE_BASE_URL, WHATSAPP_NUMBER, SITE_URL,
     GITHUB_PAGES_URL, FUEL_TYPE_FR, TRANSMISSION_FR, BODY_TYPE_FR,
-    CUSTOM_IMAGES_DIR, CUSTOM_IMAGES_URL,
+    CUSTOM_IMAGES_DIR, CUSTOM_IMAGES_URL, SOLD_IMAGES_URL,
 )
 from image_handler import make_slug
 
@@ -74,7 +74,8 @@ def _render(template, context):
 def _build_schema_json(listing, slug, is_sold=False):
     """Build Schema.org Vehicle JSON-LD for a detail page."""
     local_images = listing.get("local_images", [])
-    og_image = f"{IMAGE_BASE_URL}/{local_images[0]}" if local_images else ""
+    image_base_url = SOLD_IMAGES_URL if is_sold else IMAGE_BASE_URL
+    og_image = f"{image_base_url}/{local_images[0]}" if local_images else ""
     full_name = listing.get("full_name", f"{listing['make']} {listing.get('model', '')}")
 
     schema = {
@@ -142,7 +143,8 @@ def _build_schema_json(listing, slug, is_sold=False):
 def _seo_context(listing, slug, is_sold=False):
     """Build SEO-specific context variables for a detail page."""
     local_images = listing.get("local_images", [])
-    og_image = f"{IMAGE_BASE_URL}/{local_images[0]}" if local_images else ""
+    image_base_url = SOLD_IMAGES_URL if is_sold else IMAGE_BASE_URL
+    og_image = f"{image_base_url}/{local_images[0]}" if local_images else ""
     canonical = f"{GITHUB_PAGES_URL}/detail/{slug}.html"
     seo_status = "Vendu" if is_sold else "En vente"
 
@@ -564,12 +566,17 @@ def generate_sold_detail_pages(sold_listings, active_listings, custom_data=None)
         local_images = listing.get("local_images", [])
         custom = custom_data.get(listing["id"], {}) if custom_data else {}
 
-        main_img = f"{IMAGE_BASE_URL}/{local_images[0]}" if local_images else ""
+        main_img = f"{SOLD_IMAGES_URL}/{local_images[0]}" if local_images else ""
 
         thumbs_html = ""
         for i, img_file in enumerate(local_images):
             cls = "pcd-thumb active" if i == 0 else "pcd-thumb"
-            thumbs_html += f'            <img class="{cls}" src="{IMAGE_BASE_URL}/{img_file}" alt="{listing["make"]} {listing["model"]}" loading="lazy">\n'
+            thumbs_html += f'            <img class="{cls}" src="{SOLD_IMAGES_URL}/{img_file}" alt="{listing["make"]} {listing["model"]}" loading="lazy">\n'
+
+        # Extra custom images
+        if custom.get("extra_images"):
+            for img_file in custom["extra_images"]:
+                thumbs_html += f'            <img class="pcd-thumb" src="{CUSTOM_IMAGES_URL}/{img_file}" alt="{listing["make"]} {listing["model"]}" loading="lazy">\n'
 
         # Spec rows (same as active)
         specs = []

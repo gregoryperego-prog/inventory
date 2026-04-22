@@ -12,14 +12,15 @@ import sys
 import os
 import json
 import logging
+import shutil
 from datetime import datetime
 
 # Ensure imports work from any working directory
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from config import OUTPUT_DIR, IMAGES_DIR, DETAIL_DIR, CACHE_FILE, LOG_DIR, CUSTOM_JSON, CUSTOM_IMAGES_DIR, SOLD_JSON
+from config import OUTPUT_DIR, IMAGES_DIR, SOLD_IMAGES_DIR, DETAIL_DIR, CACHE_FILE, LOG_DIR, CUSTOM_JSON, CUSTOM_IMAGES_DIR, SOLD_JSON
 from fetcher import fetch_listings
-from image_handler import download_images, cleanup_old_images
+from image_handler import download_images, download_sold_images, cleanup_old_images
 from html_generator import generate_grid_html, generate_detail_pages, generate_sold_detail_pages, format_chf
 
 
@@ -91,10 +92,38 @@ def archive_removed(removed, sold):
     sold_ids = {str(s.get("id")) for s in sold}
     for car in removed:
         if str(car.get("id")) not in sold_ids:
+            preserve_sold_images(car)
             car["sold_date"] = datetime.now().strftime("%Y-%m-%d")
             sold.append(car)
             sold_ids.add(str(car.get("id")))
     return sold
+
+
+def preserve_sold_images(car):
+    """Copy a just-sold car's active images before active image cleanup removes them."""
+    os.makedirs(SOLD_IMAGES_DIR, exist_ok=True)
+    for img_file in car.get("local_images", []):
+        src = os.path.join(IMAGES_DIR, img_file)
+        dest = os.path.join(SOLD_IMAGES_DIR, img_file)
+        if os.path.exists(src) and not os.path.exists(dest):
+            shutil.copy2(src, dest)
+
+
+def repair_sold_images(sold):
+    """Restore missing sold image files from saved AutoScout URLs when possible."""
+    repaired = 0
+    for car in sold:
+        local_images = car.get("local_images", [])
+        has_missing = any(
+            not os.path.exists(os.path.join(SOLD_IMAGES_DIR, img_file))
+            for img_file in local_images
+        )
+        if has_missing and car.get("images"):
+            new_local_images = download_sold_images(car)
+            if new_local_images:
+                car["local_images"] = new_local_images
+                repaired += 1
+    return repaired
 
 
 def remove_active_from_sold(sold, active_listings):
@@ -187,7 +216,11 @@ def main():
         sold = archive_removed(removed, sold)
         print(f"Archived {len(removed)} sold cars (total sold: {len(sold)})")
 
-    if restored_count or removed:
+    repaired_sold_images = repair_sold_images(sold)
+    if repaired_sold_images:
+        print(f"Repaired sold images for {repaired_sold_images} cars")
+
+    if restored_count or removed or repaired_sold_images:
         save_sold(sold)
 
     # 6. Generate HTML
