@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-inventory
+  cancel-in-progress: false
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -15,7 +19,13 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
+
+      - name: Sync with main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -42,9 +52,5 @@ jobs:
         run: |
           git config user.name "Perego Cars Bot"
           git config user.email "bot@peregocars.com"
-          git add -A docs/
-          git add custom.json || true
           git commit -m "Update inventory $(date +%Y-%m-%d)"
-          git fetch origin main
-          git pull --rebase origin main
-          git push origin main
+          git push origin HEAD:main
