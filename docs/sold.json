@@ -365,5 +365,57 @@
       "porsche-911-12846179-16.jpg"
     ],
     "sold_date": "2026-04-22"
+  },
+  {
+    "id": "9854927",
+    "make": "Porsche",
+    "model": "911",
+    "full_name": "911 GT3 RS",
+    "price": 199900,
+    "mileage": 42900,
+    "year": 2004,
+    "horsepower": 381,
+    "fuel_type": "petrol",
+    "transmission": "manual",
+    "body_type": "coupe",
+    "images": [
+      "https://images.autoscout24.ch/public/listing/927/9854927/1692529274.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/6934496.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/1484555350.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/1541251685.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/98456668.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/67675668.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/1553751873.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/1270693017.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/447968247.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/2031062404.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/173260629.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/42721343.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/646034132.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/1647420671.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/901678602.jpg?w=768",
+      "https://images.autoscout24.ch/public/listing/927/9854927/1305347930.jpg?w=768"
+    ],
+    "listing_url": "https://www.autoscout24.ch/fr/d/9854927",
+    "teaser": "1 of 682 | Feux xénon | Service suivi | Volant alcantara | 2 propriétaires | Non accidentée | 95% de route",
+    "local_images": [
+      "porsche-911-9854927-01.jpg",
+      "porsche-911-9854927-02.jpg",
+      "porsche-911-9854927-03.jpg",
+      "porsche-911-9854927-04.jpg",
+      "porsche-911-9854927-05.jpg",
+      "porsche-911-9854927-06.jpg",
+      "porsche-911-9854927-07.jpg",
+      "porsche-911-9854927-08.jpg",
+      "porsche-911-9854927-09.jpg",
+      "porsche-911-9854927-10.jpg",
+      "porsche-911-9854927-11.jpg",
+      "porsche-911-9854927-12.jpg",
+      "porsche-911-9854927-13.jpg",
+      "porsche-911-9854927-14.jpg",
+      "porsche-911-9854927-15.jpg",
+      "porsche-911-9854927-16.jpg"
+    ],
+    "sold_date": "2026-04-23"
   }
 ]
